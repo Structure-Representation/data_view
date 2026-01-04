@@ -1,0 +1,2557 @@
+[
+  {
+    "idea_id": 0,
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      }
+    ],
+    "explanation": "Altering surface adhesion to release and shed soils from fibers."
+  },
+  {
+    "idea_id": 1,
+    "labels": [
+      {
+        "id": "5",
+        "name": "Supercritical / near‑critical fluid solvation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Supercritical fluid dissolves organics, extracting soils with minimal liquid."
+  },
+  {
+    "idea_id": 2,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Pressure-driven phase changes mobilize and recover solvents and contaminants."
+  },
+  {
+    "idea_id": 3,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Ultrasonic cavitation generates microbubbles that implode, dislodging particles without bulk water."
+  },
+  {
+    "idea_id": 4,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      }
+    ],
+    "explanation": "Limit fluid to microdroplets or thin films to activate cleaning without saturation."
+  },
+  {
+    "idea_id": 5,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      }
+    ],
+    "explanation": "Aerosolized fine droplets deliver solvent locally, humidifying and releasing dirt with minimal fluid."
+  },
+  {
+    "idea_id": 6,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Vaporize then condense to concentrate impurities; filter and reclaim liquid for reuse."
+  },
+  {
+    "idea_id": 7,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Ionized gas/plasma generates reactive species that decompose odors and microbes without bulk water."
+  },
+  {
+    "idea_id": 8,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Localized sensing and dosing plus mechanical contact targets and removes stains precisely."
+  },
+  {
+    "idea_id": 9,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Light-based detection identifies stains for targeted localized cleaning or dosing."
+  },
+  {
+    "idea_id": 10,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Electromagnetic radiation produces reactive species or direct microbial inactivation without bulk water."
+  },
+  {
+    "idea_id": 11,
+    "labels": [
+      {
+        "id": "7",
+        "name": "Controlled minimal-liquid exposure chamber",
+        "type": "main"
+      }
+    ],
+    "explanation": "Sealed chamber maintains minimal liquid or high-humidity environment for confined targeted cleaning."
+  },
+  {
+    "idea_id": 12,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Triboelectric charging creates electrostatic forces to mobilize and capture particles."
+  },
+  {
+    "idea_id": 13,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Opposite electrical charges attract and collect charged particles for removal."
+  },
+  {
+    "idea_id": 14,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Sequential filtration and treatments separate contaminants and capture or regenerate sorbents."
+  },
+  {
+    "idea_id": 15,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Treated output is purified and recirculated immediately, minimizing fresh water usage."
+  },
+  {
+    "idea_id": 16,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      }
+    ],
+    "explanation": "High-speed solid particles mechanically abrade and dislodge debris from fibers."
+  },
+  {
+    "idea_id": 17,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Sublimation-driven phase change creates agitation and mechanical stress to pry out embedded dirt."
+  },
+  {
+    "idea_id": 18,
+    "labels": [
+      {
+        "id": "2",
+        "name": "Enzymatic or microbial digestion",
+        "type": "main"
+      }
+    ],
+    "explanation": "Enzymes selectively break down organic stains into soluble fragments for easier extraction."
+  },
+  {
+    "idea_id": 19,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Porous sorbent wicks and captures residues, then can be regenerated to release soils."
+  },
+  {
+    "idea_id": 20,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Porous adsorbent traps odors/particles and enables regeneration and recirculation of cleaned air/solvent."
+  },
+  {
+    "idea_id": 21,
+    "labels": [
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Active airflow transports contaminants to filters for capture and continuous reuse."
+  },
+  {
+    "idea_id": 22,
+    "labels": [
+      {
+        "id": "7",
+        "name": "Controlled minimal-liquid exposure chamber",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Sealed chamber enables minimal-liquid cleaning with controlled atmosphere and extraction flow."
+  },
+  {
+    "idea_id": 23,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Granular solids mechanically abrade soils while adsorbing oils and odors for removal."
+  },
+  {
+    "idea_id": 24,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Physically separates and recovers solid media, enabling filtration and solvent/water reuse."
+  },
+  {
+    "idea_id": 25,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Acoustic-induced flows produce shear to loosen soils without bulk liquid."
+  },
+  {
+    "idea_id": 26,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      },
+      {
+        "id": "7",
+        "name": "Controlled minimal-liquid exposure chamber",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Restricts cleaning liquid to microscopic films for localized, low-volume stain treatment."
+  },
+  {
+    "idea_id": 27,
+    "labels": [
+      {
+        "id": "2",
+        "name": "Enzymatic or microbial digestion",
+        "type": "main"
+      }
+    ],
+    "explanation": "Microbes or enzymes biochemically break down organic soils and odors for removal."
+  },
+  {
+    "idea_id": 28,
+    "labels": [
+      {
+        "id": "7",
+        "name": "Controlled minimal-liquid exposure chamber",
+        "type": "main"
+      }
+    ],
+    "explanation": "Confined, humidity-controlled environment minimizes liquid use while enabling targeted cleaning."
+  },
+  {
+    "idea_id": 29,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Negative pressure entrains and extracts particulates from fabric into collection systems."
+  },
+  {
+    "idea_id": 30,
+    "labels": [
+      {
+        "id": "14",
+        "name": "Rotational and tumbling mechanical agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Rotation and collisions create relative motion that dislodges soils from textiles."
+  },
+  {
+    "idea_id": 31,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      }
+    ],
+    "explanation": "Direct frictional contact abrades and transfers adhered particles away from fibers."
+  },
+  {
+    "idea_id": 32,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Light-activated catalyst produces oxidants that chemically decompose organic contaminants."
+  },
+  {
+    "idea_id": 33,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Wicking sorbents draw oils and grime from fibers, capturing soils for regeneration."
+  },
+  {
+    "idea_id": 34,
+    "labels": [
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "main"
+      }
+    ],
+    "explanation": "Rapid freezing creates stresses that embrittle soils for easier detachment."
+  },
+  {
+    "idea_id": 35,
+    "labels": [
+      {
+        "id": "14",
+        "name": "Rotational and tumbling mechanical agitation",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Shaking sweeps and dislodges brittle or loosened residues from fabrics."
+  },
+  {
+    "idea_id": 36,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Electrocoagulation and electroaggregation",
+        "type": "main"
+      },
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Applied electrical currents destabilize colloids, aggregating particles for filtration."
+  },
+  {
+    "idea_id": 37,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "High-velocity vortices create shear, lifting contaminants into airflow for capture."
+  },
+  {
+    "idea_id": 38,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Air-capture system intercepts debris carried by flow and directs it to filtration."
+  },
+  {
+    "idea_id": 39,
+    "labels": [
+      {
+        "id": "24",
+        "name": "Adsorptive chelation and complexation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Engineered binders selectively sequester oils/dirt into removable complexes, sparing fabric."
+  },
+  {
+    "idea_id": "40",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Magnetic fields move magnetic particles/agents out of fabric for capture and removal."
+  },
+  {
+    "idea_id": "41",
+    "labels": [
+      {
+        "id": "12",
+        "name": "Foam and bubble-mediated lift and flotation",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Pressure- and flow-induced pore flushing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Bubbles lift and shear soils while inducing pore flow to dislodge contaminants."
+  },
+  {
+    "idea_id": "42",
+    "labels": [
+      {
+        "id": "7",
+        "name": "Controlled minimal-liquid exposure chamber",
+        "type": "main"
+      }
+    ],
+    "explanation": "Sealed chamber maintains minimal liquid volume for targeted, low-water cleaning."
+  },
+  {
+    "idea_id": "43",
+    "labels": [
+      {
+        "id": "19",
+        "name": "Pressure- and flow-induced pore flushing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Osmotic pressure drives fluid through fabric pores, flushing dissolved contaminants out."
+  },
+  {
+    "idea_id": "44",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "In-situ reactive species chemically oxidize and decompose organic stains without bulk water."
+  },
+  {
+    "idea_id": "45",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Electrocoagulation and electroaggregation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Applied potential drives ionic impurities away and may aggregate them for filtration."
+  },
+  {
+    "idea_id": "46",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      }
+    ],
+    "explanation": "Polymers swell and contract on trigger, releasing bound soils for removal."
+  },
+  {
+    "idea_id": "47",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Targeted resonant frequencies loosen bonds between dirt and fibers via vibration."
+  },
+  {
+    "idea_id": "48",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Suction captures and transports loosened particles away from textiles for filtration."
+  },
+  {
+    "idea_id": "49",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      }
+    ],
+    "explanation": "Textured surfaces mechanically shear and abrade soils from fibers for removal."
+  },
+  {
+    "idea_id": "50",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Thin continuous liquid film delivers solvent locally, gently extracting residues."
+  },
+  {
+    "idea_id": "51",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Vapor condenses to dissolve soils, then re-evaporates, enabling solvent recovery and reuse."
+  },
+  {
+    "idea_id": "52",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      }
+    ],
+    "explanation": "Chemical solvents dissolve oils and grime locally without bulk water immersion."
+  },
+  {
+    "idea_id": "53",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "System separates contaminants from cleaning fluid, regenerating and returning cleaned solvent."
+  },
+  {
+    "idea_id": "54",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Oscillating electric fields migrate charged contaminants away from the substrate."
+  },
+  {
+    "idea_id": "55",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Electrowetting and surface-actuated wetting control",
+        "type": "main"
+      },
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Conductive film enables electrical wetting control and field-driven mobilization of soils."
+  },
+  {
+    "idea_id": "56",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Sacrificial peelable coating removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Adhesive biomimetic surface picks up particles and is removed, carrying soils away."
+  },
+  {
+    "idea_id": "57",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      }
+    ],
+    "explanation": "Changing geometry or pressure triggers adhesion change, releasing contaminants for capture."
+  },
+  {
+    "idea_id": "58",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      },
+      {
+        "id": "14",
+        "name": "Rotational and tumbling mechanical agitation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Tumbling-induced piezo vibrations generate high-frequency agitation to dislodge debris."
+  },
+  {
+    "idea_id": "59",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Vacuum captures loosened particles and filters them from the textile surface."
+  },
+  {
+    "idea_id": "60",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Engineered adsorbents capture moisture/soils, air stream and suction transport trapped contaminants away."
+  },
+  {
+    "idea_id": "61",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Heat-driven desorption regenerates sorbent, thermally releasing trapped contaminants for removal."
+  },
+  {
+    "idea_id": "62",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Acoustic forces and vibration dislodge particles without bulk liquid, matching vibrational agitation mechanisms."
+  },
+  {
+    "idea_id": "63",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Airflow and negative pressure entrain and carry away loose particulates gently and continuously."
+  },
+  {
+    "idea_id": "64",
+    "labels": [
+      {
+        "id": "27",
+        "name": "Field-modulated fluid rheology",
+        "type": "main"
+      },
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "External fields change fluid viscosity to shear off soils, also enabling field-directed particle movement."
+  },
+  {
+    "idea_id": "65",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Mechanical filtration separates contaminants, returning cleaned working fluid for repeated reuse."
+  },
+  {
+    "idea_id": "66",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Reusable absorptive interface pulls soils onto itself via material adsorption properties for later regeneration."
+  },
+  {
+    "idea_id": "67",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Very small dispersed droplets activate cleaning locally, optionally targeted by sensing to minimize water."
+  },
+  {
+    "idea_id": "68",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Sacrificial peelable coating removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Adhesive polymer binds soils into a removable film that is peeled away from the fabric."
+  },
+  {
+    "idea_id": "69",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      }
+    ],
+    "explanation": "Environmental trigger alters adhesion, causing the medium to shed and release bound contaminants for capture."
+  },
+  {
+    "idea_id": "70",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "In-situ reactive species chemically degrade organic soils and odors without bulk water."
+  },
+  {
+    "idea_id": "71",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Convert residues to vapor via phase change, then remove vapors using negative pressure."
+  },
+  {
+    "idea_id": "72",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Acoustic fields exert forces on particles, controlling positioning and loosening via vibration."
+  },
+  {
+    "idea_id": "73",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Filter and reclaim contaminants continuously, returning cleaned fluid into the cleaning loop."
+  },
+  {
+    "idea_id": "74",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Solid cleaning medium sublimates to gas carrying soils, leveraging phase-change extraction."
+  },
+  {
+    "idea_id": "75",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      }
+    ],
+    "explanation": "Fine mist applies minimal liquid to encapsulate and mobilize dirt without saturating textiles."
+  },
+  {
+    "idea_id": "76",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      },
+      {
+        "id": "14",
+        "name": "Rotational and tumbling mechanical agitation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Micro-textured contact mechanically scrapes off soils, aided by relative motion or tumbling."
+  },
+  {
+    "idea_id": "77",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Vacuum system collects and contains loosened particles via negative pressure."
+  },
+  {
+    "idea_id": "78",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Temperature-driven membrane separates vaporized water from contaminants, enabling recovery and recirculation."
+  },
+  {
+    "idea_id": "79",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Microencapsulated agent release",
+        "type": "main"
+      }
+    ],
+    "explanation": "Microscopic capsules embedded in fabric release concentrated actives on trigger, minimizing overall water use."
+  },
+  {
+    "idea_id": 80,
+    "labels": [
+      {
+        "id": "10",
+        "name": "Microencapsulated agent release",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Physical rupture releases concentrated actives locally, minimizing bulk water use."
+  },
+  {
+    "idea_id": 81,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Engineered sorbents capture VOCs from air, enabling later regeneration and reuse."
+  },
+  {
+    "idea_id": 82,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      },
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "External energy or pressure swings regenerate sorbents, releasing trapped contaminants for recovery."
+  },
+  {
+    "idea_id": 83,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Electrowetting and surface-actuated wetting control",
+        "type": "main"
+      },
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electric fields alter wetting to move microdroplets and mobilize soils from fabric."
+  },
+  {
+    "idea_id": 84,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Precise small-volume deposition treats stains locally without saturating textiles."
+  },
+  {
+    "idea_id": 85,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      },
+      {
+        "id": "17",
+        "name": "Electrowetting and surface-actuated wetting control",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Surface forces and fields guide waste fluids to collection points for removal."
+  },
+  {
+    "idea_id": 86,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Shockwave and impulse detachment",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Broadband vibrations break adhesive bonds and dislodge diverse particle types."
+  },
+  {
+    "idea_id": 87,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Airflow entrains and removes dislodged particles without adding liquid water."
+  },
+  {
+    "idea_id": 88,
+    "labels": [
+      {
+        "id": "7",
+        "name": "Controlled minimal-liquid exposure chamber",
+        "type": "main"
+      }
+    ],
+    "explanation": "Sealed low-oxygen environment suppresses aerobic microbes without wet immersion."
+  },
+  {
+    "idea_id": 89,
+    "labels": [
+      {
+        "id": "23",
+        "name": "Shockwave and impulse detachment",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Localized electromagnetic heating of contaminants",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Directed light generates mechanical impulses that lift particles from surfaces."
+  },
+  {
+    "idea_id": 90,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Suction and airflow remove loose solids entrained from the substrate."
+  },
+  {
+    "idea_id": 91,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Electrocoagulation and electroaggregation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electrolytic generation of reactive species oxidizes organics; aggregation aids removal."
+  },
+  {
+    "idea_id": 92,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      },
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Brings actives directly to soiled areas and applies minimal solvent precisely."
+  },
+  {
+    "idea_id": 93,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Gas-phase carrier and desorption use vapor/pressure swings to remove contaminants."
+  },
+  {
+    "idea_id": 94,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Separates contaminants from transport fluid, enabling immediate solvent reuse."
+  },
+  {
+    "idea_id": 95,
+    "labels": [
+      {
+        "id": "22",
+        "name": "Localized electromagnetic heating of contaminants",
+        "type": "main"
+      }
+    ],
+    "explanation": "Tuned light preferentially heats soils, loosening adhesion while sparing fabric."
+  },
+  {
+    "idea_id": 96,
+    "labels": [
+      {
+        "id": "23",
+        "name": "Shockwave and impulse detachment",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Localized electromagnetic heating of contaminants",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Converted light energy produces mechanical waves that physically eject particles."
+  },
+  {
+    "idea_id": 97,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Gas currents capture and transport dislodged particulates away from textiles."
+  },
+  {
+    "idea_id": 98,
+    "labels": [
+      {
+        "id": "24",
+        "name": "Adsorptive chelation and complexation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Engineered affinity materials preferentially bind dirt, enabling separation from fabric."
+  },
+  {
+    "idea_id": 99,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Secondary process restores cleaning media by stripping collected contaminants physically."
+  },
+  {
+    "idea_id": "100",
+    "labels": [
+      {
+        "id": "22",
+        "name": "Localized electromagnetic heating of contaminants",
+        "type": "main"
+      }
+    ],
+    "explanation": "Electromagnetic fields preferentially heat soils to loosen adhesion without wetting fabric."
+  },
+  {
+    "idea_id": "101",
+    "labels": [
+      {
+        "id": "14",
+        "name": "Rotational and tumbling mechanical agitation",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Pressure- and flow-induced pore flushing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Physical motion dislodges particles; flow flushes them from pores."
+  },
+  {
+    "idea_id": "102",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Filtering traps particulates enabling solvent reuse."
+  },
+  {
+    "idea_id": "103",
+    "labels": [
+      {
+        "id": "24",
+        "name": "Adsorptive chelation and complexation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Chelators complex metals and oils, converting soils into removable complexes."
+  },
+  {
+    "idea_id": "104",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Purify used rinse water and regenerate adsorbents to enable recycling."
+  },
+  {
+    "idea_id": "105",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Rapid air pulses and microturbulence mechanically loosen debris from fibers."
+  },
+  {
+    "idea_id": "106",
+    "labels": [
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "main"
+      }
+    ],
+    "explanation": "Gentle continuous flow captures suspended particles without disturbing fabrics."
+  },
+  {
+    "idea_id": "107",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Surfactant-mediated solubilization and emulsification",
+        "type": "main"
+      }
+    ],
+    "explanation": "Amphiphilic agents solubilize and emulsify lipids, reducing adhesion for removal."
+  },
+  {
+    "idea_id": "108",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Cyclic evaporation/condensation and thermal shock mobilize contaminants, minimizing liquid usage."
+  },
+  {
+    "idea_id": "109",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Sacrificial peelable coating removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Apply removable coating that preferentially binds soils, then peel off carrying dirt."
+  },
+  {
+    "idea_id": "110",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      },
+      {
+        "id": "11",
+        "name": "Sacrificial peelable coating removal",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mild trigger releases coating adhesion, enabling peel-off removal of bound contaminants."
+  },
+  {
+    "idea_id": "111",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Negative pressure systems entrain and transport loosened particles away from textiles."
+  },
+  {
+    "idea_id": "112",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Surface acoustic waves apply localized mechanical forces to dislodge particles from fibers."
+  },
+  {
+    "idea_id": "113",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Suction lifts and conveys loose particulate matter for collection and disposal."
+  },
+  {
+    "idea_id": "114",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Permanent charges generate fields during movement to attract or repel particulates."
+  },
+  {
+    "idea_id": "115",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Electric, magnetic, or ionic fields steer particles toward collectors or away from fabric."
+  },
+  {
+    "idea_id": "116",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      },
+      {
+        "id": "14",
+        "name": "Rotational and tumbling mechanical agitation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Textured solids mechanically abrade fibers lifting debris; tumbling enhances contact."
+  },
+  {
+    "idea_id": "117",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Engineered sorbents selectively bind organics, enabling capture and sorbent regeneration."
+  },
+  {
+    "idea_id": "118",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      }
+    ],
+    "explanation": "Apply mild external stimulus to break agent–fabric bonds and release soils for capture."
+  },
+  {
+    "idea_id": "119",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Route purified greywater back into washing system for reuse, reducing freshwater demand."
+  },
+  {
+    "idea_id": 120,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Membrane-driven separation pulls water through draw solution, enabling continuous purification and reuse."
+  },
+  {
+    "idea_id": 121,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Airflow levitation uses controlled air forces to support and agitate garments without water."
+  },
+  {
+    "idea_id": 122,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Negative pressure and high-velocity air entrain and remove debris from fabric surfaces."
+  },
+  {
+    "idea_id": 123,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Tiny, precise agent droplets treat only stains; sensors enable targeted dosing."
+  },
+  {
+    "idea_id": 124,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Localized suction lifts fluids; absorbent sorbents capture soils for removal."
+  },
+  {
+    "idea_id": 125,
+    "labels": [
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "main"
+      }
+    ],
+    "explanation": "Temperature gradients drive particle migration (thermophoresis), moving soils away from surfaces."
+  },
+  {
+    "idea_id": 126,
+    "labels": [
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "main"
+      }
+    ],
+    "explanation": "Established temperature differentials enable thermally driven particle movement and stress-assisted soil release."
+  },
+  {
+    "idea_id": 127,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electric-field ion wind moves particles; steady extraction flow carries dislodged soils away."
+  },
+  {
+    "idea_id": 128,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Airborne particles are separated via filtration, enabling collection and recirculation of the medium."
+  },
+  {
+    "idea_id": 129,
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Temporarily increased adhesion transfers soils to a collector; sorbents capture contaminants."
+  },
+  {
+    "idea_id": 130,
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stimulus flips adhesion to release contaminants from surfaces and regenerate sorbent collectors."
+  },
+  {
+    "idea_id": 131,
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Triggered shape changes mechanically push dirt out; contact pads then remove soils."
+  },
+  {
+    "idea_id": 132,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Air currents transport loosened particles; low-velocity flow captures and conveys debris."
+  },
+  {
+    "idea_id": 133,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Gaseous solvent vapor penetrates stains then condenses or is recovered without bulk liquid."
+  },
+  {
+    "idea_id": 134,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Vacuum withdraws contaminant-bearing solvent; recovered fluid is purified and reused."
+  },
+  {
+    "idea_id": 135,
+    "labels": [
+      {
+        "id": "12",
+        "name": "Foam and bubble-mediated lift and flotation",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Surfactant-mediated solubilization and emulsification",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Foam attaches to hydrophobic soils, lifting them; surfactants stabilize and solubilize residues."
+  },
+  {
+    "idea_id": 136,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Switching fluid phase separates wastes; recovered solvent is purified for reuse."
+  },
+  {
+    "idea_id": 137,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "main"
+      }
+    ],
+    "explanation": "High-speed airflow and temperature gradients dislodge and thermophoretically move particles for capture."
+  },
+  {
+    "idea_id": 138,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Directed energetic irradiation generates reactive species that decompose organic stains and microbes."
+  },
+  {
+    "idea_id": 139,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Air suction removes detached debris and purges gases from the cleaning chamber."
+  },
+  {
+    "idea_id": 140,
+    "labels": [
+      {
+        "id": "24",
+        "name": "Adsorptive chelation and complexation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Specific chelating agents sequester metals/organics; sorbents assist capture and regeneration."
+  },
+  {
+    "idea_id": 141,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      }
+    ],
+    "explanation": "Fine spray delivers minimal liquid droplets to activate cleaning without full immersion."
+  },
+  {
+    "idea_id": 142,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Filtering separates contaminants for reuse; adsorbents capture soils for regeneration."
+  },
+  {
+    "idea_id": 143,
+    "labels": [
+      {
+        "id": "22",
+        "name": "Localized electromagnetic heating of contaminants",
+        "type": "main"
+      },
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Light-induced heating vaporizes or decomposes soils; phase-change recovers volatiles."
+  },
+  {
+    "idea_id": 144,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Optical sensing identifies stains enabling targeted, minimized treatment."
+  },
+  {
+    "idea_id": 145,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Negative pressure lifts and transports debris away from textile surfaces."
+  },
+  {
+    "idea_id": 146,
+    "labels": [
+      {
+        "id": "2",
+        "name": "Enzymatic or microbial digestion",
+        "type": "main"
+      }
+    ],
+    "explanation": "Biological agents chemically break biofilm matrix and organic soils for removal."
+  },
+  {
+    "idea_id": 147,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      }
+    ],
+    "explanation": "Atomized droplets deliver cleaning agent precisely, minimizing overall water usage."
+  },
+  {
+    "idea_id": 148,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Frictionally loosens soils and airflow lifts and collects loosened debris."
+  },
+  {
+    "idea_id": 149,
+    "labels": [
+      {
+        "id": "23",
+        "name": "Shockwave and impulse detachment",
+        "type": "main"
+      }
+    ],
+    "explanation": "Rapid pressure transients fracture soil–fiber bonds and eject contaminants for collection."
+  },
+  {
+    "idea_id": 150,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Negative pressure extracts and transports dislodged debris away from fabrics."
+  },
+  {
+    "idea_id": 151,
+    "labels": [
+      {
+        "id": "12",
+        "name": "Foam and bubble-mediated lift and flotation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Gas pockets adhere to hydrophobic particles, lifting them for removal."
+  },
+  {
+    "idea_id": 152,
+    "labels": [
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "main"
+      },
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Controlled heating desorbs oils/odors; phase-change mobilizes and recovers volatiles."
+  },
+  {
+    "idea_id": 153,
+    "labels": [
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "main"
+      }
+    ],
+    "explanation": "Continuous gas flow sweeps vaporized contaminants away without harsh agitation."
+  },
+  {
+    "idea_id": 154,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      },
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Sensors locate stains and micro-dosing applies minimal fluid exactly where needed."
+  },
+  {
+    "idea_id": 155,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Local evaporation lifts solvent and particles; continuous flow removes resulting residues."
+  },
+  {
+    "idea_id": 156,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Electric fields destabilize electrostatic bonds and drive charged contaminant movement."
+  },
+  {
+    "idea_id": 157,
+    "labels": [
+      {
+        "id": "5",
+        "name": "Supercritical / near‑critical fluid solvation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Supercritical solvent solvates and removes organics with minimal conventional water."
+  },
+  {
+    "idea_id": 158,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Pressure- and flow-induced pore flushing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electric fields induce fluid flow through pores, flushing entrained contaminants."
+  },
+  {
+    "idea_id": 159,
+    "labels": [
+      {
+        "id": "19",
+        "name": "Pressure- and flow-induced pore flushing",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Forcing fluid through fabric pores displaces contaminants; recirculation cleans transport fluid."
+  },
+  {
+    "idea_id": 160,
+    "labels": [
+      {
+        "id": "11",
+        "name": "Sacrificial peelable coating removal",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Film binds oils and dirt then peeled off; acts as sorbent capturing contaminants."
+  },
+  {
+    "idea_id": 161,
+    "labels": [
+      {
+        "id": "11",
+        "name": "Sacrificial peelable coating removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Peelable medium removed, carrying bound soils away from fabric."
+  },
+  {
+    "idea_id": 162,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Biological reactions visually signal contaminants for targeted cleaning."
+  },
+  {
+    "idea_id": 163,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Use vapor or phase-change solvents to dissolve and recover soils with minimal liquid."
+  },
+  {
+    "idea_id": 164,
+    "labels": [
+      {
+        "id": "23",
+        "name": "Shockwave and impulse detachment",
+        "type": "main"
+      }
+    ],
+    "explanation": "High-impulse particle impacts fracture soil–fiber bonds and eject contaminants for collection."
+  },
+  {
+    "idea_id": 165,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Optical sensing maps stain locations enabling targeted, reduced-water cleaning."
+  },
+  {
+    "idea_id": 166,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Negative pressure lifts and entrains loosened debris for removal without water immersion."
+  },
+  {
+    "idea_id": 167,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Catalyst generates reactive oxidants to chemically decompose organic stains without bulk water."
+  },
+  {
+    "idea_id": 168,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      }
+    ],
+    "explanation": "Discrete solids contact and transfer soils from fibers, then removed."
+  },
+  {
+    "idea_id": 169,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Foam and bubble-mediated lift and flotation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ultrasound-induced cavitation and bubbles loosen hydrophobic soils for lift-off and removal."
+  },
+  {
+    "idea_id": 170,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Combines mechanical wiping and negative pressure to remove dirty fluid layers."
+  },
+  {
+    "idea_id": 171,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Engineered sorbents encapsulate particulates for later regeneration and removal."
+  },
+  {
+    "idea_id": 172,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Magnetic fields move and extract magnetic carrier particles, dislodging contaminants."
+  },
+  {
+    "idea_id": 173,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Solid-contact mechanical abrasion",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electrostatic attraction with brushing entangles debris for mechanical removal."
+  },
+  {
+    "idea_id": 174,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Continuous purification and recirculation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Separates and purifies captured waste stream, refreshing capture medium for reuse."
+  },
+  {
+    "idea_id": 175,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Vibrational and pulsed-air agitation",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Dynamic micro-surface vibrations lift particles; stimulus changes aid release for capture."
+  },
+  {
+    "idea_id": 176,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Targeted sensing and localized dosing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Point-of-contact sensors detect individual particles enabling localized interventions."
+  },
+  {
+    "idea_id": 177,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Small-scale negative pressure collects debris directly at the contact point."
+  },
+  {
+    "idea_id": 178,
+    "labels": [
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "main"
+      }
+    ],
+    "explanation": "Crystal growth/shrinkage induces mechanical stresses that pry out embedded dirt."
+  },
+  {
+    "idea_id": 179,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Pressure- and flow-induced pore flushing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Air suction combined with pressure/flow separates and evacuates loosened particulates."
+  },
+  {
+    "idea_id": "180",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      },
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Light-triggered surface changes release soils; may also produce reactive species for decomposition."
+  },
+  {
+    "idea_id": "181",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Thermal and crystallization-induced stress cycling",
+        "type": "main"
+      }
+    ],
+    "explanation": "Rapid micro heating/cooling cycles create mechanical stresses that pry out embedded dirt."
+  },
+  {
+    "idea_id": "182",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Vacuum and pneumatic suction removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Air currents entrain and transport loosened particles away via suction and flow."
+  },
+  {
+    "idea_id": "183",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Supercritical / near‑critical fluid solvation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Near‑critical water solvates and extracts organics, minimizing use of conventional liquid water."
+  },
+  {
+    "idea_id": "184",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Pressure and temperature swings precipitate contaminants for separation and removal."
+  },
+  {
+    "idea_id": "185",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Field-driven transport and capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Applied electrostatic fields drive charged particles to attract and capture contaminants."
+  },
+  {
+    "idea_id": "186",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Electrocoagulation and electroaggregation",
+        "type": "main"
+      }
+    ],
+    "explanation": "Forces induce particle coalescence and aggregation, enabling easier deposition and filtration."
+  },
+  {
+    "idea_id": "187",
+    "labels": [
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "main"
+      }
+    ],
+    "explanation": "Wall-attached laminar Coandă airflow generates shear to dislodge and carry away soils."
+  },
+  {
+    "idea_id": "188",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Sorbent-based adsorption and regeneration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Air passed through adsorbent media traps particulates for later regeneration and disposal."
+  },
+  {
+    "idea_id": "189",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Enzymatic or microbial digestion",
+        "type": "main"
+      }
+    ],
+    "explanation": "Enzymes selectively break down organic stains and odors into soluble, removable fragments."
+  },
+  {
+    "idea_id": "190",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Micro-volume solvent application",
+        "type": "main"
+      },
+      {
+        "id": "7",
+        "name": "Controlled minimal-liquid exposure chamber",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Fine droplets deliver minimal liquid locally within a contained chamber for targeted cleaning."
+  },
+  {
+    "idea_id": "191",
+    "labels": [
+      {
+        "id": "20",
+        "name": "Gentle continuous extraction flow",
+        "type": "main"
+      }
+    ],
+    "explanation": "Low-velocity air movement carries volatiles and loosened particles away without disturbing fabric."
+  },
+  {
+    "idea_id": "192",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Sacrificial peelable coating removal",
+        "type": "main"
+      }
+    ],
+    "explanation": "Sticky removable film binds soils and is peeled off, taking contaminants away from fabric."
+  },
+  {
+    "idea_id": "193",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Stimulus-responsive surface release",
+        "type": "main"
+      }
+    ],
+    "explanation": "External trigger temporarily alters adhesion to release bound contaminants for capture."
+  },
+  {
+    "idea_id": "194",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Light-activated catalyst generates reactive species that decompose organic stains and microbes."
+  }
+]

@@ -1,0 +1,69 @@
+{
+    "clusters": [
+        {
+            "id": "1",
+            "name": "Targeted sensing and localized actuation",
+            "description": "Detect stain location or soil concentration and apply localized interventions (micro-sprays, heated spots, electrowetting, local mechanical actuators) to treat only contaminated areas and minimize overall water use."
+        },
+        {
+            "id": "2",
+            "name": "Localized controlled dosing and triggered release",
+            "description": "Deliver concentrated actives or cleaning payloads on demand at specific sites via micro-dosing, microcapsules, thin films, or triggered carriers that release chemistry only where needed."
+        },
+        {
+            "id": "3",
+            "name": "Phase-change and advanced solvent extraction",
+            "description": "Use vapor/condensation cycles, pressurization swings, or non-traditional solvent states (near-/supercritical, vapor-phase cleaning) to dissolve and transport contaminants without saturating textiles with bulk water."
+        },
+        {
+            "id": "4",
+            "name": "Flow- and suction-driven extraction",
+            "description": "Remove loosened soils by moving fluids or gases through or away from textiles (pressure flushing, gentle continuous extraction flows, vacuum/pneumatic suction) to carry contaminants out with minimal liquid volume."
+        },
+        {
+            "id": "5",
+            "name": "Acoustic and impulse detachment",
+            "description": "Use high-frequency vibrations, ultrasound, surface acoustic waves, shockwaves, or pulsed-air impulses to fracture soil\u2013fiber bonds and eject or loosen contaminants for collection without large water volumes."
+        },
+        {
+            "id": "6",
+            "name": "Mechanical agitation and solid-contact abrasion",
+            "description": "Apply relative motion, tumbling, collisions, textured pads or solid abrasives to mechanically dislodge or transfer soils from fabric surfaces for subsequent low-water removal."
+        },
+        {
+            "id": "7",
+            "name": "Foam- and bubble-mediated flotation and lift",
+            "description": "Use foamed media or bubbles that attach to hydrophobic particles and lift or float soils away from fibers for collection, minimizing wetting of the bulk textile."
+        },
+        {
+            "id": "8",
+            "name": "Field-driven particle transport and capture",
+            "description": "Use electric, ionic, electrophoretic, dielectrophoretic or magnetic fields to move, concentrate, or capture charged/magnetic particles for later removal without relying on bulk solvent transport."
+        },
+        {
+            "id": "9",
+            "name": "Field-modulated fluid rheology",
+            "description": "Change transport fluid properties (viscosity, viscoelasticity) via additives or applied fields so fluid stresses preferentially release adhered particles while minimizing required water volume."
+        },
+        {
+            "id": "10",
+            "name": "Chemical solubilization, adsorption and sequestration",
+            "description": "Apply surfactants, enzymes, chelators, adsorbents or engineered sorbents that solubilize, digest, bind or sequester soils into removable phases that reduce rinse volume; includes sorbent regeneration."
+        },
+        {
+            "id": "11",
+            "name": "Electrochemical and plasma-driven transformations",
+            "description": "Use electrical or plasma processes (electrocoagulation, in-situ oxidant or plasma generation) to chemically alter, aggregate, or decompose contaminants to aid low-water removal."
+        },
+        {
+            "id": "12",
+            "name": "Stimulus-responsive surface release and removable coatings",
+            "description": "Temporarily change fabric/fiber surface adhesion via smart coatings or apply sacrificial peelable films that bind soils and are removed, enabling capture or low-water extraction of contaminants."
+        },
+        {
+            "id": "13",
+            "name": "Continuous purification and recirculation",
+            "description": "Separate contaminants from the transport fluid in real time (filtration, trapping, recovery) and return cleaned solvent/water for immediate reuse to reduce net water consumption."
+        }
+    ]
+}

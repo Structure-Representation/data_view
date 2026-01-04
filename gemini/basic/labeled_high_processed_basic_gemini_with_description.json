@@ -1,0 +1,310 @@
+[
+  {
+    "idea_id": "1",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Chemical solubilization, adsorption and sequestration"
+      }
+    ],
+    "explanation": "Surfactants solubilize oils into micelles, enabling removal with minimal rinse water.",
+    "description": "Apply surfactants, enzymes, chelators, adsorbents or engineered sorbents that solubilize, digest, bind or sequester soils into removable phases that reduce rinse volume; includes sorbent regeneration."
+  },
+  {
+    "idea_id": "2",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Chemical solubilization, adsorption and sequestration"
+      }
+    ],
+    "explanation": "Enzymes/microbes digest organic soils into soluble fragments for easier low-water extraction.",
+    "description": "Apply surfactants, enzymes, chelators, adsorbents or engineered sorbents that solubilize, digest, bind or sequester soils into removable phases that reduce rinse volume; includes sorbent regeneration."
+  },
+  {
+    "idea_id": "3",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Electrochemical and plasma-driven transformations"
+      }
+    ],
+    "explanation": "Generate reactive oxidants in situ (plasma/electrochemical) to decompose stains without bulk water.",
+    "description": "Use electrical or plasma processes (electrocoagulation, in-situ oxidant or plasma generation) to chemically alter, aggregate, or decompose contaminants to aid low-water removal."
+  },
+  {
+    "idea_id": "4",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Phase-change and advanced solvent extraction"
+      }
+    ],
+    "explanation": "Use vaporization/condensation and pressure swings to dissolve and recover contaminants with minimal liquid.",
+    "description": "Use vapor/condensation cycles, pressurization swings, or non-traditional solvent states (near-/supercritical, vapor-phase cleaning) to dissolve and transport contaminants without saturating textiles with bulk water."
+  },
+  {
+    "idea_id": "5",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Phase-change and advanced solvent extraction"
+      }
+    ],
+    "explanation": "Supercritical/near‑critical fluids act as non-liquid solvents to dissolve and extract contaminants without water.",
+    "description": "Use vapor/condensation cycles, pressurization swings, or non-traditional solvent states (near-/supercritical, vapor-phase cleaning) to dissolve and transport contaminants without saturating textiles with bulk water."
+  },
+  {
+    "idea_id": "6",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Localized controlled dosing and triggered release"
+      }
+    ],
+    "explanation": "Deliver micro-droplets or thin solvent films to stain sites, minimizing overall wetting and water use.",
+    "description": "Deliver concentrated actives or cleaning payloads on demand at specific sites via micro-dosing, microcapsules, thin films, or triggered carriers that release chemistry only where needed."
+  },
+  {
+    "idea_id": "7",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Phase-change and advanced solvent extraction"
+      }
+    ],
+    "explanation": "Sealed high-humidity/minimal-liquid chamber uses vapor-phase cleaning to treat garments without bulk water.",
+    "description": "Use vapor/condensation cycles, pressurization swings, or non-traditional solvent states (near-/supercritical, vapor-phase cleaning) to dissolve and transport contaminants without saturating textiles with bulk water."
+  },
+  {
+    "idea_id": "8",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Continuous purification and recirculation"
+      }
+    ],
+    "explanation": "Filter and separate contaminants from transport fluid, recirculating cleaned water/solvent for reuse.",
+    "description": "Separate contaminants from the transport fluid in real time (filtration, trapping, recovery) and return cleaned solvent/water for immediate reuse to reduce net water consumption."
+  },
+  {
+    "idea_id": "9",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Chemical solubilization, adsorption and sequestration"
+      }
+    ],
+    "explanation": "Engineered sorbents adsorb soils, then are regenerated to release contaminants and reuse sorbent and fluid.",
+    "description": "Apply surfactants, enzymes, chelators, adsorbents or engineered sorbents that solubilize, digest, bind or sequester soils into removable phases that reduce rinse volume; includes sorbent regeneration."
+  },
+  {
+    "idea_id": "10",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Localized controlled dosing and triggered release"
+      }
+    ],
+    "explanation": "Microcapsules release concentrated cleaning actives on trigger, localizing chemistry and reducing water needs.",
+    "description": "Deliver concentrated actives or cleaning payloads on demand at specific sites via micro-dosing, microcapsules, thin films, or triggered carriers that release chemistry only where needed."
+  },
+  {
+    "idea_id": "11",
+    "labels": [
+      {
+        "id": "12",
+        "name": "Stimulus-responsive surface release and removable coatings"
+      }
+    ],
+    "explanation": "Apply peelable film that binds soils and is removed mechanically to extract contaminants without heavy rinsing.",
+    "description": "Temporarily change fabric/fiber surface adhesion via smart coatings or apply sacrificial peelable films that bind soils and are removed, enabling capture or low-water extraction of contaminants."
+  },
+  {
+    "idea_id": "12",
+    "labels": [
+      {
+        "id": "7",
+        "name": "Foam- and bubble-mediated flotation and lift"
+      }
+    ],
+    "explanation": "Foams or bubbles attach to hydrophobic soils and lift them away for collection, minimizing textile wetting.",
+    "description": "Use foamed media or bubbles that attach to hydrophobic particles and lift or float soils away from fibers for collection, minimizing wetting of the bulk textile."
+  },
+  {
+    "idea_id": "13",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Mechanical agitation and solid-contact abrasion"
+      }
+    ],
+    "explanation": "Solid pads or particles abrade or transfer soils from fibers for subsequent low-water removal.",
+    "description": "Apply relative motion, tumbling, collisions, textured pads or solid abrasives to mechanically dislodge or transfer soils from fabric surfaces for subsequent low-water removal."
+  },
+  {
+    "idea_id": "14",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Mechanical agitation and solid-contact abrasion"
+      }
+    ],
+    "explanation": "Tumbling and collisions mechanically dislodge soils and reorient fabrics for easier extraction.",
+    "description": "Apply relative motion, tumbling, collisions, textured pads or solid abrasives to mechanically dislodge or transfer soils from fabric surfaces for subsequent low-water removal."
+  },
+  {
+    "idea_id": "15",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Acoustic and impulse detachment"
+      }
+    ],
+    "explanation": "Ultrasound, acoustic waves or air pulses break soil–fiber bonds and eject contaminants without large water volumes.",
+    "description": "Use high-frequency vibrations, ultrasound, surface acoustic waves, shockwaves, or pulsed-air impulses to fracture soil–fiber bonds and eject or loosen contaminants for collection without large water volumes."
+  },
+  {
+    "idea_id": "16",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Field-driven particle transport and capture"
+      }
+    ],
+    "explanation": "Electric/ionic/magnetic fields move or concentrate charged/magnetic particles for capture without bulk solvent transport.",
+    "description": "Use electric, ionic, electrophoretic, dielectrophoretic or magnetic fields to move, concentrate, or capture charged/magnetic particles for later removal without relying on bulk solvent transport."
+  },
+  {
+    "idea_id": "17",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Targeted sensing and localized actuation"
+      }
+    ],
+    "explanation": "Electrowetting controls local wetting to mobilize droplets and remove soils only where needed.",
+    "description": "Detect stain location or soil concentration and apply localized interventions (micro-sprays, heated spots, electrowetting, local mechanical actuators) to treat only contaminated areas and minimize overall water use."
+  },
+  {
+    "idea_id": "18",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Flow- and suction-driven extraction"
+      }
+    ],
+    "explanation": "Vacuum/suction lifts and entrains loosened particles and gases away from textiles with minimal liquid.",
+    "description": "Remove loosened soils by moving fluids or gases through or away from textiles (pressure flushing, gentle continuous extraction flows, vacuum/pneumatic suction) to carry contaminants out with minimal liquid volume."
+  },
+  {
+    "idea_id": "19",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Flow- and suction-driven extraction"
+      }
+    ],
+    "explanation": "Force fluid through fabric pores to flush entrained contaminants out using targeted flow.",
+    "description": "Remove loosened soils by moving fluids or gases through or away from textiles (pressure flushing, gentle continuous extraction flows, vacuum/pneumatic suction) to carry contaminants out with minimal liquid volume."
+  },
+  {
+    "idea_id": "20",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Flow- and suction-driven extraction"
+      }
+    ],
+    "explanation": "Maintain a gentle extraction flow to continuously capture suspended particles without disrupting fabrics.",
+    "description": "Remove loosened soils by moving fluids or gases through or away from textiles (pressure flushing, gentle continuous extraction flows, vacuum/pneumatic suction) to carry contaminants out with minimal liquid volume."
+  },
+  {
+    "idea_id": "21",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Phase-change and advanced solvent extraction"
+      }
+    ],
+    "explanation": "Uses freeze/thaw phase-change cycles to create stresses that pry out embedded dirt.",
+    "description": "Use vapor/condensation cycles, pressurization swings, or non-traditional solvent states (near-/supercritical, vapor-phase cleaning) to dissolve and transport contaminants without saturating textiles with bulk water."
+  },
+  {
+    "idea_id": "22",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Targeted sensing and localized actuation"
+      }
+    ],
+    "explanation": "Targeted IR/microwave/RF heating selectively warms soils to loosen adhesion while sparing fabric.",
+    "description": "Detect stain location or soil concentration and apply localized interventions (micro-sprays, heated spots, electrowetting, local mechanical actuators) to treat only contaminated areas and minimize overall water use."
+  },
+  {
+    "idea_id": "23",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Acoustic and impulse detachment"
+      }
+    ],
+    "explanation": "Generate shockwaves/pressure impulses to fracture soil–fiber bonds and eject contaminants for capture.",
+    "description": "Use high-frequency vibrations, ultrasound, surface acoustic waves, shockwaves, or pulsed-air impulses to fracture soil–fiber bonds and eject or loosen contaminants for collection without large water volumes."
+  },
+  {
+    "idea_id": "24",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Chemical solubilization, adsorption and sequestration"
+      }
+    ],
+    "explanation": "Chelators and adsorbents sequester metal-bound or hydrophobic soils into removable complexes.",
+    "description": "Apply surfactants, enzymes, chelators, adsorbents or engineered sorbents that solubilize, digest, bind or sequester soils into removable phases that reduce rinse volume; includes sorbent regeneration."
+  },
+  {
+    "idea_id": "25",
+    "labels": [
+      {
+        "id": "12",
+        "name": "Stimulus-responsive surface release and removable coatings"
+      }
+    ],
+    "explanation": "Change surface adhesion via stimuli-responsive coatings or triggers to release and capture contaminants.",
+    "description": "Temporarily change fabric/fiber surface adhesion via smart coatings or apply sacrificial peelable films that bind soils and are removed, enabling capture or low-water extraction of contaminants."
+  },
+  {
+    "idea_id": "26",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Electrochemical and plasma-driven transformations"
+      }
+    ],
+    "explanation": "Apply electrical currents to destabilize colloids and aggregate fine contaminants for easier filtration.",
+    "description": "Use electrical or plasma processes (electrocoagulation, in-situ oxidant or plasma generation) to chemically alter, aggregate, or decompose contaminants to aid low-water removal."
+  },
+  {
+    "idea_id": "27",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Field-modulated fluid rheology"
+      }
+    ],
+    "explanation": "Modify fluid rheology with fields/additives so stresses preferentially release adhered particles.",
+    "description": "Change transport fluid properties (viscosity, viscoelasticity) via additives or applied fields so fluid stresses preferentially release adhered particles while minimizing required water volume."
+  },
+  {
+    "idea_id": "28",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Targeted sensing and localized actuation"
+      }
+    ],
+    "explanation": "Detect stains and apply localized sprays/heating/mechanics to treat only contaminated areas, minimizing water.",
+    "description": "Detect stain location or soil concentration and apply localized interventions (micro-sprays, heated spots, electrowetting, local mechanical actuators) to treat only contaminated areas and minimize overall water use."
+  }
+]

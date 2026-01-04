@@ -1,0 +1,980 @@
+{
+  "task": "clean laundry with less water",
+  "idea_items": [
+    {
+      "id": 0,
+      "text": "Surface Hydrophobicity Modification: Altering the textile surface energy to create extreme water and dirt repellency.",
+      "original_id": "1-B1"
+    },
+    {
+      "id": 1,
+      "text": "Supercritical fluid solvation: The process of pressurizing a substance to a supercritical state where it exhibits properties of both gas and liquid to dissolve dirt.",
+      "original_id": "2-B1"
+    },
+    {
+      "id": 2,
+      "text": "Pressure-modulated phase change cycle: Changing the physical state of the cleaning agent via pressurization and depressurization to facilitate cleaning and subsequent collection.",
+      "original_id": "2-B2"
+    },
+    {
+      "id": 3,
+      "text": "Ultrasonic Cavitation: The generation of microscopic bubbles in a liquid medium through sound waves that implode to dislodge contaminants.",
+      "original_id": "3-B1"
+    },
+    {
+      "id": 4,
+      "text": "Low-Volume Liquid Exposure: Limiting the amount of fluid the target object is submerged in or exposed to.",
+      "original_id": "3-B2"
+    },
+    {
+      "id": 5,
+      "text": "Mist Application: Dispersing cleaning agents as a fine aerosol to humidify and release dirt.",
+      "original_id": "4-B1"
+    },
+    {
+      "id": 6,
+      "text": "Condensation and Filtration Cycle: Converting vapor back to liquid to trap impurities and clean the fluid.",
+      "original_id": "4-B2"
+    },
+    {
+      "id": 7,
+      "text": "Ionized Gas Exposure: Exposing fabric surfaces to electrically charged gas particles to facilitate the breakdown of odors and microbes.",
+      "original_id": "5-B1"
+    },
+    {
+      "id": 8,
+      "text": "Targeted contaminant removal: Applying cleaning agents or mechanical force precisely to stained areas.",
+      "original_id": "6-B1"
+    },
+    {
+      "id": 9,
+      "text": "Optical sensing: Using light-based sensors to scan surfaces for visual irregularities.",
+      "original_id": "6-B2"
+    },
+    {
+      "id": 10,
+      "text": "Radiation-based sterilization: Using electromagnetic radiation to kill bacteria and eliminate odors without physical contact.",
+      "original_id": "7-B1"
+    },
+    {
+      "id": 11,
+      "text": "Enclosed exposure chamber: A contained environment designed to expose items to a treatment agent.",
+      "original_id": "7-B2"
+    },
+    {
+      "id": 12,
+      "text": "Triboelectric Charging: Inducing an electrical charge through friction in a dry environment.",
+      "original_id": "8-B1"
+    },
+    {
+      "id": 13,
+      "text": "Coulombic Attraction Collection: Using opposite electrical charges to attract and capture charged particles.",
+      "original_id": "8-B2"
+    },
+    {
+      "id": 14,
+      "text": "Multi-Stage Filtration Process: A sequence of physical and chemical treatments designed to remove contaminants from a fluid.",
+      "original_id": "9-B1"
+    },
+    {
+      "id": 15,
+      "text": "Integrated Recycling System: A built-in mechanism that routes treated output back to the input for immediate reuse.",
+      "original_id": "9-B2"
+    },
+    {
+      "id": 16,
+      "text": "Solid media blasting: Propelling solid particles at high speed to strike and dislodge debris",
+      "original_id": "10-B1"
+    },
+    {
+      "id": 17,
+      "text": "Sublimation agitation: Using the rapid expansion of a solid turning into gas to create cleaning agitation",
+      "original_id": "10-B2"
+    },
+    {
+      "id": 18,
+      "text": "Enzymatic Digestion: Using biological catalysts to chemically break down stain molecules into smaller fragments.",
+      "original_id": "11-B1"
+    },
+    {
+      "id": 19,
+      "text": "Absorptive Transfer: Using a porous material to wick away or lift the broken-down residues from the fabric surface.",
+      "original_id": "11-B2"
+    },
+    {
+      "id": 20,
+      "text": "Adsorptive filtration media: A porous material system that traps odors and particulates from the air stream.",
+      "original_id": "12-B1"
+    },
+    {
+      "id": 21,
+      "text": "Forced air circulation: Active mechanical movement of air through the items and filtration system.",
+      "original_id": "12-B2"
+    },
+    {
+      "id": 22,
+      "text": "Enclosed treatment chamber: A physical structure designed to house garments during the cleaning cycle.",
+      "original_id": "12-B3"
+    },
+    {
+      "id": 23,
+      "text": "Abrasive Granular Absorbent: Small, solid particles that mechanically interact with fabric to lift dirt while chemically soaking up oils and odors.",
+      "original_id": "13-B1"
+    },
+    {
+      "id": 24,
+      "text": "Mechanical Media Separation: The physical process of removing the solid cleaning agents from the cleaned items after the cycle.",
+      "original_id": "13-B2"
+    },
+    {
+      "id": 25,
+      "text": "Acoustic streaming: The use of sound waves to induce steady flow and shear forces within a fluid for cleaning action.",
+      "original_id": "14-B1"
+    },
+    {
+      "id": 26,
+      "text": "Thin-film confinement: Restricting liquid to a microscopic layer to minimize volume while maintaining surface contact.",
+      "original_id": "14-B2"
+    },
+    {
+      "id": 27,
+      "text": "Microbial Digestion Process: The application of specific biological agents that consume organic matter and odor compounds.",
+      "original_id": "15-B1"
+    },
+    {
+      "id": 28,
+      "text": "Low-Humidity Enclosure: A confined space designed to regulate temperature and humidity with minimal liquid water.",
+      "original_id": "15-B2"
+    },
+    {
+      "id": 29,
+      "text": "Vacuum Suction Removal: Using negative pressure airflow to lift and remove particulates from fabric fibers.",
+      "original_id": "16-B1"
+    },
+    {
+      "id": 30,
+      "text": "Tumbling Action: Rotating items within a confined space to facilitate movement and exposure.",
+      "original_id": "16-B2"
+    },
+    {
+      "id": 31,
+      "text": "Friction-Based Dislodgement: Applying physical contact to loosen adhered particles.",
+      "original_id": "16-B3"
+    },
+    {
+      "id": 32,
+      "text": "Photocatalytic oxidation: Using light energy to activate a catalyst that accelerates the oxidation of organic contaminants.",
+      "original_id": "17-B1"
+    },
+    {
+      "id": 33,
+      "text": "Capillary absorption medium: Using wicking materials to actively draw out and trap oils and grime from fibers.",
+      "original_id": "18-B1"
+    },
+    {
+      "id": 34,
+      "text": "Cryogenic Freezing: Rapidly lowering the temperature of the target object to induce brittleness in foreign matter.",
+      "original_id": "19-B1"
+    },
+    {
+      "id": 35,
+      "text": "Agitation Removal: Using shaking or sweeping motions to dislodge brittle residues.",
+      "original_id": "19-B2"
+    },
+    {
+      "id": 36,
+      "text": "Electrochemical contaminant aggregation: Using electrical charges to destabilize suspended particles and force them to clump together for easier removal from a fluid.",
+      "original_id": "20-B1"
+    },
+    {
+      "id": 37,
+      "text": "High-Velocity Air Vortex Agitation: Generating controlled, spiraling air currents to lift and transport surface contaminants from fabric fibers.",
+      "original_id": "21-B1"
+    },
+    {
+      "id": 38,
+      "text": "Airflow Particulate Collection: A system to intercept and hold debris carried by the moving air.",
+      "original_id": "21-B2"
+    },
+    {
+      "id": 39,
+      "text": "Selective Adhesion to Contaminants: Engineered particles designed to bind specifically to dirt and oils rather than the fabric itself.",
+      "original_id": "22-B1"
+    },
+    {
+      "id": 40,
+      "text": "Magnetic Field Extraction: The use of magnetic forces to pull cleaning agents out of the fabric matrix without traditional rinsing.",
+      "original_id": "22-B2"
+    },
+    {
+      "id": 41,
+      "text": "Gas bubble percolation scrubbing: The introduction of gas bubbles that pass through fabric to dislodge impurities via friction and movement.",
+      "original_id": "23-B1"
+    },
+    {
+      "id": 42,
+      "text": "Controlled minimal liquid environment: A specific chamber environment designed to hold clothes in a small amount of water or solution.",
+      "original_id": "23-B2"
+    },
+    {
+      "id": 43,
+      "text": "Osmotic pressure separation: Utilizing the difference in solute concentration to pull water and dissolved contaminants from the fabric into a higher concentration medium.",
+      "original_id": "24-B1"
+    },
+    {
+      "id": 44,
+      "text": "Reactive Species Oxidation: The core process where generated reactive agents (ozone, oxygen/nitrogen species) interact with and degrade contaminants on the fabric surface.",
+      "original_id": "25-B1"
+    },
+    {
+      "id": 45,
+      "text": "Ion migration via potential difference: Applying an electric current to draw charged impurities out of a substrate and across selective barriers",
+      "original_id": "26-B1"
+    },
+    {
+      "id": 46,
+      "text": "Stimuli-responsive polymer expansion/contraction cycle: A mechanism where polymers swell to dislodge dirt and contract to expel it upon environmental triggers.",
+      "original_id": "27-B1"
+    },
+    {
+      "id": 47,
+      "text": "Resonant frequency disruption: Applying targeted frequencies to break the physical bonds between dirt and fabric.",
+      "original_id": "28-B1"
+    },
+    {
+      "id": 48,
+      "text": "Suction-based extraction: Collecting dislodged particles using air pressure or filtration mechanisms.",
+      "original_id": "28-B2"
+    },
+    {
+      "id": 49,
+      "text": "Shear force generation via surface geometry: Utilizing specific surface textures to create localized forces that dislodge contaminants.",
+      "original_id": "29-B1"
+    },
+    {
+      "id": 50,
+      "text": "Thin-film fluid flow: Applying a minimal, continuous layer of liquid rather than a bath.",
+      "original_id": "29-B2"
+    },
+    {
+      "id": 51,
+      "text": "Vapor condensation and re-evaporation cycle: A process where a cleaning agent turns to vapor, condenses on the target to clean, and evaporates again to remove waste.",
+      "original_id": "30-B1"
+    },
+    {
+      "id": 52,
+      "text": "Solvent-based dissolution: Using chemical solvents specifically designed to dissolve oils and grime without water.",
+      "original_id": "30-B2"
+    },
+    {
+      "id": 53,
+      "text": " contaminant recovery system: A mechanism to separate removed contaminants from the cleaning agent for reuse.",
+      "original_id": "30-B3"
+    },
+    {
+      "id": 54,
+      "text": "Electrophoretic Migration: Applying an oscillating electric field to cause charged contaminant particles to move away from the substrate.",
+      "original_id": "31-B1"
+    },
+    {
+      "id": 55,
+      "text": "Conductive Film Interface: Establishing a thin, electrically conductive liquid layer on the material surface.",
+      "original_id": "31-B2"
+    },
+    {
+      "id": 56,
+      "text": "Biomimetic Adhesive Contact: Utilizing surface structures that mimic biological adhesion properties to capture particulate matter.",
+      "original_id": "32-B1"
+    },
+    {
+      "id": 57,
+      "text": "Geometry-Dependent Release: Altering physical orientation or pressure to disengage the adhesion mechanism.",
+      "original_id": "32-B2"
+    },
+    {
+      "id": 58,
+      "text": "Motion-induced piezoelectric vibration: Converting mechanical tumbling energy into high-frequency micro-vibrations within the fabric to dislodge debris.",
+      "original_id": "33-B1"
+    },
+    {
+      "id": 59,
+      "text": "Vacuum-assisted debris removal: Capturing loosened particles using suction and filtering mechanisms.",
+      "original_id": "33-B2"
+    },
+    {
+      "id": 60,
+      "text": "Adsorptive Dehumidification Cleaning: Using active materials to pull moisture and contaminants directly from fabric into an air stream and trapping them.",
+      "original_id": "34-B1"
+    },
+    {
+      "id": 61,
+      "text": "Thermal Desorption: Applying heat to release trapped contaminants from the cleaning medium.",
+      "original_id": "34-B2"
+    },
+    {
+      "id": 62,
+      "text": "Acoustic levitation and manipulation: Using sound waves to suspend objects and induce vibration or movement to dislodge debris.",
+      "original_id": "35-B1"
+    },
+    {
+      "id": 63,
+      "text": "Air-based suction removal: Applying a flow of air to capture and carry away loose particulate matter.",
+      "original_id": "35-B2"
+    },
+    {
+      "id": 64,
+      "text": "Field-Actuated Viscosity Modulation: Using an external field to rapidly alter the viscosity of a fluid to mechanically stress and release particles.",
+      "original_id": "36-B1"
+    },
+    {
+      "id": 65,
+      "text": "Filtration-Based Recycling: Mechanically separating contaminants from the working fluid to allow continuous reuse.",
+      "original_id": "36-B2"
+    },
+    {
+      "id": 66,
+      "text": "Absorptive Transfer Medium: A reusable physical interface that pulls contaminants from the target surface onto itself through material properties.",
+      "original_id": "37-B1"
+    },
+    {
+      "id": 67,
+      "text": "Micro-volume Solvent Application: Applying a very small quantity of liquid in a dispersed form to activate the cleaning process without saturation.",
+      "original_id": "37-B2"
+    },
+    {
+      "id": 68,
+      "text": "Adhesive polymer application: Applying a substance engineered to bond to dirt and odor molecules.",
+      "original_id": "38-B1"
+    },
+    {
+      "id": 69,
+      "text": "Stimuli-responsive shedding: Inducing the cleaning medium to release from the substrate via environmental change.",
+      "original_id": "38-B2"
+    },
+    {
+      "id": 70,
+      "text": "Reactive species degradation: Using energetic, unstable molecules to react with and dismantle organic compounds on surfaces.",
+      "original_id": "39-B1"
+    },
+    {
+      "id": 71,
+      "text": "Volatilization and suction: Converting broken-down matter into vapor and mechanically removing it via negative pressure.",
+      "original_id": "39-B2"
+    },
+    {
+      "id": 72,
+      "text": "Acoustic field manipulation: Using sound waves to exert force on specific particles within a fluid volume to control their position.",
+      "original_id": "40-B1"
+    },
+    {
+      "id": 73,
+      "text": "Continuous filtration recirculation: Process of removing aggregated contaminants and returning clean fluid to the process.",
+      "original_id": "40-B2"
+    },
+    {
+      "id": 74,
+      "text": "Sublimation Extraction: Converting the frozen cleaning medium directly from solid to gas to carry away dirt.",
+      "original_id": "41-B1"
+    },
+    {
+      "id": 75,
+      "text": "Targeted Misting Encapsulation: Applying a fine dispersion of liquid to wet fabric and capture dirt particles.",
+      "original_id": "41-B2"
+    },
+    {
+      "id": 76,
+      "text": "Micro-textured friction surface: Using fine, engineered structures to mechanically dislodge and separate contaminants from surfaces through contact and movement.",
+      "original_id": "42-B1"
+    },
+    {
+      "id": 77,
+      "text": "Suction collection system: A vacuum-based mechanism to gather and contain loose particles.",
+      "original_id": "42-B2"
+    },
+    {
+      "id": 78,
+      "text": "Thermal membrane separation: Using a temperature-driven membrane process to separate pure water vapor from liquid contaminants.",
+      "original_id": "43-B1"
+    },
+    {
+      "id": 79,
+      "text": "Encapsulated Agent Embedding: Storing cleaning agents within microscopic containers integrated into the material itself.",
+      "original_id": "44-B1"
+    },
+    {
+      "id": 80,
+      "text": "Mechanical Rupture Activation: Triggering the release of stored agents through physical stress or friction.",
+      "original_id": "44-B2"
+    },
+    {
+      "id": 81,
+      "text": "Chemical Adsorption: Using sorbent materials to reversibly bind and trap volatile organic compounds from circulating air.",
+      "original_id": "45-B1"
+    },
+    {
+      "id": 82,
+      "text": "Active Regeneration: Applying external energy or pressure changes to release trapped compounds from the sorbent bed.",
+      "original_id": "45-B2"
+    },
+    {
+      "id": 83,
+      "text": "Electrowetting actuation: Modifying the wetting properties of a surface using electric fields to move fluids.",
+      "original_id": "46-B1"
+    },
+    {
+      "id": 84,
+      "text": "Localized micro-dispensing: Precise deposition of small fluid volumes onto defined zones.",
+      "original_id": "46-B2"
+    },
+    {
+      "id": 85,
+      "text": "Electro-guided transport: Moving collected waste fluid to a specific location via surface forces.",
+      "original_id": "46-B3"
+    },
+    {
+      "id": 86,
+      "text": "Broadband multi-modal vibration: Generating a complex spectrum of mechanical vibrations (compressional and shear) to target diverse particle adhesion types.",
+      "original_id": "47-B1"
+    },
+    {
+      "id": 87,
+      "text": "Airflow extraction: Using a flow of air to carry away particles that have been physically dislodged from the material.",
+      "original_id": "47-B2"
+    },
+    {
+      "id": 88,
+      "text": "Hypoxic Atmosphere Maintenance: Creating and sustaining an oxygen-reduced environment to limit aerobic metabolic processes of microorganisms.",
+      "original_id": "48-B1"
+    },
+    {
+      "id": 89,
+      "text": "Photomechanical Ablation via Micro-particles: Applying directed light energy to solid particles on a surface to induce localized mechanical lifting of contaminants.",
+      "original_id": "49-B1"
+    },
+    {
+      "id": 90,
+      "text": "Pneumatic Extraction: Using suction or airflow to remove loose solids from the substrate.",
+      "original_id": "49-B2"
+    },
+    {
+      "id": 91,
+      "text": "Electrolytic Oxidation: Applying current through an electrolyte to generate reactive species that oxidize organic matter.",
+      "original_id": "50-B1"
+    },
+    {
+      "id": 92,
+      "text": "Targeted Contact Interface: A mechanism to bring the active cleaning agents into direct contact with soiled areas.",
+      "original_id": "50-B2"
+    },
+    {
+      "id": 93,
+      "text": "Gas-Phase Chemical Desorption: Utilizing a gaseous carrier and specific binding agent to chemically release and transport contaminants from the material matrix.",
+      "original_id": "51-B1"
+    },
+    {
+      "id": 94,
+      "text": "Continuous Purification and Recirculation: Separating contaminants from the transport medium to allow for immediate reuse.",
+      "original_id": "51-B2"
+    },
+    {
+      "id": 95,
+      "text": "Selective optical absorption: A process where light energy is tuned to be absorbed by contaminants rather than the substrate material.",
+      "original_id": "52-B1"
+    },
+    {
+      "id": 96,
+      "text": "Photo-mechanical shockwave generation: The conversion of absorbed light energy into mechanical waves that physically dislodge particles.",
+      "original_id": "52-B2"
+    },
+    {
+      "id": 97,
+      "text": "Pneumatic particle extraction: The use of gas currents to capture and remove dislodged particulate matter.",
+      "original_id": "52-B3"
+    },
+    {
+      "id": 98,
+      "text": "Differential chemical affinity: Using materials engineered to attract dirt molecules more strongly than the substrate (fabric) holds them.",
+      "original_id": "53-B1"
+    },
+    {
+      "id": 99,
+      "text": "Mechanical media restoration: A secondary process that physically or chemically strips collected contaminants from the primary cleaning interface.",
+      "original_id": "53-B2"
+    },
+    {
+      "id": 100,
+      "text": "Selective electromagnetic heating: Applying electromagnetic fields tuned to heat specific target materials (dirt) while leaving the substrate (fabric) relatively unaffected.",
+      "original_id": "54-B1"
+    },
+    {
+      "id": 101,
+      "text": "Agitation-assisted dislodgement: Using physical motion or fluid flow to separate loosened particles from surfaces.",
+      "original_id": "54-B2"
+    },
+    {
+      "id": 102,
+      "text": "Particulate filtration: Passing the medium through a barrier to trap solid particles.",
+      "original_id": "54-B3"
+    },
+    {
+      "id": 103,
+      "text": "Chelation-based contaminant complexation: Using chemical agents to bind metal ions, oils, and dirt into complexes that are easily rinsed away.",
+      "original_id": "55-B1"
+    },
+    {
+      "id": 104,
+      "text": "Post-process fluid purification: Cleaning used rinse water by removing specific waste complexes to enable recycling.",
+      "original_id": "55-B2"
+    },
+    {
+      "id": 105,
+      "text": "Localized Pressure Pulsation: Generating rapid, non-linear air movements and micro-turbulences to physically agitate fibers and release debris.",
+      "original_id": "56-B1"
+    },
+    {
+      "id": 106,
+      "text": "Low-Velocity Extraction Flow: Using a gentle, continuous background current to capture suspended particles without disrupting the agitation process.",
+      "original_id": "56-B2"
+    },
+    {
+      "id": 107,
+      "text": "Lipid solubilization and emulsification: The core process of using specific agents to dissolve or suspend fatty and waxy substances to weaken their adhesion to fibers.",
+      "original_id": "57-B1"
+    },
+    {
+      "id": 108,
+      "text": "Recirculating vapor sterilization system: A system that continuously cycles a cleaning medium from liquid to gas and back, applying thermal shock and vapor action to the target.",
+      "original_id": "58-B1"
+    },
+    {
+      "id": 109,
+      "text": "Affinity-Based Sacrificial Coating: A coating layer applied to the fabric that chemically or physically attracts dirt more strongly than the fabric does.",
+      "original_id": "59-B1"
+    },
+    {
+      "id": 110,
+      "text": "Stimulus-Responsive Debonding: The mechanism where a mild external trigger causes the coating to lose adhesion to the fabric.",
+      "original_id": "59-B2"
+    },
+    {
+      "id": 111,
+      "text": "Pneumatic Particle Extraction: A system that captures solid debris (coating + dirt) from the environment after separation.",
+      "original_id": "59-B3"
+    },
+    {
+      "id": 112,
+      "text": "Surface Acoustic Wave Generation: Using high-frequency waves propagating along a material surface to exert localized mechanical forces.",
+      "original_id": "60-B1"
+    },
+    {
+      "id": 113,
+      "text": "Suction Removal: Using negative pressure to collect loose particulate matter.",
+      "original_id": "60-B2"
+    },
+    {
+      "id": 114,
+      "text": "Passive field generation via material property: Utilizing materials that permanently retain electric charge to create necessary fields through movement.",
+      "original_id": "61-B1"
+    },
+    {
+      "id": 115,
+      "text": "Field-based particle separation: Directing particles away from surfaces or towards collectors using attraction/repulsion forces.",
+      "original_id": "61-B2"
+    },
+    {
+      "id": 116,
+      "text": "Surface-Based Micro-Abrasion: Using textured surfaces to penetrate fabric weaves and physically lift debris during motion.",
+      "original_id": "62-B1"
+    },
+    {
+      "id": 117,
+      "text": "Targeted Capture Mechanism: Using engineered particles designed to bond specifically with organic contaminants.",
+      "original_id": "63-B1"
+    },
+    {
+      "id": 118,
+      "text": "Triggered Detachment: Applying a specific, mild external force to break the bond between the cleaning agent and the fabric.",
+      "original_id": "63-B2"
+    },
+    {
+      "id": 119,
+      "text": "Continuous greywater recirculation: The process of routing used wash water (greywater) back into the washing system after purification.",
+      "original_id": "64-B1"
+    },
+    {
+      "id": 120,
+      "text": "Forward osmosis filtration: Using a semi-permeable membrane and a concentrated draw solution to naturally pull clean water out of contaminated feed water.",
+      "original_id": "64-B2"
+    },
+    {
+      "id": 121,
+      "text": "Aerodynamic levitation: Using airflow to support the weight of the garment in mid-air.",
+      "original_id": "65-B1"
+    },
+    {
+      "id": 122,
+      "text": "Pneumatic suction removal: Applying negative pressure or high-velocity air flow to physically pull debris away from the surface.",
+      "original_id": "65-B2"
+    },
+    {
+      "id": 123,
+      "text": "Micro-targeted agent application: Applying cleaning agents in extremely small, precise quantities directly onto contaminants.",
+      "original_id": "66-B1"
+    },
+    {
+      "id": 124,
+      "text": "Localized suction/absorption removal: Using negative pressure or absorbent materials to lift fluid and dirt from a specific spot.",
+      "original_id": "66-B2"
+    },
+    {
+      "id": 125,
+      "text": "Thermophoresis: The migration of particles driven by a temperature gradient from a warmer region to a cooler region.",
+      "original_id": "67-B1"
+    },
+    {
+      "id": 126,
+      "text": "Temperature gradient generation: Establishing a differential in temperature between two surfaces or zones.",
+      "original_id": "67-B2"
+    },
+    {
+      "id": 127,
+      "text": "Electrohydrodynamic airflow generation: Using electric fields to create an 'ion wind' that physically dislodges contaminants.",
+      "original_id": "68-B1"
+    },
+    {
+      "id": 128,
+      "text": "Filtration-based collection: Separating suspended particles and molecules from the airflow stream.",
+      "original_id": "68-B2"
+    },
+    {
+      "id": 129,
+      "text": "Switchable Adhesion Transfer: The process of transferring contaminants from a target to a collector by temporarily increasing surface stickiness.",
+      "original_id": "69-B1"
+    },
+    {
+      "id": 130,
+      "text": "Self-Cleaning Release Mechanism: Reversing adhesion properties to detach collected contaminants for disposal and system regeneration.",
+      "original_id": "69-B2"
+    },
+    {
+      "id": 131,
+      "text": "Stimuli-Responsive Mechanical Actuation: Embedded materials that change physical volume or shape in response to environmental triggers to push dirt out.",
+      "original_id": "70-B1"
+    },
+    {
+      "id": 132,
+      "text": "Pneumatic Particle Transport: Using air currents to carry away loose particles after they have been separated from the surface.",
+      "original_id": "70-B2"
+    },
+    {
+      "id": 133,
+      "text": "Gaseous solvent injection: The precise application of a cleaning agent in a gaseous state to penetrate materials and dissolve contaminants.",
+      "original_id": "71-B1"
+    },
+    {
+      "id": 134,
+      "text": "Vacuum-assisted removal: Using negative pressure to pull the contaminant-carrying agent out of the material for recovery.",
+      "original_id": "71-B2"
+    },
+    {
+      "id": 135,
+      "text": "Foam-based soil suspension: Using a dense, agitated bubble structure to emulsify and lift dirt from fabric surfaces.",
+      "original_id": "72-B1"
+    },
+    {
+      "id": 136,
+      "text": "Phase-change fluid recovery: Altering the physical state of the cleaning medium to separate waste from the liquid.",
+      "original_id": "72-B2"
+    },
+    {
+      "id": 137,
+      "text": "Aerodynamic and Thermal Gradient Manipulation: Utilizing high-velocity airflow and temperature differences to create physical forces (dislodging and thermophoresis) that separate particles from surfaces.",
+      "original_id": "73-B1"
+    },
+    {
+      "id": 138,
+      "text": "High-energy particle irradiation: Using directed energy particles to target and break organic compounds.",
+      "original_id": "74-B1"
+    },
+    {
+      "id": 139,
+      "text": "Pneumatic byproduct removal: Using air suction to remove detached debris and gases.",
+      "original_id": "74-B2"
+    },
+    {
+      "id": 140,
+      "text": "Selective chelation: Using agents that specifically bond to metallic ions and organic pollutants to detach them from the fabric.",
+      "original_id": "75-B1"
+    },
+    {
+      "id": 141,
+      "text": "Mist-based delivery: Distributing the cleaning solution as a fine spray rather than a full immersion bath.",
+      "original_id": "75-B2"
+    },
+    {
+      "id": 142,
+      "text": "Post-process filtration: Passing the used rinsing water through a filter to capture the bound contaminants.",
+      "original_id": "75-B3"
+    },
+    {
+      "id": 143,
+      "text": "Photothermal Ablation: Using light energy to induce localized vaporization or decomposition of material.",
+      "original_id": "76-B1"
+    },
+    {
+      "id": 144,
+      "text": "Optical Identification: Recognizing target areas through light-based sensing.",
+      "original_id": "76-B2"
+    },
+    {
+      "id": 145,
+      "text": "Suction Collection: Using negative pressure to gather debris.",
+      "original_id": "76-B3"
+    },
+    {
+      "id": 146,
+      "text": "Targeted biofilm matrix disruption: Using specific biological agents to chemically break the bonds of the sticky matrix holding dirt and odors.",
+      "original_id": "77-B1"
+    },
+    {
+      "id": 147,
+      "text": "Atomized fluid deposition: Distributing the cleaning agent via fine airborne particles to minimize water volume.",
+      "original_id": "77-B2"
+    },
+    {
+      "id": 148,
+      "text": "Pneumatic or friction-based lifting: Separating loosened contaminants from the surface using airflow or physical wiping.",
+      "original_id": "77-B3"
+    },
+    {
+      "id": 149,
+      "text": "Shockwave Generation: Creating rapid, high-intensity pressure waves to break dirt-fabric bonds.",
+      "original_id": "78-B1"
+    },
+    {
+      "id": 150,
+      "text": "Suction Extraction: Using negative pressure to remove dislodged debris.",
+      "original_id": "78-B2"
+    },
+    {
+      "id": 151,
+      "text": "Froth flotation process: Introduction of gas pockets that selectively adhere to hydrophobic particles and lift them to the surface for removal.",
+      "original_id": "79-B1"
+    },
+    {
+      "id": 152,
+      "text": "Thermal Desorption: The application of controlled heat to cause adsorbed compounds (oils, odors) to release from a surface.",
+      "original_id": "80-B1"
+    },
+    {
+      "id": 153,
+      "text": "Convective Scavenging: Using a continuous flow of gas to sweep away vaporized contaminants.",
+      "original_id": "80-B2"
+    },
+    {
+      "id": 154,
+      "text": "Optical detection and localized micro-dosing: Using sensing technology to identify targets followed by precise deposition of minute amounts of fluid.",
+      "original_id": "81-B1"
+    },
+    {
+      "id": 155,
+      "text": "Evaporative extraction: Using localized airflow or pressure differentials to lift suspended particles by drying the solvent rapidly.",
+      "original_id": "81-B2"
+    },
+    {
+      "id": 156,
+      "text": "Electric field destabilization: Applying energy fields to weaken electrostatic bonds and disrupt biofilm integrity, facilitating detachment.",
+      "original_id": "82-B1"
+    },
+    {
+      "id": 157,
+      "text": "Supercritical fluid drying: Transitioning a solvent past its critical point to eliminate surface tension during the drying process.",
+      "original_id": "83-B1"
+    },
+    {
+      "id": 158,
+      "text": "Electro-kinetic fluid movement: Applying an electric field to induce fluid motion through porous media.",
+      "original_id": "84-B1"
+    },
+    {
+      "id": 159,
+      "text": "Pore-level flushing: Displacing fluid and contaminants from within the fabric structure using induced flow.",
+      "original_id": "84-B2"
+    },
+    {
+      "id": 160,
+      "text": "Film-Forming Polymer Adsorption: Applying a solution that solidifies into a film engineered to bind chemically or physically to oils and dirt.",
+      "original_id": "85-B1"
+    },
+    {
+      "id": 161,
+      "text": "Peel-Off Removal Mechanism: Detaching the solidified medium from the substrate to carry away encapsulated contaminants.",
+      "original_id": "85-B2"
+    },
+    {
+      "id": 162,
+      "text": "Biological Indicator-Based Sensing: Using biological reactions to visually signal the presence of specific contaminants.",
+      "original_id": "86-B1"
+    },
+    {
+      "id": 163,
+      "text": "Phase-Change or Vapor Cleaning: Cleaning processes that rely on dispersed fluids or ionized gas rather than liquid immersion.",
+      "original_id": "86-B2"
+    },
+    {
+      "id": 164,
+      "text": "Kinetic Molecular Sputtering: Dislodging contaminant molecules through the impact of accelerated particles.",
+      "original_id": "87-B1"
+    },
+    {
+      "id": 165,
+      "text": "Optical Dirt Mapping: Using visual sensing to create a map of stain locations for targeting.",
+      "original_id": "87-B2"
+    },
+    {
+      "id": 166,
+      "text": "Suction Collection: Using negative pressure to gather dislodged matter.",
+      "original_id": "87-B3"
+    },
+    {
+      "id": 167,
+      "text": "Catalytic Oxidation Reaction: Using a catalyst to accelerate the reaction between oxidants and organic contaminants.",
+      "original_id": "88-B1"
+    },
+    {
+      "id": 168,
+      "text": "Solid Contact Medium: The use of discrete solid objects to facilitate the interaction between the cleaning agents and the fabric.",
+      "original_id": "88-B2"
+    },
+    {
+      "id": 169,
+      "text": "Acoustic micro-scrubbing: The use of sound waves to induce bubble oscillation and cavitation forces at the surface interface.",
+      "original_id": "89-B1"
+    },
+    {
+      "id": 170,
+      "text": "Surface suction/wiping: Mechanical removal of a dirty fluid layer from a solid surface.",
+      "original_id": "89-B2"
+    },
+    {
+      "id": 171,
+      "text": "Particulate encapsulation carrier: A substance introduced to bind to or encapsulate dirt particles for subsequent removal.",
+      "original_id": "90-B1"
+    },
+    {
+      "id": 172,
+      "text": "Magnetic removal process: Using magnetic forces to agitate and draw the carrier substance out of the substrate.",
+      "original_id": "90-B2"
+    },
+    {
+      "id": 173,
+      "text": "Charged Contact Medium: A physical interface that uses static attraction and brushing motion to entangle and hold debris.",
+      "original_id": "91-B1"
+    },
+    {
+      "id": 174,
+      "text": "Active Debris Discharge: A mechanism to separate collected waste from the capture medium to refresh its capacity.",
+      "original_id": "91-B2"
+    },
+    {
+      "id": 175,
+      "text": "Micro-scale active surface displacement: The core principle of using a dynamic surface to physically lift or vibrate specific particles off fibers.",
+      "original_id": "92-B1"
+    },
+    {
+      "id": 176,
+      "text": "Localized sensing mechanism: The principle of detecting individual particles at the point of contact.",
+      "original_id": "92-B2"
+    },
+    {
+      "id": 177,
+      "text": "Localized suction removal: The principle of using negative pressure at a small scale to collect debris.",
+      "original_id": "92-B3"
+    },
+    {
+      "id": 178,
+      "text": "Crystallization-induced stress cycles: Inducing growth and shrinkage of crystals within material pores to physically detach dirt via mechanical pressure.",
+      "original_id": "93-B1"
+    },
+    {
+      "id": 179,
+      "text": "Pneumatic particulate removal: Using air suction and separation mechanisms to clear loosened debris and cleaning agents.",
+      "original_id": "93-B2"
+    },
+    {
+      "id": 180,
+      "text": "Optically responsive fabric integration: Embedding materials into the fabric that react specifically to light wavelengths.",
+      "original_id": "94-B1"
+    },
+    {
+      "id": 181,
+      "text": "Localized micro-thermal agitation: Using rapid heating and cooling at the microscopic level to physically shake off dirt.",
+      "original_id": "94-B2"
+    },
+    {
+      "id": 182,
+      "text": "Aerodynamic particle evacuation: Using air currents to carry away loosened particles.",
+      "original_id": "94-B3"
+    },
+    {
+      "id": 183,
+      "text": "Near-Critical Fluid Processing: Subjecting water to high temperature and pressure to reach a near-critical state where it dissolves organic contaminants directly.",
+      "original_id": "95-B1"
+    },
+    {
+      "id": 184,
+      "text": "Phase-Change Contaminant Separation: Rapidly altering pressure and temperature to force dissolved contaminants to precipitate out of the fluid for removal.",
+      "original_id": "95-B2"
+    },
+    {
+      "id": 185,
+      "text": "Electrostatic Dirt Nucleation: Using charged particles to attract and encapsulate contaminants at a microscopic level.",
+      "original_id": "96-B1"
+    },
+    {
+      "id": 186,
+      "text": "Controlled Coalescence and Deposition: Forcing laden particles to merge and settle onto a specific collection area via applied forces.",
+      "original_id": "96-B2"
+    },
+    {
+      "id": 187,
+      "text": "Coandă Effect Airflow: Using wall-attached laminar airflow to generate shear force across surfaces.",
+      "original_id": "97-B1"
+    },
+    {
+      "id": 188,
+      "text": "Air Filtration: Passing air through a medium to trap solid particulates.",
+      "original_id": "97-B2"
+    },
+    {
+      "id": 189,
+      "text": "Enzymatic Degradation: The chemical breakdown of stains and odors facilitated by catalytic proteins.",
+      "original_id": "98-B1"
+    },
+    {
+      "id": 190,
+      "text": "Mist Application: Dispensing agents as a fine suspension of droplets within a contained space.",
+      "original_id": "98-B2"
+    },
+    {
+      "id": 191,
+      "text": "Air Dissipation: Using gentle air movement to carry away volatile byproducts or loosened particles.",
+      "original_id": "98-B3"
+    },
+    {
+      "id": 192,
+      "text": "Adhesive Dirt Removal: Using a sticky surface to physically lift particulate matter and oils off fabrics.",
+      "original_id": "99-B1"
+    },
+    {
+      "id": 193,
+      "text": "Stimulus-Responsive Release: Using an external trigger to alter surface adhesion for self-cleaning and waste disposal.",
+      "original_id": "99-B2"
+    },
+    {
+      "id": 194,
+      "text": "Photocatalytic generation of reactive species: Using light energy to activate a catalytic material which generates highly reactive agents to decompose organic matter.",
+      "original_id": "100-B1"
+    }
+  ]
+}

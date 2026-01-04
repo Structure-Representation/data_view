@@ -1,0 +1,144 @@
+{
+    "clusters": [
+        {
+            "id": "1",
+            "name": "Surfactant-mediated solubilization and emulsification",
+            "description": "Amphiphilic agents solubilize oils and waxes into micelles or emulsions, reducing adhesion and enabling removal with minimal water."
+        },
+        {
+            "id": "2",
+            "name": "Enzymatic or microbial digestion",
+            "description": "Enzymes or microbes selectively break down organic soils and odors into soluble fragments for easier extraction."
+        },
+        {
+            "id": "3",
+            "name": "Reactive-oxidant generation (catalytic/plasma/electrochemical)",
+            "description": "Produce reactive species in situ (oxidants, radicals) to chemically decompose organic stains and microbes without bulk water."
+        },
+        {
+            "id": "4",
+            "name": "Phase-change solvent cycling (evaporation/condensation/pressurization)",
+            "description": "Use controlled vaporization and recondensation or pressure swings to dissolve, mobilize, and recover contaminants with little liquid."
+        },
+        {
+            "id": "5",
+            "name": "Supercritical / near\u2011critical fluid solvation",
+            "description": "Use supercritical fluids to dissolve and extract organic contaminants with minimal or no conventional liquid water."
+        },
+        {
+            "id": "6",
+            "name": "Micro-volume solvent application",
+            "description": "Deliver very small droplets or thin films to activate chemistry at stain sites without saturating textiles."
+        },
+        {
+            "id": "7",
+            "name": "Controlled minimal-liquid exposure chamber",
+            "description": "Confine garments in a sealed environment maintaining high humidity or minimal liquid volume for targeted cleaning."
+        },
+        {
+            "id": "8",
+            "name": "Continuous purification and recirculation",
+            "description": "Separate contaminants from transport fluid (filtering, trapping) and return cleaned solvent/water for immediate reuse."
+        },
+        {
+            "id": "9",
+            "name": "Sorbent-based adsorption and regeneration",
+            "description": "Use engineered adsorbents to capture soils, then regenerate (heat/vacuum/pressure) to remove and reuse the sorbent and fluid."
+        },
+        {
+            "id": "10",
+            "name": "Microencapsulated agent release",
+            "description": "Store cleaning actives in microcapsules that rupture on trigger, releasing concentrated actives locally to minimize water."
+        },
+        {
+            "id": "11",
+            "name": "Sacrificial peelable coating removal",
+            "description": "Apply a removable film that binds contaminants, solidifies, and is peeled off carrying soils away from fabric."
+        },
+        {
+            "id": "12",
+            "name": "Foam and bubble-mediated lift and flotation",
+            "description": "Use foamed media or bubbles to attach to hydrophobic particles and lift them away from fibers for collection."
+        },
+        {
+            "id": "13",
+            "name": "Solid-contact mechanical abrasion",
+            "description": "Use discrete solids, pads, or textured media to physically abrade or transfer soils from fibers, then remove the media."
+        },
+        {
+            "id": "14",
+            "name": "Rotational and tumbling mechanical agitation",
+            "description": "Create relative motion and collisions to mechanically dislodge soils and reorient fabric surfaces for easier extraction."
+        },
+        {
+            "id": "15",
+            "name": "Vibrational and pulsed-air agitation",
+            "description": "Apply ultrasound, surface acoustic waves, or rapid air pulses to loosen particles and break adhesive bonds without excess liquid."
+        },
+        {
+            "id": "16",
+            "name": "Field-driven transport and capture",
+            "description": "Use electric, ionic, or magnetic fields to move charged/magnetic particles or induce electrostatic capture for later removal."
+        },
+        {
+            "id": "17",
+            "name": "Electrowetting and surface-actuated wetting control",
+            "description": "Use electrical control of local wetting to move, merge, or shed microdroplets and mobilize soils from fabric surfaces."
+        },
+        {
+            "id": "18",
+            "name": "Vacuum and pneumatic suction removal",
+            "description": "Generate negative pressure to lift, entrain, and transport loosened particulates and gases away from textiles."
+        },
+        {
+            "id": "19",
+            "name": "Pressure- and flow-induced pore flushing",
+            "description": "Force fluid through fabric pore networks to flush entrained contaminants from within fiber bundles."
+        },
+        {
+            "id": "20",
+            "name": "Gentle continuous extraction flow",
+            "description": "Maintain a low-velocity background flow to capture suspended particles and dissolved residues without disrupting fabrics."
+        },
+        {
+            "id": "21",
+            "name": "Thermal and crystallization-induced stress cycling",
+            "description": "Use freeze/thaw, salt crystallization, or local heating/cooling to create mechanical stresses that pry out embedded dirt."
+        },
+        {
+            "id": "22",
+            "name": "Localized electromagnetic heating of contaminants",
+            "description": "Use targeted IR, microwave, or RF to preferentially heat soils, loosen adhesion, or volatilize residues while sparing fabric."
+        },
+        {
+            "id": "23",
+            "name": "Shockwave and impulse detachment",
+            "description": "Produce rapid pressure transients to fracture soil\u2013fiber bonds and eject contaminants for collection."
+        },
+        {
+            "id": "24",
+            "name": "Adsorptive chelation and complexation",
+            "description": "Use chelating agents or complex-formers to sequester metal-bound or hydrophobic contaminants into removable complexes."
+        },
+        {
+            "id": "25",
+            "name": "Stimulus-responsive surface release",
+            "description": "Temporarily change surface adhesion (chemical or physical trigger) to actively release bound contaminants for capture."
+        },
+        {
+            "id": "26",
+            "name": "Electrocoagulation and electroaggregation",
+            "description": "Use electrical currents to destabilize colloids and aggregate fine contaminants for easier filtration and removal."
+        },
+        {
+            "id": "27",
+            "name": "Field-modulated fluid rheology",
+            "description": "Change fluid viscosity or viscoelastic properties via fields or additives to mechanically stress and release adhered particles."
+        },
+        {
+            "id": "28",
+            "name": "Targeted sensing and localized dosing",
+            "description": "Detect stains or soil concentration and apply localized cleaning (spray, heat, mechanical) to minimize total water use."
+        }
+    ]
+}
