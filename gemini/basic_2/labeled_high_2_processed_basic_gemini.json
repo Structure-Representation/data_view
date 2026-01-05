@@ -1,0 +1,332 @@
+[
+  {
+    "idea_id": "1",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Electromagnetic induction transducers"
+      }
+    ],
+    "explanation": "Direct relative magnet–coil motion converts changing magnetic flux into AC electrical power."
+  },
+  {
+    "idea_id": "2",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Inertial / oscillatory harvesters (moving mass)"
+      }
+    ],
+    "explanation": "Proof mass on springs/pendulums uses inertial motion to drive transducers."
+  },
+  {
+    "idea_id": "3",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Inertial / oscillatory harvesters (moving mass)"
+      }
+    ],
+    "explanation": "Periodic impacts and swings use inertial relative motion to generate energy pulses."
+  },
+  {
+    "idea_id": "4",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Strain / solid‑state deformation transducers"
+      }
+    ],
+    "explanation": "Piezoelectric elements produce charge from localized bending or compression strain."
+  },
+  {
+    "idea_id": "5",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Triboelectric / contact‑friction transducers"
+      }
+    ],
+    "explanation": "Harvests charge from repeated contact, sliding, or separation of dissimilar surfaces."
+  },
+  {
+    "idea_id": "6",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Electrostatic / variable‑capacitance transducers"
+      }
+    ],
+    "explanation": "Converts deformation into electrical energy by changing capacitor geometry or electrode separation."
+  },
+  {
+    "idea_id": "7",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Strain / solid‑state deformation transducers"
+      }
+    ],
+    "explanation": "Flexoelectric strain‑gradient materials generate voltage from localized bending strain."
+  },
+  {
+    "idea_id": "8",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Elastic energy storage and timing elements"
+      }
+    ],
+    "explanation": "Springs and elastic elements store and time‑shift mechanical energy for smoothing delivery."
+  },
+  {
+    "idea_id": "9",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Mechanical motion conversion & accumulation"
+      }
+    ],
+    "explanation": "Ratcheting and one‑way mechanisms accumulate incremental motion into usable stored rotation."
+  },
+  {
+    "idea_id": "10",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Mechanical motion conversion & accumulation"
+      }
+    ],
+    "explanation": "Linkages, gears and belts convert and scale human motion into generator‑friendly inputs."
+  },
+  {
+    "idea_id": "11",
+    "labels": [
+      {
+        "id": "7",
+        "name": "Motion‑phase gating & one‑way engagement"
+      }
+    ],
+    "explanation": "Clutches and one‑way couplings selectively engage harvesting during beneficial motion phases."
+  },
+  {
+    "idea_id": "12",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Inertial / oscillatory harvesters (moving mass)"
+      }
+    ],
+    "explanation": "Resonators and amplifiers use inertial dynamics to boost low‑amplitude body motion."
+  },
+  {
+    "idea_id": "13",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Body‑mounted interfaces and distributed harvesters"
+      }
+    ],
+    "explanation": "Cranks, linkages and cams couple limb displacement to harvesting hardware on the body."
+  },
+  {
+    "idea_id": "14",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Body‑mounted interfaces and distributed harvesters"
+      }
+    ],
+    "explanation": "Compression pads and actuators mount to limbs to transfer joint motion into harvesters."
+  },
+  {
+    "idea_id": "15",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Mechanical motion conversion & accumulation"
+      }
+    ],
+    "explanation": "Treads and belts translate foot motion into continuous rotational drive for generators."
+  },
+  {
+    "idea_id": "16",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Mechanical motion conversion & accumulation"
+      }
+    ],
+    "explanation": "Pedals and cranks convert cyclical limb strokes into rotational generator input."
+  },
+  {
+    "idea_id": "17",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Mechanical motion conversion & accumulation"
+      }
+    ],
+    "explanation": "Airflow‑driven flaps or turbines convert motion‑induced drag into rotational or oscillatory drive."
+  },
+  {
+    "idea_id": "18",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Hydraulic / pneumatic pressure capture & reservoir"
+      }
+    ],
+    "explanation": "Body deformation pressurizes fluid to drive turbines or pistons for energy extraction."
+  },
+  {
+    "idea_id": "19",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Hydraulic / pneumatic pressure capture & reservoir"
+      }
+    ],
+    "explanation": "Pressurized fluid storage captures and releases work to drive generators on demand."
+  },
+  {
+    "idea_id": "20",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Power electronics, buffering and energy routing"
+      }
+    ],
+    "explanation": "Supercaps or flywheels buffer intermittent harvested energy before conditioning and delivery."
+  },
+  {
+    "idea_id": "21",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Power electronics, buffering and energy routing"
+      }
+    ],
+    "explanation": "Electrochemical or capacitive storage buffers harvested energy for later use."
+  },
+  {
+    "idea_id": "22",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Power electronics, buffering and energy routing"
+      }
+    ],
+    "explanation": "Electronics for rectification, regulation and impedance matching of harvested signals."
+  },
+  {
+    "idea_id": "23",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Power electronics, buffering and energy routing"
+      }
+    ],
+    "explanation": "Immediate routing and delivery of harvested power to on-body accessories and sensors."
+  },
+  {
+    "idea_id": "24",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Body‑mounted interfaces and distributed harvesters"
+      }
+    ],
+    "explanation": "Removable harvesters emphasizing placement, attachment and local energy capture/offload."
+  },
+  {
+    "idea_id": "25",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Body‑mounted interfaces and distributed harvesters"
+      }
+    ],
+    "explanation": "Multiple limb-mounted units coupling joint/gait displacement to harvesting hardware."
+  },
+  {
+    "idea_id": "26",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Flexible substrate & integration for wearables"
+      }
+    ],
+    "explanation": "Embedding harvesters and conductors into textiles/elastomers for conformal wearable integration."
+  },
+  {
+    "idea_id": "27",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Elastic energy storage and timing elements"
+      }
+    ],
+    "explanation": "Arrays of compressible elastic elements that store, smooth and time-shift mechanical input."
+  },
+  {
+    "idea_id": "28",
+    "labels": [
+      {
+        "id": "14",
+        "name": "Sensing, control and user feedback interfaces"
+      }
+    ],
+    "explanation": "Sensors and algorithms detecting motion phases to optimize harvesting timing and routing."
+  },
+  {
+    "idea_id": "29",
+    "labels": [
+      {
+        "id": "14",
+        "name": "Sensing, control and user feedback interfaces"
+      }
+    ],
+    "explanation": "Software policies that gate, limit or prioritize functions based on activity and energy."
+  },
+  {
+    "idea_id": "30",
+    "labels": [
+      {
+        "id": "14",
+        "name": "Sensing, control and user feedback interfaces"
+      }
+    ],
+    "explanation": "Local LED/haptic interfaces presenting charge state and harvesting status to wearer."
+  },
+  {
+    "idea_id": "31",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Power electronics, buffering and energy routing"
+      }
+    ],
+    "explanation": "Ports and protocols to transfer conditioned harvested energy to external devices."
+  },
+  {
+    "idea_id": "32",
+    "labels": [
+      {
+        "id": "12",
+        "name": "Thermal and bioelectric harvesters"
+      }
+    ],
+    "explanation": "Harvests galvanic skin potential as low-power continuous supplemental energy source."
+  },
+  {
+    "idea_id": "33",
+    "labels": [
+      {
+        "id": "12",
+        "name": "Thermal and bioelectric harvesters"
+      }
+    ],
+    "explanation": "Thermoelectric modules exploiting skin-to-ambient gradients for continuous low-power trickle harvesting."
+  }
+]

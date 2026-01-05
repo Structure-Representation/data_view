@@ -1,0 +1,74 @@
+{
+    "clusters": [
+        {
+            "id": "1",
+            "name": "Strain / solid\u2011state deformation transducers",
+            "description": "Converts localized bending, compression or bulk deformation directly into electrical energy via solid\u2011state material effects (piezoelectric, flexoelectric). Suited for small high\u2011strain spots producing charge/voltage from material deformation."
+        },
+        {
+            "id": "2",
+            "name": "Triboelectric / contact\u2011friction transducers",
+            "description": "Harvests charge through repeated contact, separation, or sliding of dissimilar surfaces (triboelectric effect). Core active ingredient is surface charge transfer rather than bulk material strain."
+        },
+        {
+            "id": "3",
+            "name": "Electromagnetic induction transducers",
+            "description": "Converts relative motion between magnets and coils into AC electrical power via changing magnetic flux; used standalone or driven by moving masses, cranks or limb linkages."
+        },
+        {
+            "id": "4",
+            "name": "Electrostatic / variable\u2011capacitance transducers",
+            "description": "Converts mechanical deformation into electrical energy by changing capacitor geometry or electrode separation, often requiring charge prebiasing or charge transfer circuits."
+        },
+        {
+            "id": "5",
+            "name": "Inertial / oscillatory harvesters (moving mass)",
+            "description": "Uses proof masses, pendulums, impacts or oscillatory masses to convert translational or vibrational body motion into relative motion that drives a transducer. Focuses on inertial motion as the core energy source."
+        },
+        {
+            "id": "6",
+            "name": "Mechanical motion conversion & accumulation",
+            "description": "Linkages, gearboxes, ratchets, cams, belts and compliant elements that convert, scale, accumulate or smooth intermittent human motion into generator\u2011friendly torque/speed or continuous rotation."
+        },
+        {
+            "id": "7",
+            "name": "Motion\u2011phase gating & one\u2011way engagement",
+            "description": "Clutches, one\u2011way couplings, pawls and phase\u2011gating mechanisms that selectively engage harvesting during beneficial motion phases to reduce parasitic loss and maximize net energy."
+        },
+        {
+            "id": "8",
+            "name": "Elastic energy storage and timing elements",
+            "description": "Springs, elastic elements, compliant pads and mechanisms that store, smooth, time\u2011shift or release mechanical energy to match harvester timing or buffer intermittent inputs."
+        },
+        {
+            "id": "9",
+            "name": "Hydraulic / pneumatic pressure capture & reservoir",
+            "description": "Converts deformation into pressurized fluid (air or liquid) stored in a reservoir and released to drive turbines, pistons or generators; includes wearable pump concepts."
+        },
+        {
+            "id": "10",
+            "name": "Body\u2011mounted interfaces and distributed harvesters",
+            "description": "Localized mounts, compression pads, cranks or multiple small limb units that couple joint or limb displacement to harvesting hardware; emphasizes placement, comfort and mechanical coupling."
+        },
+        {
+            "id": "11",
+            "name": "Flexible substrate & integration for wearables",
+            "description": "Embedding harvesters, conductors and interconnects into textiles, elastomers or flexible substrates for conformal, low\u2011profile wearable energy capture and user comfort."
+        },
+        {
+            "id": "12",
+            "name": "Thermal and bioelectric harvesters",
+            "description": "Continuous, low\u2011power sources using skin\u2011to\u2011ambient thermoelectric modules or galvanic/skin\u2011potential electrodes to harvest thermal gradients or biopotential differences."
+        },
+        {
+            "id": "13",
+            "name": "Power electronics, buffering and energy routing",
+            "description": "Rectifiers, impedance\u2011matching, MPPT/regulation, converters and short\u2011term buffers (supercapacitors, flywheels) that condition, store and deliver harvested energy to loads or batteries."
+        },
+        {
+            "id": "14",
+            "name": "Sensing, control and user feedback interfaces",
+            "description": "Motion sensing, algorithms, control policies, and local user feedback (LED/haptic/status) that detect motion phases, manage harvesting, and present system state to the wearer."
+        }
+    ]
+}

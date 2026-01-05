@@ -1,0 +1,5046 @@
+[
+  {
+    "idea_id": 0,
+    "labels": [
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      }
+    ],
+    "explanation": "Inertial proof mass moves relative to frame to harvest kinetic energy."
+  },
+  {
+    "idea_id": 1,
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Gears convert and amplify human rotational input to generator-friendly speeds."
+  },
+  {
+    "idea_id": 2,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      }
+    ],
+    "explanation": "Piezo elements generate charge under bending or compression for direct harvesting."
+  },
+  {
+    "idea_id": 3,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Sliding magnet through coil produces induction; sliding mass provides inertial drive."
+  },
+  {
+    "idea_id": 4,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stretchable dielectric changes capacitance with strain, integrated into soft wearable."
+  },
+  {
+    "idea_id": 5,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Embedding harvesters into textiles enables conformal, body-worn energy capture."
+  },
+  {
+    "idea_id": 6,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body force pressurizes fluid to drive turbines; reservoir stores pressure for generation."
+  },
+  {
+    "idea_id": 7,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Rotational mechanical energy converted to electrical power via electromagnetic generation."
+  },
+  {
+    "idea_id": 8,
+    "labels": [
+      {
+        "id": "11",
+        "name": "Motion-phase gated coupling",
+        "type": "main"
+      }
+    ],
+    "explanation": "Clutch engages generator only during deceleration, harvesting only beneficial motion phases."
+  },
+  {
+    "idea_id": 9,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ratcheting accumulates incremental motion; stores energy elastically for later release."
+  },
+  {
+    "idea_id": 10,
+    "labels": [
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stored mechanical energy released at controlled rate to provide steady generator input."
+  },
+  {
+    "idea_id": 11,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Airflow from body motion drives flaps or turbines to produce rotational drive."
+  },
+  {
+    "idea_id": 12,
+    "labels": [
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      },
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Resonator tuned to input frequency amplifies proof-mass oscillation for harvesting."
+  },
+  {
+    "idea_id": 13,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Generic conversion concept includes electromagnetic, piezoelectric, or triboelectric transducers."
+  },
+  {
+    "idea_id": 14,
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Frictional contact and separation between dissimilar materials produce triboelectric charge."
+  },
+  {
+    "idea_id": 15,
+    "labels": [
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Thermoelectric modules exploit skin-to-ambient temperature differences for continuous low-power generation."
+  },
+  {
+    "idea_id": 16,
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Biological electrochemical conversion yields small voltages similar to galvanic skin-potential harvesting."
+  },
+  {
+    "idea_id": 17,
+    "labels": [
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      }
+    ],
+    "explanation": "Collects bodily fluids into a reservoir for later pressurization or processing to extract energy."
+  },
+  {
+    "idea_id": 18,
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Passive frictional contacts accumulate fluctuating surface charges used as harvested electrical energy."
+  },
+  {
+    "idea_id": 19,
+    "labels": [
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      }
+    ],
+    "explanation": "Electronics transform high-voltage, low-current static charges into usable regulated power."
+  },
+  {
+    "idea_id": 20,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 11,
+        "name": "Motion-phase gated coupling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Valves direct unidirectional fluid flow to drive a deformation-driven pump, using phase gating."
+  },
+  {
+    "idea_id": 21,
+    "labels": [
+      {
+        "id": 14,
+        "name": "Limb-mounted compression actuator",
+        "type": "main"
+      },
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Radial muscle expansion provides compressive actuation; wearable integration positions the harvester."
+  },
+  {
+    "idea_id": 22,
+    "labels": [
+      {
+        "id": 2,
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Reorienting a spinning mass produces inertial torque harvested and converted via mechanical transmission."
+  },
+  {
+    "idea_id": 23,
+    "labels": [
+      {
+        "id": 33,
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      },
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body-heat driven phase changes produce cyclic motion; wearable integration enables placement."
+  },
+  {
+    "idea_id": 24,
+    "labels": [
+      {
+        "id": 9,
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ratchet accumulates linear contraction cycles into continuous rotation, coupled to gearing for output."
+  },
+  {
+    "idea_id": 25,
+    "labels": [
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Strain-induced magnetic property changes alter flux, inducing current via electromagnetic conversion."
+  },
+  {
+    "idea_id": 26,
+    "labels": [
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Pliable, stretchable structure captures bending and stretching motions via conformal wearable integration."
+  },
+  {
+    "idea_id": 27,
+    "labels": [
+      {
+        "id": 32,
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Osmotic ion flow and membrane potentials generate chemical-electrical currents analogous to galvanic harvesting."
+  },
+  {
+    "idea_id": 28,
+    "labels": [
+      {
+        "id": 6,
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      },
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Conductive liquid displacement changes capacitance for variable-capacitance transduction; fluid motion is driven mechanically."
+  },
+  {
+    "idea_id": 29,
+    "labels": [
+      {
+        "id": 17,
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": 2,
+        "name": "Oscillating-mass inertial harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Vortex shedding from airflow drives oscillations that excite an inertial spring-mass harvester."
+  },
+  {
+    "idea_id": 30,
+    "labels": [
+      {
+        "id": 2,
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Oscillatory mechanical motion drives an inertial transducer, commonly converted electromagnetically to electricity."
+  },
+  {
+    "idea_id": 31,
+    "labels": [
+      {
+        "id": 7,
+        "name": "Flexoelectric/strain-gradient transducer",
+        "type": "main"
+      },
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Localized bending strain gradients generate flexoelectric voltages; textile integration enables conformal placement."
+  },
+  {
+    "idea_id": 32,
+    "labels": [
+      {
+        "id": 13,
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": 25,
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mounting at articulations converts joint motion into generator drive and enables distributed limb harvesting."
+  },
+  {
+    "idea_id": 33,
+    "labels": [
+      {
+        "id": 5,
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      },
+      {
+        "id": 6,
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Agitated conductive droplets sliding on surfaces generate triboelectric charge and capacitance modulation."
+  },
+  {
+    "idea_id": 34,
+    "labels": [
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": 24,
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Embedding harvesters into accessories provides conformal mounting; detachable modules allow storage and offload."
+  },
+  {
+    "idea_id": 35,
+    "labels": [
+      {
+        "id": 32,
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electrochemical reactions at electrodes produce current, requiring conditioning and regulation for usable output."
+  },
+  {
+    "idea_id": 36,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 14,
+        "name": "Limb-mounted compression actuator",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Compression-driven peristaltic action pumps fluid through channels, often actuated by limb compression pads."
+  },
+  {
+    "idea_id": 37,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 11,
+        "name": "Motion-phase gated coupling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Valves rectify oscillating fluid into unidirectional flow to drive a deformation-driven pump."
+  },
+  {
+    "idea_id": 38,
+    "labels": [
+      {
+        "id": 14,
+        "name": "Limb-mounted compression actuator",
+        "type": "main"
+      },
+      {
+        "id": 13,
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Natural limb movement provides compressive actuation, while converters translate motion to generator input."
+  },
+  {
+    "idea_id": 39,
+    "labels": [
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Liquid metal flow through a magnetic field changes flux and induces currents; fluid motion drives conduction."
+  },
+  {
+    "idea_id": 40,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Wearable deformation pumps fluid through internal channels; integration into flexible substrates aids comfort and placement."
+  },
+  {
+    "idea_id": 41,
+    "labels": [
+      {
+        "id": 3,
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": 30,
+        "name": "User feedback & status display",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Pressure/rupture triggers chemical light release; mechanical impact/pressure is the activation mechanism, useful as feedback."
+  },
+  {
+    "idea_id": 42,
+    "labels": [
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Photon-to-current modules embedded in textiles; conditioning electronics required to make PV output usable."
+  },
+  {
+    "idea_id": 43,
+    "labels": [
+      {
+        "id": 33,
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      },
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Uses body-to-ambient temperature gradient to drive molecular transport; aligns with thermal-gradient harvesting and fluid transport."
+  },
+  {
+    "idea_id": 44,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Directed liquid stream (pump) drives a turbine; transmission converts turbine rotation into generator-friendly motion."
+  },
+  {
+    "idea_id": 45,
+    "labels": [
+      {
+        "id": 12,
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      },
+      {
+        "id": 4,
+        "name": "Piezoelectric transducer array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Resonant membranes amplify acoustic/pressure waves; piezo arrays convert amplified vibrations into electrical signals."
+  },
+  {
+    "idea_id": 46,
+    "labels": [
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": 25,
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Embedding harvesters in apparel for conformal placement; distributing units across limbs increases collective yield."
+  },
+  {
+    "idea_id": 47,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ionic fluid flow through channels produces streaming potentials; pumps drive flow and conditioning extracts usable voltage."
+  },
+  {
+    "idea_id": 48,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 14,
+        "name": "Limb-mounted compression actuator",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Capillary and compression intake uses material deformation or muscle compression to drive fluid through media."
+  },
+  {
+    "idea_id": 49,
+    "labels": [
+      {
+        "id": 17,
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": 12,
+        "name": "Vibration amplification & resonance tuning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Galloping/flutter uses aerodynamic forces to create large oscillations; resonance tuning amplifies harvestable motion."
+  },
+  {
+    "idea_id": 50,
+    "labels": [
+      {
+        "id": 17,
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Flexible aerodynamic element captures airflow from limb movement; textile integration enables wearable placement."
+  },
+  {
+    "idea_id": 51,
+    "labels": [
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Converts amplified low-frequency oscillation via transmissions into generator-suitable motion; conditioning readies electrical output."
+  },
+  {
+    "idea_id": 52,
+    "labels": [
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": 9,
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Descent of a mass drives a generator through gear trains; ratcheting accumulates discrete lifts for release."
+  },
+  {
+    "idea_id": 53,
+    "labels": [
+      {
+        "id": 9,
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": 11,
+        "name": "Motion-phase gated coupling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "One-way capture and controlled return use ratchets and phase-gated couplings to accumulate and release energy."
+  },
+  {
+    "idea_id": 54,
+    "labels": [
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": 33,
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Thermomagnetic cycles change magnetic flux; induction in coils converts flux changes to electrical power."
+  },
+  {
+    "idea_id": 55,
+    "labels": [
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Varying magnetic flux induces current; mechanical transmissions typically drive flux-changing elements like magnets or coils."
+  },
+  {
+    "idea_id": 56,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 19,
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Evaporation-driven capillary flow pumps fluid; reservoirs store pressurized fluid for later power extraction."
+  },
+  {
+    "idea_id": 57,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ion-selective flow generates streaming potentials; pumps drive ionic flow and conditioning extracts usable voltage."
+  },
+  {
+    "idea_id": 58,
+    "labels": [
+      {
+        "id": 6,
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Changing electrode separation produces charge flow; mechanical transmissions convert body motion into displacement."
+  },
+  {
+    "idea_id": 59,
+    "labels": [
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Conductive liquid moving through magnetic fields induces currents; pumps or motion drive the liquid flow."
+  },
+  {
+    "idea_id": 60,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      }
+    ],
+    "explanation": "Soft structure pumps fluid when deformed, matching deformation-driven fluid pump mechanism."
+  },
+  {
+    "idea_id": 61,
+    "labels": [
+      {
+        "id": 12,
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      },
+      {
+        "id": 4,
+        "name": "Piezoelectric transducer array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Engineered resonant structures focus sound onto a transducer; resonance tuning is primary, piezoelectric transducer secondary."
+  },
+  {
+    "idea_id": 62,
+    "labels": [
+      {
+        "id": 4,
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      }
+    ],
+    "explanation": "Converts mechanical stress from sound pressure directly into charge via piezoelectric elements."
+  },
+  {
+    "idea_id": 63,
+    "labels": [
+      {
+        "id": 5,
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      },
+      {
+        "id": 6,
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Frictional charge generation (triboelectric) with variable separation inducing voltage via changing capacitance."
+  },
+  {
+    "idea_id": 64,
+    "labels": [
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Ferrofluid shape changes alter magnetic flux through coils, producing induction-based electrical generation."
+  },
+  {
+    "idea_id": 65,
+    "labels": [
+      {
+        "id": 2,
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      }
+    ],
+    "explanation": "Sloshing fluid behaves as an inertial mass, driven by motion to drive a harvester."
+  },
+  {
+    "idea_id": 66,
+    "labels": [
+      {
+        "id": 32,
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electrochemical cell produces electricity via redox; conditioning electronics adapt outputs and regulate power."
+  },
+  {
+    "idea_id": 67,
+    "labels": [
+      {
+        "id": 19,
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      }
+    ],
+    "explanation": "Osmotic-driven fluid uptake creates pressure-driven expansion/contraction, acting as a fluid pressure actuator/reservoir."
+  },
+  {
+    "idea_id": 68,
+    "labels": [
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Directly converts linear displacement into generator-ready motion via mechanical transmissions and linkages."
+  },
+  {
+    "idea_id": 69,
+    "labels": [
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      },
+      {
+        "id": 26,
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical grating modulation produces optical signals requiring photovoltaic conditioning; integration into flexible substrate supports deformation."
+  },
+  {
+    "idea_id": 70,
+    "labels": [
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      }
+    ],
+    "explanation": "Converting modulated light to usable electrical energy requires photovoltaic conditioning and power electronics."
+  },
+  {
+    "idea_id": 71,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      }
+    ],
+    "explanation": "Evaporation-driven capillary flow produces continuous fluid movement analogous to deformation-driven microfluidic pumping."
+  },
+  {
+    "idea_id": 72,
+    "labels": [
+      {
+        "id": 18,
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Microfluidic flow displaces mechanical elements; fluid pumping is primary, transmission converts motion to generator input."
+  },
+  {
+    "idea_id": 73,
+    "labels": [
+      {
+        "id": 28,
+        "name": "Motion sensing and control logic",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Non-contact field distortion is a sensing function, with conditioning electronics to process signals."
+  },
+  {
+    "idea_id": 74,
+    "labels": [
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      }
+    ],
+    "explanation": "Directly describes electronics that rectify and condition tiny potentials into usable DC power."
+  },
+  {
+    "idea_id": 75,
+    "labels": [
+      {
+        "id": 32,
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": 22,
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanically enhanced redox produces electrochemical potential; conditioning electronics make output usable."
+  },
+  {
+    "idea_id": 76,
+    "labels": [
+      {
+        "id": 2,
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": 1,
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Levitated mass creates inertial motion; electromagnetic coils can transduce that motion into electricity."
+  },
+  {
+    "idea_id": 77,
+    "labels": [
+      {
+        "id": 9,
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Asymmetric stepping biases motion into one-way accumulation, typically coupled through transmissions to generators."
+  },
+  {
+    "idea_id": 78,
+    "labels": [
+      {
+        "id": 12,
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      },
+      {
+        "id": 4,
+        "name": "Piezoelectric transducer array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Tuned cavity amplifies pressure waves; resonant diaphragm drives piezoelectric transducer for conversion."
+  },
+  {
+    "idea_id": 79,
+    "labels": [
+      {
+        "id": 19,
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      },
+      {
+        "id": 10,
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical compression stores gas pressure then releases to drive a turbine; transmission converts to generator input."
+  },
+  {
+    "idea_id": "80",
+    "labels": [
+      {
+        "id": "14",
+        "name": "Limb-mounted compression actuator",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Uses limb compression to drive harvesters; body-mounted converters translate limb motion to generator input."
+  },
+  {
+    "idea_id": "81",
+    "labels": [
+      {
+        "id": "11",
+        "name": "Motion-phase gated coupling",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Strain gates optical transmission by motion phase; embedded materials enable wearable implementation."
+  },
+  {
+    "idea_id": "82",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Light-to-electric conversion embedded in wearable substrate, routing generated power locally."
+  },
+  {
+    "idea_id": "83",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Enzymatic oxidation generates electrons like galvanic cells; onboard storage buffers harvested charge."
+  },
+  {
+    "idea_id": "84",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Nested unstable masses act as inertial harvesters; transmissions convert their motion to generators."
+  },
+  {
+    "idea_id": "85",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Geared linkages convert small oscillations into scaled generator inputs; body interface converts limb motion."
+  },
+  {
+    "idea_id": "86",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stress-modulated dielectric changes capacitance for energy harvesting; embedded flexible substrate enables wearability."
+  },
+  {
+    "idea_id": "87",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Active components are embedded into pliable substrates, forming arrays of deformable elements for harvesting."
+  },
+  {
+    "idea_id": "88",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stress-driven ferroelectric switching produces charge like piezo elements; embedding enables wearable form."
+  },
+  {
+    "idea_id": "89",
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Granular jamming/unjamming behaves like deformable elements, producing variable forces and pressure for pumps."
+  },
+  {
+    "idea_id": "90",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Converts internal pressure variations into linear motion via mechanical transmissions to drive generators."
+  },
+  {
+    "idea_id": "91",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Magnetic gradients drive magnetic-fluid flow (pumping); electromagnetic elements enable controlled actuation."
+  },
+  {
+    "idea_id": "92",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Pumped fluid drives micro-turbines; pressurized reservoirs smooth and deliver flow to turbines."
+  },
+  {
+    "idea_id": "93",
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Dense flexible element arrays absorb kinetic energy and store/release it via elastic elements."
+  },
+  {
+    "idea_id": "94",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Linkages collect distributed inputs and transmit force centrally; body interfaces couple limb motions."
+  },
+  {
+    "idea_id": "95",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Streaming electrolyte across charged interfaces generates potentials like galvanic harvesting; embedded in wearables."
+  },
+  {
+    "idea_id": "96",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Passive fluid transport uses body deformation-driven pumping, optionally storing pressure in reservoirs."
+  },
+  {
+    "idea_id": "97",
+    "labels": [
+      {
+        "id": "7",
+        "name": "Flexoelectric/strain-gradient transducer",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Molecular-scale strain-induced charge redistribution aligns with flexoelectric/strain-gradient transduction; wearable embedding."
+  },
+  {
+    "idea_id": "98",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Transforms irregular low-frequency airflow into consistent oscillations via aerodynamic elements and resonance tuning."
+  },
+  {
+    "idea_id": "99",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Applied magnetic fields actively control fluid dynamics; electromagnetic components enable motion-driven effects."
+  },
+  {
+    "idea_id": 100,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Converts pulsed or vibrating fluid flow into mechanical drive via airflow/drag-driven capture."
+  },
+  {
+    "idea_id": 101,
+    "labels": [
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Grid sensors detect localized inputs and integrate with wearable substrate for motion-aware harvesting."
+  },
+  {
+    "idea_id": 102,
+    "labels": [
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Conditioning electronics align phases and combine signals, guided by motion sensing."
+  },
+  {
+    "idea_id": 103,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Relative magnet-coil motion generates electricity; mechanical transmission converts human motion to generator drive."
+  },
+  {
+    "idea_id": 104,
+    "labels": [
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "MR fluid adjusts damping to tune resonance, amplifying vibration; integrates with mechanical transmission."
+  },
+  {
+    "idea_id": 105,
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Hygroscopic expansion deforms elastic elements in wearable substrate, producing mechanical motion for harvesting."
+  },
+  {
+    "idea_id": 106,
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Linkages translate small deformation into rotational or linear generator drive, attached to the body."
+  },
+  {
+    "idea_id": 107,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Fluid motion drives magnetic flux changes near coils, combining fluid pumping with electromagnetic induction."
+  },
+  {
+    "idea_id": 108,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Pressure differences deform flexible structures to pump fluid, implemented within wearable substrates."
+  },
+  {
+    "idea_id": 109,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Structural deformation produces charge via piezoelectric elements; conditioning electronics manage the output."
+  },
+  {
+    "idea_id": 110,
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Catalytic electrochemical reactions produce electrode currents (galvanic-like), buffered by short-term storage."
+  },
+  {
+    "idea_id": 111,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Magnetic liquid movement changes flux near coils, enabling electromagnetic induction driven by fluid motion."
+  },
+  {
+    "idea_id": 112,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stationary coil senses changing magnetic flux from a moving source to generate electricity."
+  },
+  {
+    "idea_id": 113,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Deformation redirects light to embedded photovoltaics in flexible substrate; conditioning electronics handle output."
+  },
+  {
+    "idea_id": 114,
+    "labels": [
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ion-generated currents require sensitive power conditioning and wearable integration for collector electrodes."
+  },
+  {
+    "idea_id": 115,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Limb motion converts to airflow into a chamber, enabling airflow/drag-driven energy capture."
+  },
+  {
+    "idea_id": 116,
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Differential thermal expansion flexes elastic elements embedded in wearables, producing mechanical motion."
+  },
+  {
+    "idea_id": 117,
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Converts irregular motion into rotational energy using transmissions and optional ratcheting accumulation."
+  },
+  {
+    "idea_id": 118,
+    "labels": [
+      {
+        "id": "7",
+        "name": "Flexoelectric/strain-gradient transducer",
+        "type": "main"
+      },
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Deformation-induced ion redistribution produces voltage via flexoelectric-like transduction, resembling galvanic mechanisms."
+  },
+  {
+    "idea_id": 119,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Flexible wearable structures deform with body movement, enabling distributed mechanical energy capture."
+  },
+  {
+    "idea_id": 120,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Magnetic domain motion changes magnetization/flux producing electrical signals; requires conditioning for usable output."
+  },
+  {
+    "idea_id": 121,
+    "labels": [
+      {
+        "id": "7",
+        "name": "Flexoelectric/strain-gradient transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Mechanical strain alters molecular chirality producing voltage via strain-gradient (flexoelectric) effects."
+  },
+  {
+    "idea_id": 122,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body-driven fluid movement alters local chemistry at electrodes to generate voltage, requiring conditioning."
+  },
+  {
+    "idea_id": 123,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Compression transports fluid through channels, enabling pressure transmission or storage for downstream work."
+  },
+  {
+    "idea_id": 124,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      }
+    ],
+    "explanation": "Magneto-responsive resonance changes magnetic flux to induce current; resonance amplifies response."
+  },
+  {
+    "idea_id": 125,
+    "labels": [
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Fluid displacement transmits localized pressure to remote actuators or generators, acting as hydraulic transmission."
+  },
+  {
+    "idea_id": 126,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      }
+    ],
+    "explanation": "Squeezing or deforming piezo materials directly generates electrical charge for harvesting."
+  },
+  {
+    "idea_id": 127,
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Mechanical changes in liquid contact and surface tension redistribute charge analogous to triboelectric effects."
+  },
+  {
+    "idea_id": 128,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Vortex shedding produces periodic aerodynamic forces that drive oscillators for harvesting."
+  },
+  {
+    "idea_id": 129,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Mechanical movement changes magnetic coupling and flux through a receiver, inducing electrical power."
+  },
+  {
+    "idea_id": 130,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Circulating redox fluid produces electrode current; pumping and conditioning make the energy usable."
+  },
+  {
+    "idea_id": 131,
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Osmotic chemical potential drives fluid flow, enabling hydraulic work or driving generators."
+  },
+  {
+    "idea_id": 132,
+    "labels": [
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      }
+    ],
+    "explanation": "Tuning harvester resonance to gait frequencies amplifies displacement and increases harvested energy."
+  },
+  {
+    "idea_id": 133,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Magnetostrictive strain alters magnetization and flux, inducing current in coils requiring conditioning."
+  },
+  {
+    "idea_id": 134,
+    "labels": [
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Pressure accumulates then releases in pulses, regularizing erratic input to drive harvesters."
+  },
+  {
+    "idea_id": 135,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "High-frequency pulsed airflow actuates harvesting elements (flaps/turbines), producing harvestable mechanical drive."
+  },
+  {
+    "idea_id": 136,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Combines piezoelectric strain harvesting with thermal (pyro/thermo) mechanisms for dual-mode energy."
+  },
+  {
+    "idea_id": 137,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Conformal interface embeds harvesters and maintains mechanical coupling to body motion for reliable capture."
+  },
+  {
+    "idea_id": 138,
+    "labels": [
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electronics merge, rectify, and match multiple energy streams, optionally buffering intermittent power."
+  },
+  {
+    "idea_id": 139,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical pressure moves magnetic medium altering flux through coils, inducing electrical current."
+  },
+  {
+    "idea_id": "140",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "14",
+        "name": "Limb-mounted compression actuator",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Limb-coupled compression drives internal fluid pressure; wearable compressive interface applies the force."
+  },
+  {
+    "idea_id": "141",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body-fluid transport via deformation pumps triggers reactions; integrated wearable routing supports fluid transfer."
+  },
+  {
+    "idea_id": "142",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Photovoltaic collectors embedded near body-emitted light; integrated wearable PV with local storage."
+  },
+  {
+    "idea_id": "143",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Evaporation-driven fluid flows create surface-tension forces; distributed deformable elements convert motion to work."
+  },
+  {
+    "idea_id": "144",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Gearing amplifies small motions into rotation, driving an electromagnetic generator for power production."
+  },
+  {
+    "idea_id": "145",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      },
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Air shearing over charged surfaces generates streaming/triboelectric charge; airflow provides the mechanical drive."
+  },
+  {
+    "idea_id": "146",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mounted on moving extremities to harvest aerodynamic drag; multiple limb units increase collected power."
+  },
+  {
+    "idea_id": "147",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Engineered metamaterial channels concentrate ambient airflow into focused jets, enhancing aerodynamic energy capture."
+  },
+  {
+    "idea_id": "148",
+    "labels": [
+      {
+        "id": "153",
+        "name": "Flow-Based Generation",
+        "type": "main"
+      },
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Focused air jet drives micro-rotor engine; controlled flow directly produces rotational generation."
+  },
+  {
+    "idea_id": "149",
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Material volume change produces mechanical displacement; arrays of deformable elements convert that motion to work."
+  },
+  {
+    "idea_id": "150",
+    "labels": [
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": "11",
+        "name": "Motion-phase gated coupling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Rectifies oscillatory motion into one-way accumulated rotation or displacement using ratchets and phase gating."
+  },
+  {
+    "idea_id": "151",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical deformation modulates electrical impedance (capacitive-like), requiring conditioning to extract usable power."
+  },
+  {
+    "idea_id": "152",
+    "labels": [
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical compression pressurizes fluid into a reservoir for later controlled release to drive generation."
+  },
+  {
+    "idea_id": "153",
+    "labels": [
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Controlled release of pressurized medium drives a generator; reservoirs and transmissions convert flow to rotation."
+  },
+  {
+    "idea_id": "154",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Cavitation-induced charge separation resembles surface-charge generation; conditioning needed to harvest resulting pulses."
+  },
+  {
+    "idea_id": "155",
+    "labels": [
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      },
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Resonant up-conversion amplifies low-frequency body motion into high-frequency oscillations for transducers."
+  },
+  {
+    "idea_id": "156",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical deformation changes capacitor geometry to produce electricity; integrated into flexible wearables."
+  },
+  {
+    "idea_id": "157",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Minute vibrating structures act as small inertial oscillators; resonance tuning improves energy capture."
+  },
+  {
+    "idea_id": "158",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Physical coupling induces charge separation/polarization consistent with triboelectric surface charge generation."
+  },
+  {
+    "idea_id": "159",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body movements compress internal volumes to pump fluid; wearable converter translates limb motion to pumping."
+  },
+  {
+    "idea_id": "160",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electrochemical membrane-driven ion flow generates voltage; conditioning needed for usable electrical output."
+  },
+  {
+    "idea_id": "161",
+    "labels": [
+      {
+        "id": "6",
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Mechanical stress changes nanoscale gap geometry, modulating tunneling/electrical conduction like variable capacitive transducers."
+  },
+  {
+    "idea_id": "162",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      }
+    ],
+    "explanation": "Phase-change induced polarization under mechanical/thermal bias produces charge analogous to piezo/ferroelectric harvesting."
+  },
+  {
+    "idea_id": "163",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ambient-motion-driven rotor uses airflow drag to spin, then mechanical gearing transmits rotation to generator."
+  },
+  {
+    "idea_id": "164",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Relative rotor–stator magnetic flux changes induce current; transmission adapts motion to induction element."
+  },
+  {
+    "idea_id": "165",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Biofuel cell electrochemically converts biological reactants (sweat) into electrical energy, like galvanic harvesting."
+  },
+  {
+    "idea_id": "166",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      }
+    ],
+    "explanation": "Compressing soft materials creates pressure gradients to circulate fluid, driving microfluidic energy conversion."
+  },
+  {
+    "idea_id": "167",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Streaming ion separation at charged walls produces a potential difference requiring conditioning for usable output."
+  },
+  {
+    "idea_id": "168",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Capillary wicking passively drives fluid transport, useful as the fluid-handling element in microfluidic pumps."
+  },
+  {
+    "idea_id": "169",
+    "labels": [
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "main"
+      }
+    ],
+    "explanation": "Amplifies low-amplitude body motion into higher-amplitude oscillations via resonance for improved transducer input."
+  },
+  {
+    "idea_id": "170",
+    "labels": [
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Acoustic-to-thermal conversion yields heat differentials exploited by thermoelectric modules for electrical generation."
+  },
+  {
+    "idea_id": "171",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanically gated ion channels produce ionic currents; integration into wearables enables practical on-body harvesting."
+  },
+  {
+    "idea_id": "172",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Magnetostrictive stress alters magnetic flux, inducing current in coils via electromagnetic induction."
+  },
+  {
+    "idea_id": "173",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Arrayed piezo materials generate charge from bending/compression; can be embedded into flexible garments."
+  },
+  {
+    "idea_id": "174",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Conductive fibers integrate electrical paths into fabric for on-body routing of harvested energy."
+  },
+  {
+    "idea_id": "175",
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      },
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Charge generated by contact/separation is later transferred to a receiver; modular capture aids offload."
+  },
+  {
+    "idea_id": "176",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Physical linkages or shafts transmit and adapt mechanical energy between components for generation."
+  },
+  {
+    "idea_id": "177",
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      }
+    ],
+    "explanation": "Device connects to external machinery or conditioners rather than producing conditioned power internally."
+  },
+  {
+    "idea_id": "178",
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Dedicated external collection point receives incoming energy and routes it to conditioning or local loads."
+  },
+  {
+    "idea_id": "179",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Uses joint angular displacement converted by linkages or gearing to drive a generator or transducer."
+  },
+  {
+    "idea_id": "180",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Rotational motion drives a generator; gearing adapts human input to generator speeds."
+  },
+  {
+    "idea_id": "181",
+    "labels": [
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Uses skin-to-ambient temperature gradients to generate continuous thermoelectric power."
+  },
+  {
+    "idea_id": "182",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Multiple limb-worn units collect gait energy; converters attach to limbs to transduce motion."
+  },
+  {
+    "idea_id": "183",
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable harvester stores energy and interfaces to offload charge to external systems."
+  },
+  {
+    "idea_id": "184",
+    "labels": [
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Photovoltaic conversion produces electrical output requiring conditioning; can integrate into wearable substrate."
+  },
+  {
+    "idea_id": "185",
+    "labels": [
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical source directly powers a device; transmission adapts motion to the load."
+  },
+  {
+    "idea_id": "186",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Conductive skin contacts harvest small potentials or provide conduction-based energy transfer."
+  },
+  {
+    "idea_id": "187",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Rhythmic arterial pressure drives piezo elements; body-mounted converters position transducers over pulses."
+  },
+  {
+    "idea_id": "188",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "14",
+        "name": "Limb-mounted compression actuator",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Vertical foot impacts produce pulses harvested by impact/oscillatory elements and compression pads."
+  },
+  {
+    "idea_id": "189",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Embedding harvesters and conductors into textiles for conformal, on-body energy capture."
+  },
+  {
+    "idea_id": "190",
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Airborne inductive/RF transfer sends harvested energy to external storage requiring conditioning."
+  },
+  {
+    "idea_id": "191",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "User-driven rotating treadbelt provides continuous drive to generators via gearing and induction."
+  },
+  {
+    "idea_id": "192",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Tether cables convert limb motion into generator inputs using transmissions; can be distributed on limbs."
+  },
+  {
+    "idea_id": "193",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Limb- or torso-mounted linkages convert displacement into drive motion via transmissions for generation."
+  },
+  {
+    "idea_id": "194",
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Wired connection transfers generated electricity off-device; also enables local routing to accessories."
+  },
+  {
+    "idea_id": "195",
+    "labels": [
+      {
+        "id": "29",
+        "name": "Activity-dependent gating & software policies",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Software gates access based on harvested energy, using sensors and control logic to measure activity."
+  },
+  {
+    "idea_id": "196",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Converts linear compression into rotation via transmissions to drive an electromagnetic generator."
+  },
+  {
+    "idea_id": "197",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanisms translate linear limb strokes into rotational generator input using gearing and linkages."
+  },
+  {
+    "idea_id": "198",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Internal proof mass oscillates with motion; resonance tuning amplifies low-amplitude inputs."
+  },
+  {
+    "idea_id": "199",
+    "labels": [
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "main"
+      },
+      {
+        "id": "30",
+        "name": "User feedback & status display",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Optical sensing quantifies physiological byproduct; control logic interprets and can display results."
+  },
+  {
+    "idea_id": 200,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Embedded textile sensors convert motion; piezo elements generate electricity from local bending."
+  },
+  {
+    "idea_id": 201,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stretchable textile ensures intimate contact; deformable element arrays distribute and convert motion."
+  },
+  {
+    "idea_id": 202,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Shoe impacts produce periodic impulses; extremity-mounted harvester collects energy from steps."
+  },
+  {
+    "idea_id": 203,
+    "labels": [
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Routes harvested energy immediately to nearby accessories and stores excess in portable batteries."
+  },
+  {
+    "idea_id": 204,
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Garment-embedded harvesters in fabric convert distributed body motion; multiple locations aggregate energy."
+  },
+  {
+    "idea_id": 205,
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable module stores harvested charge, enabling on‑demand attachment, charging, or external offload."
+  },
+  {
+    "idea_id": 206,
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Provides interfaces and protocols to export stored energy to communal grids via detachable modules."
+  },
+  {
+    "idea_id": 207,
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Cylinder translates running motion to rotational drive using mechanical transmission to drive a generator."
+  },
+  {
+    "idea_id": 208,
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      }
+    ],
+    "explanation": "Vertical displacement creates contact/separation, producing charge via triboelectric surface friction."
+  },
+  {
+    "idea_id": 209,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Pedal/crank drive conversion",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Pedal/crank motion drives rotation; electromagnetic generator converts rotational motion to electrical current."
+  },
+  {
+    "idea_id": 210,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Pedal/crank drive conversion",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Crank-driven leg cycles produce rotational input; electromagnetic generator yields electrical power."
+  },
+  {
+    "idea_id": 211,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Watch-like rotor and ratchet accumulate limb motion into stored rotation; inertial mass drives conversion."
+  },
+  {
+    "idea_id": 212,
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Multiple small finger-mounted harvesters collect repetitive typing motions; piezo elements generate charge."
+  },
+  {
+    "idea_id": 213,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Linear pull converted via transmission into rotation; electromagnetic induction generates electricity."
+  },
+  {
+    "idea_id": 214,
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      }
+    ],
+    "explanation": "Pulleys and counterweights transmit and scale human motion into generator-compatible mechanical inputs."
+  },
+  {
+    "idea_id": 215,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Worn physical interface captures limb motion and routes harvested energy directly to on‑body loads."
+  },
+  {
+    "idea_id": 216,
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Modular removable unit stores charge for later use, powering external devices when detached."
+  },
+  {
+    "idea_id": 217,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body-worn converter translates limb kinematics to harvestable motion, with conditioning electronics for usable power."
+  },
+  {
+    "idea_id": 218,
+    "labels": [
+      {
+        "id": "29",
+        "name": "Activity-dependent gating & software policies",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Software policies gate features based on activity metrics, using motion sensing to decide behavior."
+  },
+  {
+    "idea_id": 219,
+    "labels": [
+      {
+        "id": "5",
+        "name": "Triboelectric/surface-friction transducer",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Wearable material contact/separation generates triboelectric charge; integrated into flexible textiles for comfort."
+  },
+  {
+    "idea_id": "220",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Inner-surface walking creates continuous rotational drive; gearing converts rotation to generator-friendly speed."
+  },
+  {
+    "idea_id": "221",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      }
+    ],
+    "explanation": "Shaped form factors affect airflow/drag, improving aerodynamic-driven capture or reducing losses."
+  },
+  {
+    "idea_id": "222",
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable harvester attaches to mobile devices and routes harvested energy directly to the device."
+  },
+  {
+    "idea_id": "223",
+    "labels": [
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Thermoelectric modules convert skin-to-ambient temperature gradients into electricity for storage."
+  },
+  {
+    "idea_id": "224",
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Add-on generator mounts to machines, transmits motion through gearing and conditions electrical output."
+  },
+  {
+    "idea_id": "225",
+    "labels": [
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Conditions, manages, and stores facility-collected electricity and provides external interfaces."
+  },
+  {
+    "idea_id": "226",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mechanical deformation stores elastic potential energy for smoothing or time-shifting output."
+  },
+  {
+    "idea_id": "227",
+    "labels": [
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Transfers heat-driven fluid or uses pressurized fluid conduits to move harvested thermal energy."
+  },
+  {
+    "idea_id": "228",
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Weight-bearing surfaces use compressible element arrays and impact conversion to harvest vertical loads."
+  },
+  {
+    "idea_id": "229",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Running inside a cylinder drives a continuous tread, transmitted via gearing to a generator."
+  },
+  {
+    "idea_id": "230",
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Exploits chemical or electrochemical reactions (sweat/skin potentials) as an electrical power source."
+  },
+  {
+    "idea_id": "231",
+    "labels": [
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "main"
+      }
+    ],
+    "explanation": "Records displacement and processes motion data to optimize harvesting timing and efficiency."
+  },
+  {
+    "idea_id": "232",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Uses multiple body-mounted converters on limbs to collect energy from natural movements."
+  },
+  {
+    "idea_id": "233",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Pedal/crank drive conversion",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Hand-crank rotates generator via gearing; electromagnetic induction produces electrical output."
+  },
+  {
+    "idea_id": "234",
+    "labels": [
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Buffers intermittent generation using short-term mechanical or electrical storage before conditioning."
+  },
+  {
+    "idea_id": "235",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "14",
+        "name": "Limb-mounted compression actuator",
+        "type": "secondary"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Footwear converts stomps' vertical impacts into pulses of harvestable energy via compression elements."
+  },
+  {
+    "idea_id": "236",
+    "labels": [
+      {
+        "id": "30",
+        "name": "User feedback & status display",
+        "type": "main"
+      }
+    ],
+    "explanation": "Uses localized sensory outputs (auditory/tactile/olfactory) to create a deterrent field."
+  },
+  {
+    "idea_id": "237",
+    "labels": [
+      {
+        "id": "29",
+        "name": "Activity-dependent gating & software policies",
+        "type": "main"
+      }
+    ],
+    "explanation": "Implements thresholds and policies to keep deterrent imperceptible to humans but effective for insects."
+  },
+  {
+    "idea_id": "238",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Embedded probe sensors use piezo elements in fabric to convert localized kinetic stresses into charge."
+  },
+  {
+    "idea_id": "239",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Integrates storage within a wearable accessory for local retention and offload of harvested energy."
+  },
+  {
+    "idea_id": "240",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Suction/vacuum uses airflow and pumped fluid dynamics to extract usable mechanical energy."
+  },
+  {
+    "idea_id": "241",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      }
+    ],
+    "explanation": "Embedding components into textiles for conformal, comfortable on-body harvesting."
+  },
+  {
+    "idea_id": "242",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Ring form translates limb displacement into harvesting interfaces, embedded for comfort."
+  },
+  {
+    "idea_id": "243",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Rotating turbine drives coils/magnets, with gearing to scale rotational input for generation."
+  },
+  {
+    "idea_id": "244",
+    "labels": [
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Wired conduction routes harvested power to remote on-body storage for later use."
+  },
+  {
+    "idea_id": "245",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Rhythmic impacts converted to pulses, with springs smoothing and storing mechanical energy."
+  },
+  {
+    "idea_id": "246",
+    "labels": [
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Captures skin-to-ambient heat gradients with thermoelectric modules for continuous trickle power."
+  },
+  {
+    "idea_id": "247",
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable storage cells provide modular local storage for harvested energy offload."
+  },
+  {
+    "idea_id": "248",
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "External station interfaces and conditions stored energy into usable electrical outputs."
+  },
+  {
+    "idea_id": "249",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Loose-carry form focuses on portable storage and detachable modules for easy transport."
+  },
+  {
+    "idea_id": "250",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Orbiting magnets induce changing flux; orbiting mass behaves as inertial harvester driving coils."
+  },
+  {
+    "idea_id": "251",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Footstep compression produces pulses; floors can pressurize fluids for stored release to generators."
+  },
+  {
+    "idea_id": "252",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "main"
+      }
+    ],
+    "explanation": "Combines storage and conditioning to capture, regulate, and distribute harvested power."
+  },
+  {
+    "idea_id": "253",
+    "labels": [
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "main"
+      }
+    ],
+    "explanation": "Elastic elements absorb walking impact and store mechanical energy for later conversion."
+  },
+  {
+    "idea_id": "254",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Air entering/exiting chambers drives flow-based harvesters; chamber deformation acts as pump."
+  },
+  {
+    "idea_id": "255",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Battery embedded into footwear structure, integrated into the shoe substrate for storage."
+  },
+  {
+    "idea_id": "256",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "In-shoe mechanism captures footstep oscillations; distributed wearable units collect gait energy."
+  },
+  {
+    "idea_id": "257",
+    "labels": [
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      }
+    ],
+    "explanation": "Thermoelectric modules convert skin heat flow into electrical current across temperature gradient."
+  },
+  {
+    "idea_id": "258",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Converts repetitive swings/impacts to charge, with resonance tuning to amplify low-amplitude motion."
+  },
+  {
+    "idea_id": "259",
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Integrated wired interface provides ports to offload harvested energy to external devices."
+  },
+  {
+    "idea_id": "260",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body-worn units harvest step and walking limb motion, converting limb displacement into electrical drive."
+  },
+  {
+    "idea_id": "261",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Gearing maximizes input power while ratchets accumulate incremental motion for efficient generation."
+  },
+  {
+    "idea_id": "262",
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body-mounted interface translates limb displacement into generator drive for wearable harvesting."
+  },
+  {
+    "idea_id": "263",
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable storage modules physically dock to base stations for energy offload and conditioning."
+  },
+  {
+    "idea_id": "264",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Rotating circumferential tread converts applied inner-surface force into rotational drive via transmissions."
+  },
+  {
+    "idea_id": "265",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Directly converts rotational shaft motion into electrical power through changing magnetic flux."
+  },
+  {
+    "idea_id": "266",
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Turbine or flap captures airflow/drag to produce rotation, then drives induction generation."
+  },
+  {
+    "idea_id": "267",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Pedal/crank drive conversion",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Crank/pedal interface accepts upper or lower limb strokes, converting them into rotational drive."
+  },
+  {
+    "idea_id": "268",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Converts discrete step impacts into pulsed mechanical inputs, accumulated by ratchets for generation."
+  },
+  {
+    "idea_id": "269",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Multiple exercise modalities linked via transmissions with buffering to smooth intermittent harvested power."
+  },
+  {
+    "idea_id": "270",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Routes harvested power into high-capacity electrochemical storage and provides external offload interface."
+  },
+  {
+    "idea_id": "271",
+    "labels": [
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Analog-style sensing transcribes fluctuating inputs and conditions signals for effective energy use."
+  },
+  {
+    "idea_id": "272",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Foot-mounted unit captures gait impact and swing energy, producing pulsed mechanical inputs."
+  },
+  {
+    "idea_id": "273",
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Flexible deformable platform compresses under weight, converting and temporarily storing mechanical energy."
+  },
+  {
+    "idea_id": "274",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      }
+    ],
+    "explanation": "Compact electrochemical storage holding harvested charge for later use."
+  },
+  {
+    "idea_id": "275",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Fitness-tracker form factor integrates harvesters into textiles, converting limb motion to drive."
+  },
+  {
+    "idea_id": "276",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Kinetic motion directly drives inductive generation, then electronics condition the output for use."
+  },
+  {
+    "idea_id": "277",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Moving belt translates running motion into continuous rotational drive through transmissions."
+  },
+  {
+    "idea_id": "278",
+    "labels": [
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Tethered weight functions as oscillating inertial mass, coupled via mechanisms to drive generation."
+  },
+  {
+    "idea_id": "279",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Subsurface mechanism converts vertical impacts into mechanical motion routed through transmissions."
+  },
+  {
+    "idea_id": "280",
+    "labels": [
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Compressed air drives turbine rotation; mechanical transmission conveys rotational energy to generator."
+  },
+  {
+    "idea_id": "281",
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Vertical steps produce impact pulses; body-mounted converter translates step motion into harvestable energy."
+  },
+  {
+    "idea_id": "282",
+    "labels": [
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Short-term buffer smooths intermittent harvested energy before transfer to longer-term storage or use."
+  },
+  {
+    "idea_id": "283",
+    "labels": [
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "main"
+      },
+      {
+        "id": "11",
+        "name": "Motion-phase gated coupling",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Sensors detect movement and trigger harvesting or gated coupling during beneficial motion phases."
+  },
+  {
+    "idea_id": "284",
+    "labels": [
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electromechanical release uses linkages/gearing, controlled by sensing logic to actuate contents release."
+  },
+  {
+    "idea_id": "285",
+    "labels": [
+      {
+        "id": "27",
+        "name": "Elastic deformable element array",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Under-equipment compressible interface distributes downward forces into deformable elements for harvesting."
+  },
+  {
+    "idea_id": "286",
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Relative magnet/coil motion generates AC electricity; electronics condition and match output for use."
+  },
+  {
+    "idea_id": "287",
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Compressive forces drive piezo elements to produce charge; conditioning electronics ready usable power."
+  },
+  {
+    "idea_id": "288",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "User strides drive a rolling belt, translating horizontal motion into continuous rotational generator input."
+  },
+  {
+    "idea_id": "289",
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Extremity-worn units collect gait energy; integrated into flexible wearables for comfort and portability."
+  },
+  {
+    "idea_id": "290",
+    "labels": [
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Intermediate buffer smooths intermittent harvest before handing off to portable storage or loads."
+  },
+  {
+    "idea_id": "291",
+    "labels": [
+      {
+        "id": "7",
+        "name": "Flexoelectric/strain-gradient transducer",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Joint bending produces strain-gradient voltages via flexoelectric elements; body-mounted converters capture motion."
+  },
+  {
+    "idea_id": "292",
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Inductive/RF link provides wireless offload to external conditioners and receivers."
+  },
+  {
+    "idea_id": "293",
+    "labels": [
+      {
+        "id": "29",
+        "name": "Activity-dependent gating & software policies",
+        "type": "main"
+      },
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Software policies gate harvesting based on activity or emotion proxies; sensors supply inputs."
+  },
+  {
+    "idea_id": "294",
+    "labels": [
+      {
+        "id": "16",
+        "name": "Pedal/crank drive conversion",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Leg pedaling drives cranks providing continuous rotational input; gearing transmits to generator."
+  },
+  {
+    "idea_id": "295",
+    "labels": [
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "main"
+      },
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Wearable integration distributes load and embeds harvesters, enabling comfortable, portable energy capture."
+  },
+  {
+    "idea_id": "296",
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Locomotion rotates a continuous belt, translating foot motion into rotational generator drive via gearing."
+  },
+  {
+    "idea_id": "297",
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electrochemical storage holds surplus harvested energy; intermediate buffering smooths intermittent input."
+  },
+  {
+    "idea_id": "298",
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable harvester module with local storage integrates into handheld devices for on-demand charging."
+  },
+  {
+    "idea_id": "299",
+    "labels": [
+      {
+        "id": "18",
+        "name": "Deformation-driven fluid pump",
+        "type": "main"
+      },
+      {
+        "id": "19",
+        "name": "Hydraulic/pneumatic pressure reservoir",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Wearable pumps convert body or fluid pressure into fluid work; reservoirs store pressurized energy."
+  },
+  {
+    "idea_id": 300,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "14",
+        "name": "Limb-mounted compression actuator",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "In-sole impacts produce pulses harvested by impact transducers; compressive pads route foot pressure to the harvester."
+  },
+  {
+    "idea_id": 301,
+    "labels": [
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "main"
+      },
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Provides a physical port to transfer harvested energy to external devices or centralized conditioners."
+  },
+  {
+    "idea_id": 302,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Spinning motion drives coils/magnets to generate AC; gearing conditions rotation for the generator."
+  },
+  {
+    "idea_id": 303,
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Electrochemical cells store harvested electricity for later use; can be modular or removable."
+  },
+  {
+    "idea_id": 304,
+    "labels": [
+      {
+        "id": "3",
+        "name": "Impact/oscillatory harvester",
+        "type": "main"
+      },
+      {
+        "id": "26",
+        "name": "Flexible wearable substrate integration",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Footwear embeds impact-based harvesters; conformal integration ensures comfort and consistent contact."
+  },
+  {
+    "idea_id": 305,
+    "labels": [
+      {
+        "id": "33",
+        "name": "Skin-to-air thermoelectric harvesting",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Thermoelectric modules exploit skin-to-ambient gradients to generate trickle power, stored in local cells."
+  },
+  {
+    "idea_id": 306,
+    "labels": [
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Body-carried oscillating mass converts rhythmic gait; ratchets accumulate incremental motion into usable rotation."
+  },
+  {
+    "idea_id": 307,
+    "labels": [
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "main"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stores captured energy in short-term buffers (supercap/flywheel) for later conditioned transfer off-device."
+  },
+  {
+    "idea_id": 308,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Flaps or turbines harvest relative airflow, converting drag into rotational drive via gearing to the generator."
+  },
+  {
+    "idea_id": 309,
+    "labels": [
+      {
+        "id": "4",
+        "name": "Piezoelectric transducer array",
+        "type": "main"
+      },
+      {
+        "id": "12",
+        "name": "Vibration amplification & resonance tuning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Piezo elements convert tiny cardiac oscillations to charge; resonance tuning amplifies low-amplitude signals."
+  },
+  {
+    "idea_id": 310,
+    "labels": [
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Exercise apparatus interfaces (cranks, linkages) translate limb displacement into generator-driving motion."
+  },
+  {
+    "idea_id": 311,
+    "labels": [
+      {
+        "id": "2",
+        "name": "Oscillating-mass inertial harvester",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Spherical housing can contain a rolling/oscillating mass, enabling inertial harvesting coupled through gearing."
+  },
+  {
+    "idea_id": 312,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": "8",
+        "name": "Elastic spring energy storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "One-way winding accumulates oscillating weight motion into stored rotation, often loading an elastic spring."
+  },
+  {
+    "idea_id": 313,
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable chemical storage modules (battery cartridges) hold harvested energy and interface with standard devices."
+  },
+  {
+    "idea_id": 314,
+    "labels": [
+      {
+        "id": "6",
+        "name": "Variable-capacitance electromechanical transducer",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Changing capacitance from body motion generates charge; electronics condition and store the captured static energy."
+  },
+  {
+    "idea_id": 315,
+    "labels": [
+      {
+        "id": "32",
+        "name": "Galvanic or skin-potential harvesting",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Harvests small skin voltages or conductance differences; conditioning circuits convert them into usable power."
+  },
+  {
+    "idea_id": 316,
+    "labels": [
+      {
+        "id": "17",
+        "name": "Airflow and drag-driven capture",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Air-displacement mechanisms (turbines, flaps) convert wind into rotation, transmitted to the generator."
+  },
+  {
+    "idea_id": 317,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Pedal/crank drive conversion",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Stationary cycling uses pedal/crank motion to provide continuous rotational input through transmissions to generators."
+  },
+  {
+    "idea_id": 318,
+    "labels": [
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "main"
+      },
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Frame-mounted surface holds electronics for immediate on-body power routing and modular attachment."
+  },
+  {
+    "idea_id": 319,
+    "labels": [
+      {
+        "id": "9",
+        "name": "Ratcheting/mechanical accumulation",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Footstep compression ratchets accumulate motion into rotation, transmitted to drive an electromagnetic generator."
+  },
+  {
+    "idea_id": 320,
+    "labels": [
+      {
+        "id": "30",
+        "name": "User feedback & status display",
+        "type": "main"
+      },
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Display shows battery/charge status of onboard storage."
+  },
+  {
+    "idea_id": 321,
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Wrist-worn unit harvests limb motion, translating displacement into generator drive."
+  },
+  {
+    "idea_id": 322,
+    "labels": [
+      {
+        "id": "24",
+        "name": "Detachable modular capture & storage",
+        "type": "main"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Removable harvester with local storage and ports for external charging offload."
+  },
+  {
+    "idea_id": 323,
+    "labels": [
+      {
+        "id": "15",
+        "name": "Belt/tread or internal circumferential mechanism",
+        "type": "main"
+      },
+      {
+        "id": "20",
+        "name": "Intermediate energy buffer (supercap/flywheel)",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Footwheel drives circumferential mechanism with integrated mechanical storage (flywheel) for generation."
+  },
+  {
+    "idea_id": 324,
+    "labels": [
+      {
+        "id": "25",
+        "name": "Distributed limb harvesters",
+        "type": "main"
+      },
+      {
+        "id": "13",
+        "name": "Body-mounted motion converter",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Leg-mounted unit intercepts gait kinetic energy, converting limb motion to generator input."
+  },
+  {
+    "idea_id": 325,
+    "labels": [
+      {
+        "id": "21",
+        "name": "Portable energy storage (battery/supercap)",
+        "type": "main"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Mobile device captures and stores harvested energy, enabling transfer or local use."
+  },
+  {
+    "idea_id": 326,
+    "labels": [
+      {
+        "id": "16",
+        "name": "Pedal/crank drive conversion",
+        "type": "main"
+      },
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Foot-actuated crank drives electromagnetic generator through gearing."
+  },
+  {
+    "idea_id": 327,
+    "labels": [
+      {
+        "id": "23",
+        "name": "Direct local power routing",
+        "type": "main"
+      },
+      {
+        "id": "22",
+        "name": "Power conditioning & impedance matching",
+        "type": "secondary"
+      },
+      {
+        "id": "31",
+        "name": "Offload/interface for external conditioning",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Harvested electricity routed via wires for immediate use or conditioned transfer."
+  },
+  {
+    "idea_id": 328,
+    "labels": [
+      {
+        "id": "1",
+        "name": "Electromagnetic induction (moving magnet/coil)",
+        "type": "main"
+      },
+      {
+        "id": "10",
+        "name": "Mechanical transmission & gearing",
+        "type": "secondary"
+      },
+      {
+        "id": "28",
+        "name": "Motion sensing and control logic",
+        "type": "secondary"
+      }
+    ],
+    "explanation": "Generator output scaled by speed via transmission and motion-sensing control."
+  }
+]

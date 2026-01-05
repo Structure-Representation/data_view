@@ -1,0 +1,169 @@
+{
+    "clusters": [
+        {
+            "id": "1",
+            "name": "Electromagnetic induction (moving magnet/coil)",
+            "description": "Converting relative motion between magnets and coils into AC electrical power via changing magnetic flux."
+        },
+        {
+            "id": "2",
+            "name": "Oscillating-mass inertial harvester",
+            "description": "Proof mass on springs or pendulums that moves relative to a frame to drive transducers from body motion."
+        },
+        {
+            "id": "3",
+            "name": "Impact/oscillatory harvester",
+            "description": "Converting periodic impacts or swings into pulses of electrical energy via inertial or piezo elements."
+        },
+        {
+            "id": "4",
+            "name": "Piezoelectric transducer array",
+            "description": "Elements that generate charge under bending or compression to harvest localized mechanical stress."
+        },
+        {
+            "id": "5",
+            "name": "Triboelectric/surface-friction transducer",
+            "description": "Harvesting charge from contact, sliding, or separation between dissimilar materials in wearables."
+        },
+        {
+            "id": "6",
+            "name": "Variable-capacitance electromechanical transducer",
+            "description": "Changing capacitor geometry via deformation to convert mechanical work into electrical energy."
+        },
+        {
+            "id": "7",
+            "name": "Flexoelectric/strain-gradient transducer",
+            "description": "Generating voltage from localized bending strain gradients for small-scale deformation harvesting."
+        },
+        {
+            "id": "8",
+            "name": "Elastic spring energy storage",
+            "description": "Storing mechanical energy in elastic elements to smooth or time-shift energy delivery."
+        },
+        {
+            "id": "9",
+            "name": "Ratcheting/mechanical accumulation",
+            "description": "One-way mechanisms that accumulate incremental motion into stored rotation or displacement for generation."
+        },
+        {
+            "id": "10",
+            "name": "Mechanical transmission & gearing",
+            "description": "Linkages, gears, belts, and shafts converting and scaling human motion into generator-friendly inputs."
+        },
+        {
+            "id": "11",
+            "name": "Motion-phase gated coupling",
+            "description": "Clutches or one-way couplings that engage harvesting only during beneficial motion phases."
+        },
+        {
+            "id": "12",
+            "name": "Vibration amplification & resonance tuning",
+            "description": "Resonators or amplifiers that increase low-amplitude motion into higher-amplitude transducer inputs."
+        },
+        {
+            "id": "13",
+            "name": "Body-mounted motion converter",
+            "description": "Interfaces (cranks, linkages, cams) that translate limb displacement into generator drive motion."
+        },
+        {
+            "id": "14",
+            "name": "Limb-mounted compression actuator",
+            "description": "Compressive pads or actuators that use joint motion to apply force to harvesters."
+        },
+        {
+            "id": "15",
+            "name": "Belt/tread or internal circumferential mechanism",
+            "description": "Moving-surface mechanisms (tread, belt) translating foot motion into continuous generator drive."
+        },
+        {
+            "id": "16",
+            "name": "Pedal/crank drive conversion",
+            "description": "Converting cyclical leg or arm strokes via cranks into rotational generator input."
+        },
+        {
+            "id": "17",
+            "name": "Airflow and drag-driven capture",
+            "description": "Flexible flaps or turbines using airflow from motion to produce rotational or oscillatory drive."
+        },
+        {
+            "id": "18",
+            "name": "Deformation-driven fluid pump",
+            "description": "Wearable pumps that pressurize fluid via body deformation to drive micro-turbines or pistons."
+        },
+        {
+            "id": "19",
+            "name": "Hydraulic/pneumatic pressure reservoir",
+            "description": "Pressurized fluid storage that stores and releases work to drive generators on demand."
+        },
+        {
+            "id": "20",
+            "name": "Intermediate energy buffer (supercap/flywheel)",
+            "description": "Short-term electrical or mechanical storage smoothing intermittent harvested energy before conditioning."
+        },
+        {
+            "id": "21",
+            "name": "Portable energy storage (battery/supercap)",
+            "description": "Compact electrochemical or capacitive storage holding harvested energy for later use."
+        },
+        {
+            "id": "22",
+            "name": "Power conditioning & impedance matching",
+            "description": "Electronics that rectify, regulate, combine, and match harvested signals into usable power outputs."
+        },
+        {
+            "id": "23",
+            "name": "Direct local power routing",
+            "description": "Immediate routing of harvested energy to on-body accessories or sensors without long transmission paths."
+        },
+        {
+            "id": "24",
+            "name": "Detachable modular capture & storage",
+            "description": "Removable harvesters with local storage for on-demand attachment, charging, or offload."
+        },
+        {
+            "id": "25",
+            "name": "Distributed limb harvesters",
+            "description": "Multiple small units on extremities that collectively harvest energy from natural gait cycles."
+        },
+        {
+            "id": "26",
+            "name": "Flexible wearable substrate integration",
+            "description": "Embedding harvesters and conductors into textiles or elastomers for conformal, comfortable harvesting."
+        },
+        {
+            "id": "27",
+            "name": "Elastic deformable element array",
+            "description": "Arrays of compressible elements distributing and converting distributed kinetic inputs into usable work."
+        },
+        {
+            "id": "28",
+            "name": "Motion sensing and control logic",
+            "description": "Sensors and algorithms that detect motion phases and optimize harvesting timing or routing."
+        },
+        {
+            "id": "29",
+            "name": "Activity-dependent gating & software policies",
+            "description": "Software rules that enable, limit, or prioritize device functions based on activity or harvested energy."
+        },
+        {
+            "id": "30",
+            "name": "User feedback & status display",
+            "description": "Local interfaces (LED, haptic) that present charge, harvesting status, and usage prompts to the wearer."
+        },
+        {
+            "id": "31",
+            "name": "Offload/interface for external conditioning",
+            "description": "Ports and protocols to transfer harvested energy to external devices or centralized conditioners."
+        },
+        {
+            "id": "32",
+            "name": "Galvanic or skin-potential harvesting",
+            "description": "Harvesting small voltages between skin and electrodes for supplemental power."
+        },
+        {
+            "id": "33",
+            "name": "Skin-to-air thermoelectric harvesting",
+            "description": "Low-power thermoelectric modules exploiting skin-to-ambient gradients for continuous trickle energy."
+        }
+    ]
+}

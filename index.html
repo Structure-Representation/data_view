@@ -548,6 +548,13 @@
                     <span id="ideaCount">0</span> ideas
                 </div>
             </div>
+            <div class="sidebar-search" style="padding: 15px; border-bottom: 1px solid #e1e8ed;">
+                <label for="datasetSelect" style="display: block; font-size: 0.9em; font-weight: 600; color: white; margin-bottom: 8px;">Select Dataset:</label>
+                <select id="datasetSelect" style="width: 100%; padding: 10px 15px; border: 2px solid #e1e8ed; border-radius: 8px; font-size: 0.9em; background: white; color: #2c3e50; cursor: pointer;">
+                    <option value="basic">Clean laundry with less water</option>
+                    <option value="basic_2">Lightweight exercise device (energy collection)</option>
+                </select>
+            </div>
             <div class="sidebar-search">
                 <input type="text" id="ideaSearch" placeholder="🔍 Search ideas...">
             </div>
@@ -563,7 +570,7 @@
         <div class="tree-container">
             <div class="tree-header">
                 <h1>🌳 Hierarchical Tree Structure</h1>
-                <p>Taxonomy labels as main layer, abstraction items as children</p>
+                <p id="datasetDescription">Taxonomy labels as main layer, abstraction items as children</p>
                 <div class="tree-controls">
                     <div class="zoom-controls">
                         <button class="zoom-btn" id="zoomOutBtn" title="Zoom Out">−</button>
@@ -591,7 +598,7 @@
                     </div>
                     <div class="legend-item">
                         <div class="legend-color" style="background: linear-gradient(135deg, #90ee90 0%, #98fb98 100%); border-color: #28a745;"></div>
-                        <span>Selected (Core Basic Abstraction of the Idea)</span>
+                        <span>Selected (Core)</span>
                     </div>
                 </div>
             </div>
@@ -611,13 +618,36 @@
         const zoomStep = 0.1;
         const minZoom = 0.3;
         const maxZoom = 2.0;
+        let currentDataset = 'basic';
+
+        const datasetConfigs = {
+            'basic': {
+                folder: 'gemini/basic',
+                title: 'Water-Efficient Laundry Cleaning',
+                description: 'Clean laundry with less water'
+            },
+            'basic_2': {
+                folder: 'gemini/basic_2',
+                title: 'Lightweight Exercise Device with Energy Collection',
+                description: 'Solutions for a lightweight exercise device that can collect energy from human motion'
+            }
+        };
 
         async function loadData() {
             try {
+                const config = datasetConfigs[currentDataset];
+                const prefix = currentDataset === 'basic' ? '0' : '2';
+                const taxonomyFile = currentDataset === 'basic' 
+                    ? 'final_taxa_cluster_processed_basic_gemini.json'
+                    : 'final_taxa_cluster_2_processed_basic_gemini.json';
+                const higherLevelFile = currentDataset === 'basic'
+                    ? 'labeled_high_processed_basic_gemini_with_description.json'
+                    : 'labeled_high_2_processed_basic_gemini_with_description.json';
+                
                 const [taxonomyResponse, abstractionResponse, higherLevelResponse] = await Promise.all([
-                    fetch('gemini/basic/final_taxa_cluster_processed_basic_gemini.json'),
-                    fetch('gemini/basic/0_basic_gemini_with_labels.json'),
-                    fetch('gemini/basic/labeled_high_processed_basic_gemini_with_description.json'),
+                    fetch(`${config.folder}/${taxonomyFile}`),
+                    fetch(`${config.folder}/${prefix}_basic_gemini_with_labels.json`),
+                    fetch(`${config.folder}/${higherLevelFile}`),
                 ]);
 
                 taxonomyData = await taxonomyResponse.json();
@@ -628,13 +658,20 @@
             } catch (error) {
                 console.error('Error loading data:', error);
                 document.getElementById('treeContainer').innerHTML = 
-                    '<div class="no-results">Error loading data. Please ensure JSON files are in the same directory.</div>';
+                    '<div class="no-results">Error loading data. Please ensure JSON files are in the correct directory.</div>';
             }
         }
 
         function initializeVisualization(higherLevelData) {
+            updateDatasetDescription();
             renderIdeasList();
             renderTree(higherLevelData);
+        }
+
+        function updateDatasetDescription() {
+            const config = datasetConfigs[currentDataset];
+            document.getElementById('datasetDescription').textContent = 
+                `Design Task: ${config.description} | Taxonomy labels as main layer, abstraction items as children`;
         }
 
         function renderIdeasList() {
@@ -781,9 +818,10 @@
             });
 
             // Render root node
+            const config = datasetConfigs[currentDataset];
             let html = `
                 <div class="root-node">
-                    <div class="node-content">Water-Efficient Laundry Cleaning</div>
+                    <div class="node-content">${config.title}</div>
                 </div>
             `;
 
@@ -998,6 +1036,11 @@
         }, { passive: false });
 
         // Event listeners
+        document.getElementById('datasetSelect').addEventListener('change', (e) => {
+            currentDataset = e.target.value;
+            clearSelection();
+            loadData();
+        });
         document.getElementById('clearBtn').addEventListener('click', clearSelection);
         document.getElementById('zoomInBtn').addEventListener('click', zoomIn);
         document.getElementById('zoomOutBtn').addEventListener('click', zoomOut);
