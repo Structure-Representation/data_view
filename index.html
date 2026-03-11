@@ -1,1070 +1,1358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hierarchical Tree Structure - Taxonomy & Abstractions</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: #f5f7fa;
-            overflow: hidden;
-            height: 100vh;
-        }
-
-        .main-container {
-            display: flex;
-            height: 100vh;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            width: 350px;
-            background: white;
-            border-right: 2px solid #e1e8ed;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .sidebar-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-        }
-
-        .sidebar-header h2 {
-            font-size: 1.3em;
-            margin-bottom: 8px;
-        }
-
-        .sidebar-stats {
-            font-size: 0.9em;
-            opacity: 0.95;
-        }
-
-        .sidebar-search {
-            padding: 15px;
-            border-bottom: 1px solid #e1e8ed;
-        }
-
-        .sidebar-search input {
-            width: 100%;
-            padding: 10px 15px;
-            border: 2px solid #e1e8ed;
-            border-radius: 8px;
-            font-size: 0.9em;
-            transition: all 0.3s;
-        }
-
-        .sidebar-search input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .ideas-list {
-            flex: 1;
-            overflow-y: auto;
-            padding: 10px;
-        }
-
-        .idea-item {
-            padding: 12px 15px;
-            margin-bottom: 8px;
-            background: #f8f9fa;
-            border: 2px solid #e1e8ed;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .idea-item:hover {
-            background: #e7f3ff;
-            border-color: #667eea;
-            transform: translateX(5px);
-        }
-
-        .idea-item.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: #667eea;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-        }
-
-        .idea-item-id {
-            font-weight: 700;
-            font-size: 0.85em;
-            margin-bottom: 5px;
-            opacity: 0.8;
-        }
-
-        .idea-item.active .idea-item-id {
-            opacity: 1;
-        }
-
-        .idea-item-text {
-            font-size: 0.9em;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-
-        .idea-abstractions {
-            margin-top: 10px;
-            font-size: 0.8em;
-            border-top: 1px solid #dee2e6;
-            padding-top: 8px;
-        }
-
-        .idea-item.active .idea-abstractions {
-            border-top-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .tree-node-mini {
-            margin-bottom: 5px;
-            position: relative;
-        }
-
-        .tree-node-mini-content {
-            display: flex;
-            align-items: start;
-            gap: 6px;
-            line-height: 1.3;
-            padding: 3px 0;
-        }
-
-        .tree-node-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #667eea;
-            flex-shrink: 0;
-            margin-top: 4px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .idea-item.active .tree-node-dot {
-            background: white;
-        }
-
-        .tree-node-dot.core {
-            background: #28a745;
-        }
-
-        .idea-item.active .tree-node-dot.core {
-            background: #90ee90;
-        }
-
-        .tree-node-label-mini {
-            flex: 1;
-        }
-
-        .tree-children-mini {
-            margin-left: 15px;
-            padding-left: 10px;
-            border-left: 2px solid #dee2e6;
-            position: relative;
-        }
-
-        .idea-item.active .tree-children-mini {
-            border-left-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .tree-level-indicator {
-            font-size: 0.7em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            opacity: 0.6;
-            margin-top: 5px;
-            margin-bottom: 3px;
-        }
-
-        .idea-item.active .tree-level-indicator {
-            opacity: 0.85;
-        }
-
-        /* Tree Container */
-        .tree-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .tree-header {
-            background: white;
-            padding: 20px 30px;
-            border-bottom: 2px solid #e1e8ed;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .tree-header h1 {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
-
-        .tree-header p {
-            color: #6c757d;
-            font-size: 0.95em;
-        }
-
-        .tree-controls {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            align-items: center;
-        }
-
-        .zoom-controls {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-            background: #f8f9fa;
-            padding: 5px;
-            border-radius: 8px;
-            border: 2px solid #e1e8ed;
-        }
-
-        .zoom-btn {
-            background: white;
-            border: 2px solid #667eea;
-            color: #667eea;
-            width: 36px;
-            height: 36px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1.2em;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .zoom-btn:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .zoom-level {
-            font-size: 0.9em;
-            font-weight: 600;
-            color: #2c3e50;
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .legend {
-            display: flex;
-            gap: 20px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85em;
-            color: #6c757d;
-        }
-
-        .legend-color {
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-            border: 2px solid #dee2e6;
-        }
-
-        .tree-viewport {
-            flex: 1;
-            overflow: auto;
-            padding: 30px;
-            background: #f5f7fa;
-            position: relative;
-        }
-
-        .tree {
-            min-width: max-content;
-            transform-origin: top center;
-            transition: transform 0.3s ease;
-        }
-
-        /* Tree Node Styles */
-        .tree-node {
-            position: relative;
-            margin: 10px 0;
-        }
-
-        .root-node {
-            text-align: center;
-            margin: 0 auto 40px;
-        }
-
-        .root-node .node-content {
-            display: inline-block;
-            padding: 20px 40px;
-            background: #8898e2;
-            color: white;
-            border-radius: 12px;
-            font-size: 1.4em;
-            font-weight: 700;
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
-        }
-
-        .main-layer {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            margin-top: 40px;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            padding: 20px 0;
-        }
-
-        .higher-cluster-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 250px;
-        }
-
-        .mechanisms-layer {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-            justify-content: center;
-            flex-wrap: nowrap;
-        }
-
-        .taxonomy-node {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 280px;
-            min-width: 220px;
-        }
-
-        .taxonomy-node-content {
-            background: white;
-            border: 3px solid #667eea;
-            border-radius: 12px;
-            padding: 15px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-            cursor: pointer;
-            text-align: center;
-            min-width: 200px;
-            width: 100%;
-        }
-
-        .taxonomy-node-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .taxonomy-node-content.highlighted {
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            border-color: #ffa500;
-            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3);
-            transform: scale(1.05);
-        }
-
-        .taxonomy-id {
-            font-size: 0.75em;
-            font-weight: 700;
-            color: white;
-            background: #667eea;
-            padding: 4px 10px;
-            border-radius: 12px;
-            display: inline-block;
-            margin-bottom: 8px;
-        }
-
-        .taxonomy-node-content.highlighted .taxonomy-id {
-            background: #ff8c00;
-        }
-
-        .taxonomy-name {
-            font-weight: 700;
-            font-size: 1em;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        .taxonomy-description {
-            font-size: 0.8em;
-            color: #88919a;
-            line-height: 1.4;
-            white-space: normal;
-        }
-
-        .abstraction-items {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 0 10px;
-            width: 100%;
-        }
-
-        .abstraction-items-wrapper {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .abstraction-item {
-            background: white;
-            border: 2px solid #e1e8ed;
-            border-radius: 8px;
-            padding: 12px 15px;
-            transition: all 0.3s;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .abstraction-item:hover {
-            border-color: #667eea;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transform: translateX(5px);
-        }
-
-        .abstraction-item.highlighted {
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            border-color: #ffa500;
-            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
-            transform: scale(1.05);
-        }
-
-        .abstraction-item.core.highlighted {
-            background: linear-gradient(135deg, #90ee90 0%, #98fb98 100%);
-            border-color: #28a745;
-            box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
-            transform: scale(1.05);
-        }
-
-        .abstraction-level {
-            font-size: 0.7em;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #667eea;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
-        }
-
-        .abstraction-label {
-            font-weight: 600;
-            font-size: 0.9em;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        .abstraction-description {
-            font-size: 0.8em;
-            color: #6c757d;
-            line-height: 1.3;
-        }
-
-        .toggle-btn {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85em;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: all 0.3s;
-        }
-
-        .toggle-btn:hover {
-            background: #764ba2;
-        }
-
-
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #6c757d;
-            font-size: 1.1em;
-        }
-
-        .controls {
-            padding: 15px;
-            background: white;
-            border-top: 1px solid #e1e8ed;
-            display: flex;
-            gap: 10px;
-        }
-
-        .control-btn {
-            flex: 1;
-            padding: 10px;
-            background: white;
-            border: 2px solid #667eea;
-            color: #667eea;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85em;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .control-btn:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        @media (max-width: 1200px) {
-            .sidebar {
-                width: 300px;
-            }
-
-            .main-layer {
-                gap: 20px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline 2 Tree Viewer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+
+  /* ── Left Panel ── */
+  .info-panel {
+    width: 480px;
+    min-width: 360px;
+    background: #fff;
+    border-right: 1px solid #e0e4e8;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(0,0,0,.04);
+  }
+
+  .info-header {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid #e0e4e8;
+    background: #fafbfc;
+  }
+
+  .info-header h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+
+  .info-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 24px;
+  }
+
+  .info-placeholder {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .info-field { margin-bottom: 18px; }
+
+  .info-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: #8a919a;
+    margin-bottom: 4px;
+  }
+
+  .info-value {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+    word-break: break-word;
+  }
+
+  .type-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .idea-card {
+    background: #f7f8fa;
+    border: 1px solid #e5e8ec;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+  }
+
+  .idea-card-id {
+    font-size: 11px;
+    font-weight: 700;
+    color: #8a919a;
+    margin-bottom: 4px;
+  }
+
+  .idea-card-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  /* ── Mechanism node chips ── */
+  .mech-node-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    margin: 3px 4px 3px 0;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #d0d5dc;
+    background: #f7f8fa;
+    color: #444;
+    transition: all .15s;
+  }
+
+  .mech-node-chip:hover { background: #e8ecf2; border-color: #b0b8c4; }
+  .mech-node-chip.active { background: #dbe8f7; border-color: #5b9bd5; color: #2a5f8f; }
+
+  .mech-chip-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8a919a;
+    flex-shrink: 0;
+  }
+
+  /* ── Mechanism detail overlay ── */
+  .mech-detail {
+    background: #fff;
+    border: 1px solid #d0d5dc;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  }
+
+  .mech-detail-close {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #999;
+    padding: 0 4px;
+    line-height: 1;
+  }
+
+  .mech-detail-close:hover { color: #555; }
+
+  .mech-detail-section {
+    margin-bottom: 12px;
+  }
+
+  .mech-detail-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #8a919a;
+    margin-bottom: 4px;
+  }
+
+  .mech-detail-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  .abstraction-tree {
+    margin-top: 6px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .abstraction-level {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    border-left: 3px solid;
+  }
+
+  .abstraction-level.level-purpose { border-color: #e74c3c; background: #fdf2f2; }
+  .abstraction-level.level-superordinate { border-color: #e67e22; background: #fef6ee; }
+  .abstraction-level.level-basic { border-color: #27ae60; background: #f0faf4; }
+  .abstraction-level.level-subordinate { border-color: #8e44ad; background: #f8f0fc; }
+
+  .abstraction-level-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 2px;
+  }
+
+  .level-purpose .abstraction-level-tag { color: #e74c3c; }
+  .level-superordinate .abstraction-level-tag { color: #e67e22; }
+  .level-basic .abstraction-level-tag { color: #27ae60; }
+  .level-subordinate .abstraction-level-tag { color: #8e44ad; }
+
+  .abstraction-level-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .abstraction-level-desc {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.45;
+  }
+
+  .abstraction-level-meta {
+    font-size: 11px;
+    color: #999;
+    margin-top: 2px;
+  }
+
+  /* ── Right Panel (Tree) ── */
+  .tree-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .tree-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #fff;
+    border-bottom: 1px solid #e0e4e8;
+  }
+
+  .tree-toolbar button {
+    padding: 6px 14px;
+    border: 1px solid #d0d5dc;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    color: #555;
+    transition: all .15s;
+  }
+
+  .tree-toolbar button:hover { background: #f0f2f5; border-color: #b0b8c4; }
+
+  .tree-toolbar .search-box {
+    margin-left: auto;
+    padding: 6px 12px;
+    border: 1px solid #d0d5dc;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 240px;
+    outline: none;
+    transition: border-color .15s;
+  }
+
+  .tree-toolbar .search-box:focus { border-color: #5b9bd5; }
+
+  .tree-body {
+    flex: 1;
+    overflow: auto;
+    padding: 20px 24px;
+  }
+
+  /* ── Tree Nodes ── */
+  .tree-list { list-style: none; padding-left: 22px; }
+  .tree-list.root-list { padding-left: 0; }
+
+  .tree-item { position: relative; }
+
+  .tree-item::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #dce0e5;
+  }
+
+  .tree-item:last-child::before { height: 16px; }
+
+  .tree-item::after {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 16px;
+    width: 12px;
+    height: 1px;
+    background: #dce0e5;
+  }
+
+  .root-list > .tree-item::before,
+  .root-list > .tree-item::after { display: none; }
+
+  .tree-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px 3px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: background .12s;
+    margin: 1px 0;
+    max-width: 100%;
+  }
+
+  .tree-row:hover { background: #edf1f7; }
+  .tree-row.selected { background: #dbe8f7; }
+  .tree-row.search-match { outline: 2px solid #f0ad4e; outline-offset: 1px; }
+
+  .toggle-btn {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #888;
+    flex-shrink: 0;
+    transition: transform .15s;
+  }
+
+  .toggle-btn.collapsed { transform: rotate(-90deg); }
+  .toggle-btn.leaf { visibility: hidden; }
+
+  .node-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .node-label {
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .children-container { overflow: hidden; }
+  .children-container.collapsed { display: none; }
+
+  /* ── Node type colours ── */
+  .type-root            { background: #5b9bd5; }
+  .type-level1_cluster  { background: #e67e22; }
+  .type-level2_cluster  { background: #27ae60; }
+  .type-level3_cluster  { background: #8e44ad; }
+
+  .node-count {
+    font-size: 11px;
+    color: #999;
+    margin-left: 4px;
+    flex-shrink: 0;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 7px; height: 7px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #c8cdd4; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #aab2bc; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 20px;
+    background: #fff;
+    border-top: 1px solid #e0e4e8;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .legend-item { display: flex; align-items: center; gap: 5px; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid #e5e8ec;
+    margin: 16px 0;
+  }
+
+  /* ── Right Ideas Panel (index.html sidebar style) ── */
+  .ideas-panel {
+    width: 350px;
+    min-width: 280px;
+    background: #fff;
+    border-left: 2px solid #e1e8ed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2px 0 10px rgba(0,0,0,.05);
+  }
+
+  .ideas-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+  }
+
+  .ideas-header h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .ideas-stats {
+    font-size: 0.9em;
+    opacity: 0.95;
+  }
+
+  .ideas-search-wrap {
+    padding: 15px;
+    border-bottom: 1px solid #e1e8ed;
+  }
+
+  .ideas-search {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 0.9em;
+    outline: none;
+    transition: all 0.3s;
+  }
+
+  .ideas-search:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+
+  .ideas-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+  .idea-item {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: #f8f9fa;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #444;
+  }
+
+  .idea-item:hover {
+    background: #e7f3ff;
+    border-color: #667eea;
+    transform: translateX(5px);
+  }
+
+  .idea-item.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  }
+
+  .idea-item-id {
+    font-weight: 700;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+    opacity: 0.8;
+  }
+
+  .idea-item.active .idea-item-id { opacity: 1; }
+
+  .idea-item-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .idea-item-nodes {
+    font-size: 0.8em;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+
+  .idea-item.hidden { display: none; }
+
+  /* ── Mini abstraction tree inside idea cards ── */
+  .idea-abstractions {
+    margin-top: 10px;
+    font-size: 0.8em;
+    border-top: 1px solid #dee2e6;
+    padding-top: 8px;
+  }
+
+  .idea-item.active .idea-abstractions {
+    border-top-color: rgba(255,255,255,0.3);
+  }
+
+  .tree-node-mini {
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .tree-node-mini-content {
+    display: flex;
+    align-items: start;
+    gap: 6px;
+    line-height: 1.3;
+    padding: 3px 0;
+  }
+
+  .tree-node-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #667eea;
+    flex-shrink: 0;
+    margin-top: 4px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .idea-item.active .tree-node-dot { background: white; }
+
+  .tree-node-dot.core { background: #28a745; }
+  .idea-item.active .tree-node-dot.core { background: #90ee90; }
+
+  .tree-node-dot.purpose { background: #e74c3c; }
+  .idea-item.active .tree-node-dot.purpose { background: #ff9999; }
+
+  .tree-node-label-mini { flex: 1; }
+
+  .tree-children-mini {
+    margin-left: 15px;
+    padding-left: 10px;
+    border-left: 2px solid #dee2e6;
+    position: relative;
+  }
+
+  .idea-item.active .tree-children-mini {
+    border-left-color: rgba(255,255,255,0.3);
+  }
+
+  .tree-level-indicator {
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    opacity: 0.6;
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+
+  .idea-item.active .tree-level-indicator { opacity: 0.85; }
+
+  /* ── Controls bar ── */
+  .ideas-controls {
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #e1e8ed;
+    display: flex;
+    gap: 10px;
+  }
+
+  .control-btn {
+    flex: 1;
+    padding: 10px;
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .control-btn:hover {
+    background: #667eea;
+    color: white;
+  }
+
+  /* ── Highlighted tree rows when idea is selected ── */
+  .tree-row.idea-highlight {
+    background: #fff3cd;
+    outline: 2px solid #f0ad4e;
+    outline-offset: 1px;
+  }
+
+  .tree-row.idea-highlight.selected {
+    background: #fde68a;
+  }
+</style>
 </head>
 <body>
-    <div class="main-container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <h2>💡 Ideas</h2>
-                <div class="sidebar-stats">
-                    <span id="ideaCount">0</span> ideas
-                </div>
-            </div>
-            <div class="sidebar-search" style="padding: 15px; border-bottom: 1px solid #e1e8ed;">
-                <label for="datasetSelect" style="display: block; font-size: 0.9em; font-weight: 600; color: white; margin-bottom: 8px;">Select Dataset:</label>
-                <select id="datasetSelect" style="width: 100%; padding: 10px 15px; border: 2px solid #e1e8ed; border-radius: 8px; font-size: 0.9em; background: white; color: #2c3e50; cursor: pointer;">
-                    <option value="basic">Clean laundry with less water</option>
-                    <option value="basic_2">Lightweight exercise device (energy collection)</option>
-                </select>
-            </div>
-            <div class="sidebar-search">
-                <input type="text" id="ideaSearch" placeholder="🔍 Search ideas...">
-            </div>
-            <div class="ideas-list" id="ideasList">
-                <!-- Ideas will be populated here -->
-            </div>
-            <div class="controls">
-                <button class="control-btn" id="clearBtn">Clear Selection</button>
-            </div>
-        </div>
 
-        <!-- Tree Visualization -->
-        <div class="tree-container">
-            <div class="tree-header">
-                <h1>🌳 Hierarchical Tree Structure</h1>
-                <p id="datasetDescription">Taxonomy labels as main layer, abstraction items as children</p>
-                <div class="tree-controls">
-                    <div class="zoom-controls">
-                        <button class="zoom-btn" id="zoomOutBtn" title="Zoom Out">−</button>
-                        <span class="zoom-level" id="zoomLevel">100%</span>
-                        <button class="zoom-btn" id="zoomInBtn" title="Zoom In">+</button>
-                        <button class="zoom-btn" id="zoomResetBtn" title="Reset Zoom">⟲</button>
-                    </div>
-                </div>
-                <div class="legend">
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                        <span>Higher-Level Cluster</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: white; border-color: #667eea;"></div>
-                        <span>Mechanism Cluster</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: white; border-color: #e1e8ed;"></div>
-                        <span>Abstraction</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);"></div>
-                        <span>Selected (Regular)</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: linear-gradient(135deg, #90ee90 0%, #98fb98 100%); border-color: #28a745;"></div>
-                        <span>Selected (Core)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tree-viewport">
-                <div class="tree" id="treeContainer">
-                    <!-- Tree will be populated here -->
-                </div>
-            </div>
-        </div>
+<div class="container">
+  <!-- Left: Info Panel -->
+  <div class="info-panel">
+    <div class="info-header"><h2>Node Details</h2></div>
+    <div class="info-body" id="infoBody">
+      <p class="info-placeholder">Click a node to view details</p>
     </div>
+  </div>
 
-    <script>
-        let taxonomyData = null;
-        let abstractionData = null;
-        let selectedIdeaId = null;
-        let zoomLevel = 1.0;
-        const zoomStep = 0.1;
-        const minZoom = 0.3;
-        const maxZoom = 2.0;
-        let currentDataset = 'basic';
+  <!-- Right: Tree Panel -->
+  <div class="tree-panel">
+    <div class="tree-toolbar">
+      <button onclick="expandAll()">Expand All</button>
+      <button onclick="collapseAll()">Collapse All</button>
+      <button onclick="expandLevel(1)">Level 1</button>
+      <button onclick="expandLevel(2)">Level 2</button>
+      <button onclick="expandLevel(3)">Level 3</button>
+      <input class="search-box" type="text" id="searchBox" placeholder="Search nodes..." oninput="onSearch(this.value)">
+    </div>
+    <div class="tree-body" id="treeBody"></div>
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot type-root"></span> Root</div>
+      <div class="legend-item"><span class="legend-dot type-level1_cluster"></span> Level 1 (Superordinate)</div>
+      <div class="legend-item"><span class="legend-dot type-level2_cluster"></span> Level 2 (Basic)</div>
+      <div class="legend-item"><span class="legend-dot type-level3_cluster"></span> Level 3 (Subordinate)</div>
+    </div>
+  </div>
 
-        const datasetConfigs = {
-            'basic': {
-                folder: 'gemini/basic',
-                title: 'Water-Efficient Laundry Cleaning',
-                description: 'Clean laundry with less water'
-            },
-            'basic_2': {
-                folder: 'gemini/basic_2',
-                title: 'Lightweight Exercise Device with Energy Collection',
-                description: 'Solutions for a lightweight exercise device that can collect energy from human motion'
-            }
+  <!-- Right: Ideas Panel -->
+  <div class="ideas-panel">
+    <div class="ideas-header">
+      <h2>Ideas</h2>
+      <div class="ideas-stats"><span id="ideasCount">0</span> ideas</div>
+    </div>
+    <div class="ideas-search-wrap">
+      <input class="ideas-search" type="text" id="ideasSearch" placeholder="Search ideas..." oninput="onIdeasFilter(this.value)">
+    </div>
+    <div class="ideas-body" id="ideasBody"></div>
+    <div class="ideas-controls">
+      <button class="control-btn" onclick="clearIdeaHighlights()">Clear Selection</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const TYPE_ORDER = ['root','level1_cluster','level2_cluster','level3_cluster'];
+const TYPE_LABELS = {
+  root: 'Root',
+  level1_cluster: 'Level 1 (Superordinate)',
+  level2_cluster: 'Level 2 (Basic)',
+  level3_cluster: 'Level 3 (Subordinate)'
+};
+
+let treeData = null;
+let purposeData = null;
+let mechAbData = null;
+let purposeAnnotData = null;
+let purposeMap = {};
+let mechAbMap = {};
+let purposeAnnotMap = {};
+let nodeMap = {};
+let childrenMap = {};
+let selectedRow = null;
+let ideaToNodesMap = {};
+let allIdeas = [];
+let activeIdeaId = null;
+
+async function loadData() {
+  const [treeResp, purposeResp, mechAbResp, purposeAnnotResp] = await Promise.all([
+    fetch('tree_2/variant_2_tree.json'),
+    fetch('tree_2/0_ab_purpose.json').catch(() => null),
+    fetch('tree_2/0_ab_with_labels.json').catch(() => null),
+    fetch('tree_2/0_superordinate_purpose_annotated_processed.json').catch(() => null)
+  ]);
+  treeData = await treeResp.json();
+  purposeData = purposeResp && purposeResp.ok ? await purposeResp.json() : null;
+  mechAbData = mechAbResp && mechAbResp.ok ? await mechAbResp.json() : null;
+  purposeAnnotData = purposeAnnotResp && purposeAnnotResp.ok ? await purposeAnnotResp.json() : null;
+  buildMaps();
+  renderTree();
+  buildIdeaMap();
+  renderIdeasPanel();
+}
+
+function buildMaps() {
+  treeData.nodes.forEach(n => { nodeMap[n.tree_node_id] = n; });
+  treeData.edges.forEach(e => {
+    if (e.edge_type === 'parent_child') {
+      if (!childrenMap[e.from_node_id]) childrenMap[e.from_node_id] = [];
+      childrenMap[e.from_node_id].push(e.to_node_id);
+    }
+  });
+  if (purposeData) purposeData.forEach(item => { purposeMap[item.id] = item; });
+  if (mechAbData) mechAbData.forEach(item => { mechAbMap[item.id] = item; });
+  if (purposeAnnotData) {
+    purposeAnnotData.forEach(entry => {
+      const key = entry.idea_id + ':' + entry.abstraction_id;
+      purposeAnnotMap[key] = {
+        cluster: entry.assigned_cluster,
+        name: entry.cluster_name,
+        description: entry.cluster_description
+      };
+    });
+  }
+}
+
+function renderTree() {
+  const root = nodeMap[0];
+  const ul = document.createElement('ul');
+  ul.className = 'tree-list root-list';
+  ul.appendChild(createTreeItem(root, 0));
+  document.getElementById('treeBody').innerHTML = '';
+  document.getElementById('treeBody').appendChild(ul);
+}
+
+function createTreeItem(node, depth) {
+  const children = childrenMap[node.tree_node_id] || [];
+  const isLeaf = children.length === 0;
+
+  const li = document.createElement('li');
+  li.className = 'tree-item';
+  li.dataset.nodeId = node.tree_node_id;
+  li.dataset.depth = depth;
+
+  const row = document.createElement('div');
+  row.className = 'tree-row';
+  row.dataset.nodeId = node.tree_node_id;
+
+  const toggle = document.createElement('span');
+  toggle.className = 'toggle-btn' + (isLeaf ? ' leaf' : (depth > 0 ? ' collapsed' : ''));
+  toggle.innerHTML = '&#9660;';
+
+  const dot = document.createElement('span');
+  dot.className = 'node-dot type-' + node.type;
+
+  const label = document.createElement('span');
+  label.className = 'node-label';
+  label.textContent = node.name;
+
+  row.appendChild(toggle);
+  row.appendChild(dot);
+  row.appendChild(label);
+
+  if (!isLeaf) {
+    const count = document.createElement('span');
+    count.className = 'node-count';
+    count.textContent = '(' + children.length + ')';
+    row.appendChild(count);
+  }
+
+  row.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!isLeaf) {
+      const container = li.querySelector(':scope > .children-container');
+      const isCollapsed = container.classList.contains('collapsed');
+      container.classList.toggle('collapsed');
+      toggle.classList.toggle('collapsed', !isCollapsed);
+      if (isCollapsed && !container.dataset.loaded) {
+        populateChildren(container, node.tree_node_id, depth + 1);
+        container.dataset.loaded = 'true';
+      }
+    }
+    selectNode(node, row);
+  });
+
+  li.appendChild(row);
+
+  if (!isLeaf) {
+    const container = document.createElement('div');
+    container.className = 'children-container' + (depth > 0 ? ' collapsed' : '');
+
+    if (depth === 0) {
+      populateChildren(container, node.tree_node_id, depth + 1);
+      container.dataset.loaded = 'true';
+    }
+
+    li.appendChild(container);
+  }
+
+  return li;
+}
+
+function populateChildren(container, parentId, depth) {
+  const childIds = childrenMap[parentId] || [];
+  if (childIds.length === 0) return;
+  const ul = document.createElement('ul');
+  ul.className = 'tree-list';
+  childIds.forEach(cid => {
+    const childNode = nodeMap[cid];
+    if (childNode) ul.appendChild(createTreeItem(childNode, depth));
+  });
+  container.appendChild(ul);
+}
+
+function selectNode(node, row) {
+  if (selectedRow) selectedRow.classList.remove('selected');
+  row.classList.add('selected');
+  selectedRow = row;
+  showNodeInfo(node);
+}
+
+function showNodeInfo(node) {
+  const body = document.getElementById('infoBody');
+  let html = '';
+
+  html += field('Node ID', node.tree_node_id);
+  html += field('Label', `<strong>${esc(node.name)}</strong>`);
+  html += field('Type', `<span class="type-badge type-${node.type}">${TYPE_LABELS[node.type] || node.type}</span>`);
+  html += field('Description', esc(node.description));
+
+  if (node.property && node.property.original_id) {
+    html += field('Pipeline ID', esc(node.property.original_id));
+  }
+
+  const ideaIds = normalizeArray(node.idea_ids || node.idea_id);
+
+  if (ideaIds.length > 0) {
+    html += `<div class="info-field"><div class="info-label">Original Idea IDs (${ideaIds.length})</div><div class="info-value">${ideaIds.join(', ')}</div></div>`;
+  }
+
+  const mechNodes = getMechNodes(node);
+  if (mechNodes.length > 0) {
+    html += '<hr class="section-divider">';
+    html += `<div class="info-field"><div class="info-label">Included Members (${mechNodes.length})</div>`;
+    html += '<div style="display:flex;flex-wrap:wrap;margin-top:4px">';
+    mechNodes.forEach((mn, idx) => {
+      const chipLabel = esc(mn.label || mn.abstraction || ('Idea #' + mn.idea_id));
+      html += `<span class="mech-node-chip" data-mech-idx="${idx}" onclick="toggleMechDetail(this, ${node.tree_node_id}, ${idx})">`;
+      html += `<span class="mech-chip-dot"></span>${chipLabel} <span style="color:#aaa;font-size:11px">(#${mn.idea_id})</span>`;
+      html += `</span>`;
+    });
+    html += '</div>';
+    html += '<div id="mechDetailContainer"></div>';
+    html += '</div>';
+  }
+
+  body.innerHTML = html;
+}
+
+function getMechNodes(node) {
+  if (node.property && node.property.included_members) {
+    return node.property.included_members;
+  }
+  if (node.property && node.property.included_mechanism_nodes) {
+    return node.property.included_mechanism_nodes;
+  }
+  if (node.included_mechanism_nodes) {
+    return node.included_mechanism_nodes;
+  }
+  return [];
+}
+
+function toggleMechDetail(chipEl, nodeId, idx) {
+  const allChips = chipEl.parentElement.querySelectorAll('.mech-node-chip');
+  const wasActive = chipEl.classList.contains('active');
+
+  allChips.forEach(c => c.classList.remove('active'));
+
+  const container = document.getElementById('mechDetailContainer');
+  if (wasActive) {
+    container.innerHTML = '';
+    return;
+  }
+
+  chipEl.classList.add('active');
+
+  const node = nodeMap[nodeId];
+  const mechNodes = getMechNodes(node);
+  const mn = mechNodes[idx];
+  if (!mn) return;
+
+  let html = '<div class="mech-detail">';
+  html += `<button class="mech-detail-close" onclick="closeMechDetail(this)">&times;</button>`;
+
+  html += `<div class="mech-detail-section"><div class="mech-detail-section-title">Idea #${mn.idea_id}</div>`;
+  html += `<div class="mech-detail-text">${esc(mn.idea_text)}</div></div>`;
+
+  if (mn.label) {
+    html += `<div class="mech-detail-section"><div class="mech-detail-section-title">Label</div>`;
+    html += `<div class="mech-detail-text"><strong>${esc(mn.label)}</strong></div></div>`;
+  }
+  if (mn.description) {
+    html += `<div class="mech-detail-section"><div class="mech-detail-section-title">Description</div>`;
+    html += `<div class="mech-detail-text">${esc(mn.description)}</div></div>`;
+  }
+  if (mn.level) {
+    const levelMeta = [esc(mn.level)];
+    if (mn.is_core) levelMeta.push('core');
+    if (mn.abstraction_id) levelMeta.push('ID: ' + esc(mn.abstraction_id));
+    if (mn.parent) levelMeta.push('parent: ' + esc(mn.parent));
+    if (mn.children && mn.children.length) levelMeta.push('children: ' + mn.children.join(', '));
+    html += `<div class="mech-detail-section"><div class="mech-detail-section-title">Level</div>`;
+    html += `<div class="mech-detail-text">${levelMeta.join(' · ')}</div></div>`;
+  }
+  if (mn.explanation) {
+    html += `<div class="mech-detail-section"><div class="mech-detail-section-title">Explanation</div>`;
+    html += `<div class="mech-detail-text">${esc(mn.explanation)}</div></div>`;
+  }
+
+  const purposeItem = purposeMap[mn.idea_id];
+  if (purposeItem) {
+    html += '<hr class="section-divider">';
+    html += `<div class="mech-detail-section"><div class="mech-detail-section-title">Purpose Abstractions (Idea #${mn.idea_id})</div>`;
+    html += renderAbstractionHierarchy(purposeItem.abstraction);
+    html += '</div>';
+  }
+
+  html += '</div>';
+  container.innerHTML = html;
+  container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeMechDetail(btn) {
+  const container = document.getElementById('mechDetailContainer');
+  container.innerHTML = '';
+  document.querySelectorAll('.mech-node-chip.active').forEach(c => c.classList.remove('active'));
+}
+
+function renderAbstractionHierarchy(abstraction) {
+  if (!abstraction) return '';
+  let html = '';
+  const levels = ['purpose', 'superordinate', 'basic', 'subordinate'];
+  const levelLabels = { purpose: 'Purpose', superordinate: 'Superordinate', basic: 'Basic', subordinate: 'Subordinate' };
+
+  levels.forEach(level => {
+    const items = abstraction[level];
+    if (!items || items.length === 0) return;
+    items.forEach(item => {
+      html += `<div class="abstraction-level level-${level}">`;
+      html += `<div class="abstraction-level-tag">${levelLabels[level]} &middot; ${esc(item.id)}</div>`;
+      html += `<div class="abstraction-level-label">${esc(item.label)}</div>`;
+      if (item.description) html += `<div class="abstraction-level-desc">${esc(item.description)}</div>`;
+      const meta = [];
+      if (item.is_core) meta.push('core');
+      if (item.parent) meta.push('parent: ' + item.parent);
+      if (item.children && item.children.length) meta.push('children: ' + item.children.join(', '));
+      if (meta.length) html += `<div class="abstraction-level-meta">${esc(meta.join(' | '))}</div>`;
+      html += '</div>';
+    });
+  });
+  return html;
+}
+
+function field(label, value) {
+  return `<div class="info-field"><div class="info-label">${label}</div><div class="info-value">${value}</div></div>`;
+}
+
+function normalizeArray(val) {
+  if (val == null) return [];
+  return Array.isArray(val) ? val : [val];
+}
+
+function esc(s) {
+  if (s == null) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ── Toolbar actions ── */
+
+function expandAll() {
+  document.querySelectorAll('.children-container.collapsed').forEach(c => {
+    c.classList.remove('collapsed');
+    if (!c.dataset.loaded) {
+      const parentItem = c.closest('.tree-item');
+      const pid = parseInt(parentItem.dataset.nodeId);
+      const depth = parseInt(parentItem.dataset.depth) + 1;
+      populateChildren(c, pid, depth);
+      c.dataset.loaded = 'true';
+    }
+  });
+  document.querySelectorAll('.toggle-btn.collapsed').forEach(t => t.classList.remove('collapsed'));
+  setTimeout(() => expandAll_check(), 50);
+}
+
+function expandAll_check() {
+  const remaining = document.querySelectorAll('.children-container.collapsed');
+  if (remaining.length > 0) expandAll();
+}
+
+function collapseAll() {
+  document.querySelectorAll('.children-container').forEach(c => {
+    const parentItem = c.closest('.tree-item');
+    if (parseInt(parentItem.dataset.depth) === 0) return;
+    c.classList.add('collapsed');
+  });
+  document.querySelectorAll('.toggle-btn:not(.leaf)').forEach(t => {
+    const parentItem = t.closest('.tree-item');
+    if (parseInt(parentItem.dataset.depth) > 0) t.classList.add('collapsed');
+  });
+}
+
+function expandLevel(level) {
+  collapseAll();
+  document.querySelectorAll('.tree-item').forEach(item => {
+    const d = parseInt(item.dataset.depth);
+    if (d < level) {
+      const container = item.querySelector(':scope > .children-container');
+      if (container) {
+        container.classList.remove('collapsed');
+        if (!container.dataset.loaded) {
+          const pid = parseInt(item.dataset.nodeId);
+          populateChildren(container, pid, d + 1);
+          container.dataset.loaded = 'true';
+        }
+        const toggle = item.querySelector(':scope > .tree-row .toggle-btn');
+        if (toggle) toggle.classList.remove('collapsed');
+      }
+    }
+  });
+  setTimeout(() => {
+    document.querySelectorAll('.tree-item').forEach(item => {
+      const d = parseInt(item.dataset.depth);
+      if (d < level) {
+        const container = item.querySelector(':scope > .children-container');
+        if (container && container.classList.contains('collapsed')) {
+          container.classList.remove('collapsed');
+          if (!container.dataset.loaded) {
+            const pid = parseInt(item.dataset.nodeId);
+            populateChildren(container, pid, d + 1);
+            container.dataset.loaded = 'true';
+          }
+        }
+      }
+    });
+  }, 50);
+}
+
+/* ── Search ── */
+
+let searchTimeout;
+function onSearch(query) {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(() => performSearch(query), 200);
+}
+
+function performSearch(query) {
+  document.querySelectorAll('.tree-row.search-match').forEach(r => r.classList.remove('search-match'));
+  if (!query.trim()) return;
+
+  const q = query.toLowerCase();
+  const matchedIds = [];
+
+  treeData.nodes.forEach(n => {
+    if (n.name.toLowerCase().includes(q) || (n.description && n.description.toLowerCase().includes(q))) {
+      matchedIds.push(n.tree_node_id);
+    }
+  });
+
+  if (matchedIds.length === 0) return;
+
+  matchedIds.forEach(id => {
+    revealNode(id);
+    const row = document.querySelector(`.tree-row[data-node-id="${id}"]`);
+    if (row) row.classList.add('search-match');
+  });
+
+  const firstRow = document.querySelector('.tree-row.search-match');
+  if (firstRow) firstRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function revealNode(nodeId) {
+  const path = getAncestorPath(nodeId);
+  path.forEach(ancestorId => {
+    const item = document.querySelector(`.tree-item[data-node-id="${ancestorId}"]`);
+    if (!item) return;
+    const container = item.querySelector(':scope > .children-container');
+    if (container) {
+      if (!container.dataset.loaded) {
+        const d = parseInt(item.dataset.depth);
+        populateChildren(container, ancestorId, d + 1);
+        container.dataset.loaded = 'true';
+      }
+      container.classList.remove('collapsed');
+      const toggle = item.querySelector(':scope > .tree-row .toggle-btn');
+      if (toggle) toggle.classList.remove('collapsed');
+    }
+  });
+}
+
+function getAncestorPath(nodeId) {
+  const parentMap = {};
+  treeData.edges.forEach(e => {
+    if (e.edge_type === 'parent_child') parentMap[e.to_node_id] = e.from_node_id;
+  });
+  const path = [];
+  let cur = nodeId;
+  while (parentMap[cur] !== undefined) {
+    cur = parentMap[cur];
+    path.unshift(cur);
+  }
+  return path;
+}
+
+/* ── Ideas Panel ── */
+
+function buildIdeaMap() {
+  ideaToNodesMap = {};
+  const ideaTextMap = {};
+
+  treeData.nodes.forEach(n => {
+    const ids = normalizeArray(n.idea_ids || n.idea_id);
+    const texts = normalizeArray(n.idea_texts || n.idea_text);
+    ids.forEach((id, i) => {
+      if (!ideaToNodesMap[id]) ideaToNodesMap[id] = [];
+      ideaToNodesMap[id].push(n.tree_node_id);
+      if (texts[i] && !ideaTextMap[id]) ideaTextMap[id] = texts[i];
+    });
+
+    const mechNodes = getMechNodes(n);
+    mechNodes.forEach(mn => {
+      if (mn.idea_id != null) {
+        if (!ideaToNodesMap[mn.idea_id]) ideaToNodesMap[mn.idea_id] = [];
+        if (!ideaToNodesMap[mn.idea_id].includes(n.tree_node_id)) {
+          ideaToNodesMap[mn.idea_id].push(n.tree_node_id);
+        }
+        if (mn.idea_text && !ideaTextMap[mn.idea_id]) ideaTextMap[mn.idea_id] = mn.idea_text;
+      }
+    });
+  });
+
+  const ideaIds = Object.keys(ideaToNodesMap).map(Number).sort((a, b) => a - b);
+  allIdeas = ideaIds.map(id => ({
+    id: id,
+    text: ideaTextMap[id] || (purposeMap[id] && (purposeMap[id].idea || purposeMap[id].text || purposeMap[id].idea_text)) || (mechAbMap[id] && mechAbMap[id].idea) || '',
+    nodeIds: [...new Set(ideaToNodesMap[id])]
+  }));
+}
+
+function renderIdeasPanel() {
+  const body = document.getElementById('ideasBody');
+  const countEl = document.getElementById('ideasCount');
+  countEl.textContent = allIdeas.length;
+
+  body.innerHTML = '';
+  allIdeas.forEach(idea => {
+    const div = document.createElement('div');
+    div.className = 'idea-item';
+    div.dataset.ideaId = idea.id;
+
+    const abstractionsHTML = buildIdeaMiniTree(idea.id);
+
+    div.innerHTML =
+      `<div class="idea-item-id">Idea #${idea.id}</div>` +
+      (idea.text ? `<div class="idea-item-text">${esc(idea.text)}</div>` : '') +
+      abstractionsHTML;
+
+    div.addEventListener('click', () => onIdeaClick(idea.id));
+    body.appendChild(div);
+  });
+}
+
+function buildIdeaMiniTree(ideaId) {
+  const combined = getIdeaAbstractions(ideaId);
+  const abNodeMap = {};
+  ['superordinate', 'basic', 'subordinate'].forEach(level => {
+    if (combined[level]) {
+      combined[level].forEach(node => {
+        abNodeMap[node.id] = { ...node, level };
+      });
+    }
+  });
+
+  if (Object.keys(abNodeMap).length === 0) return '';
+
+  const superNodes = combined.superordinate || [];
+
+  const purposeClusters = {};
+  superNodes.forEach(sNode => {
+    const key = ideaId + ':' + sNode.id;
+    const annot = purposeAnnotMap[key];
+    if (annot) {
+      const cid = 'purpose_' + annot.cluster;
+      if (!purposeClusters[cid]) {
+        purposeClusters[cid] = {
+          id: cid,
+          label: annot.name,
+          description: annot.description,
+          level: 'purpose',
+          children: []
         };
+      }
+      if (!purposeClusters[cid].children.includes(sNode.id)) {
+        purposeClusters[cid].children.push(sNode.id);
+      }
+    }
+  });
 
-        async function loadData() {
-            try {
-                const config = datasetConfigs[currentDataset];
-                const prefix = currentDataset === 'basic' ? '0' : '2';
-                const taxonomyFile = currentDataset === 'basic' 
-                    ? 'final_taxa_cluster_processed_basic_gemini.json'
-                    : 'final_taxa_cluster_2_processed_basic_gemini.json';
-                const higherLevelFile = currentDataset === 'basic'
-                    ? 'labeled_high_processed_basic_gemini_with_description.json'
-                    : 'labeled_high_2_processed_basic_gemini_with_description.json';
-                
-                const [taxonomyResponse, abstractionResponse, higherLevelResponse] = await Promise.all([
-                    fetch(`${config.folder}/${taxonomyFile}`),
-                    fetch(`${config.folder}/${prefix}_basic_gemini_with_labels.json`),
-                    fetch(`${config.folder}/${higherLevelFile}`),
-                ]);
+  Object.values(purposeClusters).forEach(p => {
+    abNodeMap[p.id] = p;
+  });
 
-                taxonomyData = await taxonomyResponse.json();
-                abstractionData = await abstractionResponse.json();
-                const higherLevelData = await higherLevelResponse.json();
+  const purposeList = Object.values(purposeClusters);
+  const superInPurpose = new Set();
+  purposeList.forEach(p => p.children.forEach(sid => superInPurpose.add(sid)));
 
-                initializeVisualization(higherLevelData);
-            } catch (error) {
-                console.error('Error loading data:', error);
-                document.getElementById('treeContainer').innerHTML = 
-                    '<div class="no-results">Error loading data. Please ensure JSON files are in the correct directory.</div>';
-            }
-        }
+  let html = '<div class="idea-abstractions">';
 
-        function initializeVisualization(higherLevelData) {
-            updateDatasetDescription();
-            renderIdeasList();
-            renderTree(higherLevelData);
-        }
+  if (purposeList.length > 0) {
+    purposeList.forEach(pNode => {
+      html += renderMiniTreeNode(pNode, abNodeMap, 'purpose');
+    });
+    const orphanSuper = superNodes.filter(s => !superInPurpose.has(s.id));
+    orphanSuper.forEach(node => {
+      html += renderMiniTreeNode(abNodeMap[node.id], abNodeMap, 'superordinate');
+    });
+  } else if (superNodes.length > 0) {
+    superNodes.forEach(node => {
+      html += renderMiniTreeNode(abNodeMap[node.id], abNodeMap, 'superordinate');
+    });
+  } else {
+    const basicNodes = combined.basic || [];
+    basicNodes.forEach(node => {
+      html += renderMiniTreeNode(abNodeMap[node.id], abNodeMap, 'basic');
+    });
+  }
+  html += '</div>';
+  return html;
+}
 
-        function updateDatasetDescription() {
-            const config = datasetConfigs[currentDataset];
-            document.getElementById('datasetDescription').textContent = 
-                `Design Task: ${config.description} | Taxonomy labels as main layer, abstraction items as children`;
-        }
+function getIdeaAbstractions(ideaId) {
+  const combined = {};
+  const purposeItem = purposeMap[ideaId];
+  const mechItem = mechAbMap[ideaId];
 
-        function renderIdeasList() {
-            const ideasList = document.getElementById('ideasList');
-            const ideaCount = document.getElementById('ideaCount');
-            
-            ideaCount.textContent = abstractionData.length;
-            
-            ideasList.innerHTML = '';
-            abstractionData.forEach(idea => {
-                const ideaDiv = document.createElement('div');
-                ideaDiv.className = 'idea-item';
-                ideaDiv.dataset.ideaId = idea.id;
-                
-                // Build tree structure
-                const abstraction = idea.abstraction;
-                let abstractionsHTML = '<div class="idea-abstractions">';
-                
-                // Build node map
-                const nodeMap = {};
-                ['superordinate', 'basic', 'subordinate'].forEach(level => {
-                    if (abstraction[level]) {
-                        abstraction[level].forEach(node => {
-                            nodeMap[node.id] = { ...node, level };
-                        });
-                    }
-                });
-                
-                // Render tree starting from superordinate nodes
-                if (abstraction.superordinate && abstraction.superordinate.length > 0) {
-                    abstraction.superordinate.forEach(node => {
-                        abstractionsHTML += renderTreeNodeMini(node, nodeMap, 'superordinate');
-                    });
-                }
-                
-                abstractionsHTML += '</div>';
-                
-                ideaDiv.innerHTML = `
-                    <div class="idea-item-id">Idea #${idea.id}</div>
-                    <div class="idea-item-text">${idea.idea}</div>
-                    ${abstractionsHTML}
-                `;
-                
-                ideaDiv.addEventListener('click', () => {
-                    selectIdea(idea.id);
-                });
-                
-                ideasList.appendChild(ideaDiv);
+  if (purposeItem && purposeItem.abstraction) {
+    Object.keys(purposeItem.abstraction).forEach(k => { combined[k] = [...(purposeItem.abstraction[k] || [])]; });
+  }
+  if (mechItem && mechItem.abstraction) {
+    ['superordinate', 'basic', 'subordinate'].forEach(k => {
+      if (mechItem.abstraction[k]) combined[k] = mechItem.abstraction[k];
+    });
+  }
+
+  if (Object.keys(combined).length === 0) {
+    const idea = allIdeas.find(i => i.id === ideaId);
+    if (idea) {
+      const seen = new Set();
+      idea.nodeIds.forEach(nid => {
+        const n = nodeMap[nid];
+        if (!n) return;
+        const members = getMechNodes(n);
+        members.forEach(m => {
+          if (m.idea_id === ideaId && m.level && m.abstraction_id) {
+            const key = m.abstraction_id + ':' + m.idea_id;
+            if (seen.has(key)) return;
+            seen.add(key);
+            if (!combined[m.level]) combined[m.level] = [];
+            combined[m.level].push({
+              id: m.abstraction_id,
+              label: m.label || m.abstraction,
+              description: m.description || '',
+              is_core: m.is_core,
+              parent: m.parent,
+              children: m.children || []
             });
-        }
-
-        function renderTreeNodeMini(node, nodeMap, level) {
-            const coreClass = node.is_core ? 'core' : '';
-            const levelLabel = level === 'superordinate' ? 'S' : level === 'basic' ? 'B' : 'D';
-            
-            let html = `
-                <div class="tree-node-mini">
-                    <div class="tree-node-mini-content">
-                        <div class="tree-node-dot ${coreClass}"></div>
-                        <div class="tree-node-label-mini">
-                            <strong>[${levelLabel}]</strong> ${node.label}
-                            <div style="margin-top: 4px; font-size: 0.9em; opacity: 0.8; line-height: 1.3;">
-                                ${node.description}
-                            </div>
-                        </div>
-                    </div>
-            `;
-            
-            // Render children
-            if (node.children && node.children.length > 0) {
-                html += '<div class="tree-children-mini">';
-                
-                node.children.forEach(childId => {
-                    const childNode = nodeMap[childId];
-                    if (childNode) {
-                        html += renderTreeNodeMini(childNode, nodeMap, childNode.level);
-                    }
-                });
-                
-                html += '</div>';
-            }
-            
-            html += '</div>';
-            return html;
-        }
-
-        function renderTree(higherLevelData) {
-            const treeContainer = document.getElementById('treeContainer');
-            
-            // Build higher-level cluster mapping
-            const higherLevelMap = {};
-            higherLevelData.forEach(item => {
-                const taxonomyClusterId = item.idea_id;
-                item.labels.forEach(label => {
-                    if (!higherLevelMap[label.id]) {
-                        higherLevelMap[label.id] = {
-                            id: label.id,
-                            name: label.name,
-                            description: item.description || '',
-                            taxonomyClusters: []
-                        };
-                    }
-                    higherLevelMap[label.id].taxonomyClusters.push({
-                        clusterId: taxonomyClusterId,
-                        explanation: item.explanation
-                    });
-                });
-            });
-            
-            // Build taxonomy data structure
-            const taxonomyMap = {};
-            taxonomyData.clusters.forEach(cluster => {
-                taxonomyMap[cluster.id] = {
-                    ...cluster,
-                    abstractions: []
-                };
-            });
-
-            // Group abstractions by their main label
-            abstractionData.forEach(idea => {
-                const abstraction = idea.abstraction;
-                
-                ['superordinate', 'basic', 'subordinate'].forEach(level => {
-                    if (abstraction[level]) {
-                        abstraction[level].forEach(node => {
-                            if (node.labels && node.labels.length > 0) {
-                                // Find main label
-                                const mainLabel = node.labels.find(l => l.type === 'main');
-                                if (mainLabel && taxonomyMap[mainLabel.id]) {
-                                    taxonomyMap[mainLabel.id].abstractions.push({
-                                        nodeId: node.id,
-                                        label: node.label,
-                                        description: node.description,
-                                        level: level,
-                                        isCore: node.is_core || false,
-                                        ideaId: idea.id,
-                                        allLabels: node.labels
-                                    });
-                                }
-                            }
-                        });
-                    }
-                });
-            });
-
-            // Render root node
-            const config = datasetConfigs[currentDataset];
-            let html = `
-                <div class="root-node">
-                    <div class="node-content">${config.title}</div>
-                </div>
-            `;
-
-            // Render higher-level clusters
-            html += '<div class="main-layer">';
-            
-            const sortedHigherLevel = Object.values(higherLevelMap)
-                .sort((a, b) => parseInt(a.id) - parseInt(b.id));
-
-            sortedHigherLevel.forEach(higherCluster => {
-                // Get taxonomy clusters for this higher-level cluster
-                const taxonomyClusters = higherCluster.taxonomyClusters
-                    .map(tc => taxonomyMap[tc.clusterId])
-                    .filter(c => c && c.abstractions.length > 0);
-                
-                if (taxonomyClusters.length === 0) return;
-                
-                const totalAbstractions = taxonomyClusters.reduce((sum, c) => sum + c.abstractions.length, 0);
-                
-                html += `
-                    <div class="higher-cluster-wrapper" data-higher-cluster-id="${higherCluster.id}">
-                        <div class="taxonomy-node-content" data-higher-cluster-id="${higherCluster.id}" 
-                             style="background: white; color: #2c3e50; border-color: #667eea;">
-                            <div class="taxonomy-id" style="background: #667eea; color: white;">Higher Cluster #${higherCluster.id}</div>
-                            <div class="taxonomy-name">${higherCluster.name}</div>
-                            <div class="taxonomy-description">${higherCluster.description || ''}</div>
-                            <div class="taxonomy-description" style="margin-top: 8px; font-weight: 600; color: #667eea;">${taxonomyClusters.length} mechanisms, ${totalAbstractions} items</div>
-                        </div>
-                        <div class="mechanisms-layer" data-higher-cluster-id="${higherCluster.id}">
-                `;
-                
-                // Render taxonomy clusters under this higher-level cluster (horizontally)
-                taxonomyClusters.forEach(cluster => {
-                    html += `
-                        <div class="taxonomy-node" data-cluster-id="${cluster.id}">
-                            <div class="taxonomy-node-content" data-cluster-id="${cluster.id}">
-                                <div class="taxonomy-id">Mechanism #${cluster.id}</div>
-                                <div class="taxonomy-name">${cluster.name}</div>
-                                <div class="taxonomy-description">${cluster.description}</div>
-                                <div style="margin-top: 8px; font-size: 0.85em; color: #667eea; font-weight: 600;">${cluster.abstractions.length} items</div>
-                            </div>
-                            <div class="abstraction-items-wrapper">
-                                <div class="abstraction-items" data-cluster-id="${cluster.id}">
-                                    ${renderAbstractions(cluster.abstractions)}
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                });
-                
-                html += `
-                        </div>
-                    </div>
-                `;
-            });
-
-            html += '</div>';
-
-            treeContainer.innerHTML = html;
-        }
-
-        function renderAbstractions(abstractions) {
-            return abstractions.map(abs => `
-                <div class="abstraction-item ${abs.isCore ? 'core' : ''}" 
-                     data-idea-id="${abs.ideaId}" 
-                     data-node-id="${abs.nodeId}"
-                     onclick="selectIdeaFromAbstraction(${abs.ideaId})">
-                    <div class="abstraction-level">${abs.level}</div>
-                    <div class="abstraction-label">${abs.label}</div>
-                    <div class="abstraction-description">${abs.description}</div>
-                </div>
-            `).join('');
-        }
-
-        function truncateText(text, maxLength) {
-            if (text.length <= maxLength) return text;
-            return text.substring(0, maxLength) + '...';
-        }
-
-        function selectIdea(ideaId) {
-            selectedIdeaId = ideaId;
-            
-            // Update idea list UI
-            document.querySelectorAll('.idea-item').forEach(item => {
-                if (parseInt(item.dataset.ideaId) === ideaId) {
-                    item.classList.add('active');
-                    // Scroll the idea into view in the sidebar
-                    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                } else {
-                    item.classList.remove('active');
-                }
-            });
-
-            highlightIdeaOnTree(ideaId);
-        }
-
-        function selectIdeaFromAbstraction(ideaId) {
-            // Same as selectIdea but called from abstraction click
-            selectIdea(ideaId);
-        }
-
-        function highlightIdeaOnTree(ideaId) {
-            // Clear previous highlights
-            document.querySelectorAll('.taxonomy-node-content.highlighted').forEach(el => {
-                el.classList.remove('highlighted');
-            });
-            document.querySelectorAll('.abstraction-item.highlighted').forEach(el => {
-                el.classList.remove('highlighted');
-            });
-
-            // Find and highlight abstractions and their taxonomy labels for this idea
-            const idea = abstractionData.find(i => i.id === ideaId);
-            if (!idea) return;
-
-            const highlightedClusters = new Set();
-            
-            // Highlight abstraction items and collect their cluster IDs
-            document.querySelectorAll(`.abstraction-item[data-idea-id="${ideaId}"]`).forEach(item => {
-                item.classList.add('highlighted');
-                
-                // Find parent cluster
-                const parentNode = item.closest('.taxonomy-node');
-                if (parentNode) {
-                    const clusterId = parentNode.dataset.clusterId;
-                    highlightedClusters.add(clusterId);
-                }
-                
-                // Scroll into view the first one
-                if (highlightedClusters.size === 1) {
-                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            });
-
-            // Highlight taxonomy nodes
-            highlightedClusters.forEach(clusterId => {
-                const taxonomyNode = document.querySelector(`.taxonomy-node-content[data-cluster-id="${clusterId}"]`);
-                if (taxonomyNode) {
-                    taxonomyNode.classList.add('highlighted');
-                    
-                }
-            });
-        }
-
-        function clearSelection() {
-            selectedIdeaId = null;
-            
-            document.querySelectorAll('.idea-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.taxonomy-node-content.highlighted').forEach(el => {
-                el.classList.remove('highlighted');
-            });
-            document.querySelectorAll('.abstraction-item.highlighted').forEach(el => {
-                el.classList.remove('highlighted');
-            });
-        }
-
-
-
-
-        // Search functionality
-        document.getElementById('ideaSearch').addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            
-            document.querySelectorAll('.idea-item').forEach(item => {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+          }
         });
+      });
+    }
+  }
+  return combined;
+}
 
-        // Zoom functions
-        function updateZoom() {
-            const tree = document.getElementById('treeContainer');
-            tree.style.transform = `scale(${zoomLevel})`;
-            document.getElementById('zoomLevel').textContent = Math.round(zoomLevel * 100) + '%';
-        }
+function renderMiniTreeNode(node, abNodeMap, level) {
+  const dotClass = level === 'purpose' ? 'purpose' : (node.is_core ? 'core' : '');
+  const levelLabels = { purpose: 'P', superordinate: 'S', basic: 'B', subordinate: 'D' };
+  const levelLabel = levelLabels[level] || level.charAt(0).toUpperCase();
+  const desc = node.description || '';
 
-        function zoomIn() {
-            if (zoomLevel < maxZoom) {
-                zoomLevel = Math.min(maxZoom, zoomLevel + zoomStep);
-                updateZoom();
-            }
-        }
+  let html = '<div class="tree-node-mini">';
+  html += '<div class="tree-node-mini-content">';
+  html += `<div class="tree-node-dot ${dotClass}"></div>`;
+  html += '<div class="tree-node-label-mini">';
+  html += `<strong>[${levelLabel}]</strong> ${esc(node.label)}`;
+  if (desc) html += `<div style="margin-top:4px;font-size:0.9em;opacity:0.8;line-height:1.3">${esc(desc)}</div>`;
+  html += '</div></div>';
 
-        function zoomOut() {
-            if (zoomLevel > minZoom) {
-                zoomLevel = Math.max(minZoom, zoomLevel - zoomStep);
-                updateZoom();
-            }
-        }
+  if (node.children && node.children.length > 0) {
+    html += '<div class="tree-children-mini">';
+    node.children.forEach(childId => {
+      const childNode = abNodeMap[childId];
+      if (childNode) {
+        html += renderMiniTreeNode(childNode, abNodeMap, childNode.level);
+      }
+    });
+    html += '</div>';
+  }
 
-        function zoomReset() {
-            zoomLevel = 1.0;
-            updateZoom();
-        }
+  html += '</div>';
+  return html;
+}
 
-        // Mouse wheel zoom
-        document.getElementById('treeContainer').addEventListener('wheel', (e) => {
-            if (e.ctrlKey || e.metaKey) {
-                e.preventDefault();
-                if (e.deltaY < 0) {
-                    zoomIn();
-                } else {
-                    zoomOut();
-                }
-            }
-        }, { passive: false });
+function onIdeaClick(ideaId) {
+  const wasSame = activeIdeaId === ideaId;
+  clearIdeaHighlights();
 
-        // Event listeners
-        document.getElementById('datasetSelect').addEventListener('change', (e) => {
-            currentDataset = e.target.value;
-            clearSelection();
-            loadData();
-        });
-        document.getElementById('clearBtn').addEventListener('click', clearSelection);
-        document.getElementById('zoomInBtn').addEventListener('click', zoomIn);
-        document.getElementById('zoomOutBtn').addEventListener('click', zoomOut);
-        document.getElementById('zoomResetBtn').addEventListener('click', zoomReset);
+  if (wasSame) return;
 
-        // Keyboard shortcuts
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey || e.metaKey) {
-                if (e.key === '=' || e.key === '+') {
-                    e.preventDefault();
-                    zoomIn();
-                } else if (e.key === '-') {
-                    e.preventDefault();
-                    zoomOut();
-                } else if (e.key === '0') {
-                    e.preventDefault();
-                    zoomReset();
-                }
-            }
-        });
+  activeIdeaId = ideaId;
 
-        // Load data on page load
-        loadData();
-    </script>
+  document.querySelectorAll('.idea-item').forEach(el => {
+    el.classList.toggle('active', parseInt(el.dataset.ideaId) === ideaId);
+  });
+
+  const idea = allIdeas.find(i => i.id === ideaId);
+  if (!idea) return;
+
+  const targetNodeIds = idea.nodeIds.filter(nid => {
+    const n = nodeMap[nid];
+    return n && (n.type === 'level3_cluster' || n.type === 'subordinate_node');
+  });
+  const fallbackIds = targetNodeIds.length > 0 ? targetNodeIds : idea.nodeIds;
+
+  fallbackIds.forEach(nid => revealNode(nid));
+
+  requestAnimationFrame(() => {
+    fallbackIds.forEach(nid => {
+      const row = document.querySelector(`.tree-row[data-node-id="${nid}"]`);
+      if (row) row.classList.add('idea-highlight');
+    });
+    const firstHighlight = document.querySelector('.tree-row.idea-highlight');
+    if (firstHighlight) firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+}
+
+function clearIdeaHighlights() {
+  activeIdeaId = null;
+  document.querySelectorAll('.tree-row.idea-highlight').forEach(r => r.classList.remove('idea-highlight'));
+  document.querySelectorAll('.idea-item.active').forEach(el => el.classList.remove('active'));
+}
+
+function onIdeasFilter(query) {
+  const q = query.toLowerCase().trim();
+  let visible = 0;
+  document.querySelectorAll('.idea-item').forEach(el => {
+    const ideaId = el.dataset.ideaId;
+    const idea = allIdeas.find(i => i.id === parseInt(ideaId));
+    const match = !q ||
+      String(idea.id).includes(q) ||
+      (idea.text && idea.text.toLowerCase().includes(q));
+    el.classList.toggle('hidden', !match);
+    if (match) visible++;
+  });
+  document.getElementById('ideasCount').textContent = q ? `${visible}/${allIdeas.length}` : allIdeas.length;
+}
+
+loadData();
+</script>
 </body>
 </html>
-

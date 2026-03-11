@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchical Tree Structure - Taxonomy & Abstractions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f7fa;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .main-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 350px;
+            background: white;
+            border-right: 2px solid #e1e8ed;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .sidebar-stats {
+            font-size: 0.9em;
+            opacity: 0.95;
+        }
+
+        .sidebar-search {
+            padding: 15px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        .sidebar-search input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .sidebar-search input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .ideas-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .idea-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .idea-item:hover {
+            background: #e7f3ff;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .idea-item.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .idea-item-id {
+            font-weight: 700;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+            opacity: 0.8;
+        }
+
+        .idea-item.active .idea-item-id {
+            opacity: 1;
+        }
+
+        .idea-item-text {
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .idea-abstractions {
+            margin-top: 10px;
+            font-size: 0.8em;
+            border-top: 1px solid #dee2e6;
+            padding-top: 8px;
+        }
+
+        .idea-item.active .idea-abstractions {
+            border-top-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .tree-node-mini {
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .tree-node-mini-content {
+            display: flex;
+            align-items: start;
+            gap: 6px;
+            line-height: 1.3;
+            padding: 3px 0;
+        }
+
+        .tree-node-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #667eea;
+            flex-shrink: 0;
+            margin-top: 4px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .idea-item.active .tree-node-dot {
+            background: white;
+        }
+
+        .tree-node-dot.core {
+            background: #28a745;
+        }
+
+        .idea-item.active .tree-node-dot.core {
+            background: #90ee90;
+        }
+
+        .tree-node-label-mini {
+            flex: 1;
+        }
+
+        .tree-children-mini {
+            margin-left: 15px;
+            padding-left: 10px;
+            border-left: 2px solid #dee2e6;
+            position: relative;
+        }
+
+        .idea-item.active .tree-children-mini {
+            border-left-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .tree-level-indicator {
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            opacity: 0.6;
+            margin-top: 5px;
+            margin-bottom: 3px;
+        }
+
+        .idea-item.active .tree-level-indicator {
+            opacity: 0.85;
+        }
+
+        /* Tree Container */
+        .tree-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .tree-header {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 2px solid #e1e8ed;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .tree-header h1 {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .tree-header p {
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+
+        .tree-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            align-items: center;
+        }
+
+        .zoom-controls {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 5px;
+            border-radius: 8px;
+            border: 2px solid #e1e8ed;
+        }
+
+        .zoom-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .zoom-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .zoom-level {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #2c3e50;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85em;
+            color: #6c757d;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 2px solid #dee2e6;
+        }
+
+        .tree-viewport {
+            flex: 1;
+            overflow: auto;
+            padding: 30px;
+            background: #f5f7fa;
+            position: relative;
+        }
+
+        .tree {
+            min-width: max-content;
+            transform-origin: top center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Tree Node Styles */
+        .tree-node {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .root-node {
+            text-align: center;
+            margin: 0 auto 40px;
+        }
+
+        .root-node .node-content {
+            display: inline-block;
+            padding: 20px 40px;
+            background: #8898e2;
+            color: white;
+            border-radius: 12px;
+            font-size: 1.4em;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+        }
+
+        .main-layer {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+
+        .higher-cluster-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 250px;
+        }
+
+        .mechanisms-layer {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        .taxonomy-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 280px;
+            min-width: 220px;
+        }
+
+        .taxonomy-node-content {
+            background: white;
+            border: 3px solid #667eea;
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-align: center;
+            min-width: 200px;
+            width: 100%;
+        }
+
+        .taxonomy-node-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .taxonomy-node-content.highlighted {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            border-color: #ffa500;
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        .taxonomy-id {
+            font-size: 0.75em;
+            font-weight: 700;
+            color: white;
+            background: #667eea;
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .taxonomy-node-content.highlighted .taxonomy-id {
+            background: #ff8c00;
+        }
+
+        .taxonomy-name {
+            font-weight: 700;
+            font-size: 1em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .taxonomy-description {
+            font-size: 0.8em;
+            color: #88919a;
+            line-height: 1.4;
+            white-space: normal;
+        }
+
+        .abstraction-items {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 10px;
+            width: 100%;
+        }
+
+        .abstraction-items-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .abstraction-item {
+            background: white;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 12px 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .abstraction-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateX(5px);
+        }
+
+        .abstraction-item.highlighted {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            border-color: #ffa500;
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        .abstraction-item.core.highlighted {
+            background: linear-gradient(135deg, #90ee90 0%, #98fb98 100%);
+            border-color: #28a745;
+            box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+            transform: scale(1.05);
+        }
+
+        .abstraction-level {
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #667eea;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .abstraction-label {
+            font-weight: 600;
+            font-size: 0.9em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .abstraction-description {
+            font-size: 0.8em;
+            color: #6c757d;
+            line-height: 1.3;
+        }
+
+        .toggle-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background: #764ba2;
+        }
+
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+            font-size: 1.1em;
+        }
+
+        .controls {
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #e1e8ed;
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            flex: 1;
+            padding: 10px;
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        @media (max-width: 1200px) {
+            .sidebar {
+                width: 300px;
+            }
+
+            .main-layer {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>💡 Ideas</h2>
+                <div class="sidebar-stats">
+                    <span id="ideaCount">0</span> ideas
+                </div>
+            </div>
+            <div class="sidebar-search" style="padding: 15px; border-bottom: 1px solid #e1e8ed;">
+                <label for="datasetSelect" style="display: block; font-size: 0.9em; font-weight: 600; color: white; margin-bottom: 8px;">Select Dataset:</label>
+                <select id="datasetSelect" style="width: 100%; padding: 10px 15px; border: 2px solid #e1e8ed; border-radius: 8px; font-size: 0.9em; background: white; color: #2c3e50; cursor: pointer;">
+                    <option value="basic">Clean laundry with less water</option>
+                    <option value="basic_2">Lightweight exercise device (energy collection)</option>
+                </select>
+            </div>
+            <div class="sidebar-search">
+                <input type="text" id="ideaSearch" placeholder="🔍 Search ideas...">
+            </div>
+            <div class="ideas-list" id="ideasList">
+                <!-- Ideas will be populated here -->
+            </div>
+            <div class="controls">
+                <button class="control-btn" id="clearBtn">Clear Selection</button>
+            </div>
+        </div>
+
+        <!-- Tree Visualization -->
+        <div class="tree-container">
+            <div class="tree-header">
+                <h1>🌳 Hierarchical Tree Structure</h1>
+                <p id="datasetDescription">Taxonomy labels as main layer, abstraction items as children</p>
+                <div class="tree-controls">
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" id="zoomOutBtn" title="Zoom Out">−</button>
+                        <span class="zoom-level" id="zoomLevel">100%</span>
+                        <button class="zoom-btn" id="zoomInBtn" title="Zoom In">+</button>
+                        <button class="zoom-btn" id="zoomResetBtn" title="Reset Zoom">⟲</button>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <span>Higher-Level Cluster</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: white; border-color: #667eea;"></div>
+                        <span>Mechanism Cluster</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: white; border-color: #e1e8ed;"></div>
+                        <span>Abstraction</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);"></div>
+                        <span>Selected (Regular)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: linear-gradient(135deg, #90ee90 0%, #98fb98 100%); border-color: #28a745;"></div>
+                        <span>Selected (Core)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tree-viewport">
+                <div class="tree" id="treeContainer">
+                    <!-- Tree will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let taxonomyData = null;
+        let abstractionData = null;
+        let selectedIdeaId = null;
+        let zoomLevel = 1.0;
+        const zoomStep = 0.1;
+        const minZoom = 0.3;
+        const maxZoom = 2.0;
+        let currentDataset = 'basic';
+
+        const datasetConfigs = {
+            'basic': {
+                folder: 'gemini/basic',
+                title: 'Water-Efficient Laundry Cleaning',
+                description: 'Clean laundry with less water'
+            },
+            'basic_2': {
+                folder: 'gemini/basic_2',
+                title: 'Lightweight Exercise Device with Energy Collection',
+                description: 'Solutions for a lightweight exercise device that can collect energy from human motion'
+            }
+        };
+
+        async function loadData() {
+            try {
+                const config = datasetConfigs[currentDataset];
+                const prefix = currentDataset === 'basic' ? '0' : '2';
+                const taxonomyFile = currentDataset === 'basic' 
+                    ? 'final_taxa_cluster_processed_basic_gemini.json'
+                    : 'final_taxa_cluster_2_processed_basic_gemini.json';
+                const higherLevelFile = currentDataset === 'basic'
+                    ? 'labeled_high_processed_basic_gemini_with_description.json'
+                    : 'labeled_high_2_processed_basic_gemini_with_description.json';
+                
+                const [taxonomyResponse, abstractionResponse, higherLevelResponse] = await Promise.all([
+                    fetch(`${config.folder}/${taxonomyFile}`),
+                    fetch(`${config.folder}/${prefix}_basic_gemini_with_labels.json`),
+                    fetch(`${config.folder}/${higherLevelFile}`),
+                ]);
+
+                taxonomyData = await taxonomyResponse.json();
+                abstractionData = await abstractionResponse.json();
+                const higherLevelData = await higherLevelResponse.json();
+
+                initializeVisualization(higherLevelData);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('treeContainer').innerHTML = 
+                    '<div class="no-results">Error loading data. Please ensure JSON files are in the correct directory.</div>';
+            }
+        }
+
+        function initializeVisualization(higherLevelData) {
+            updateDatasetDescription();
+            renderIdeasList();
+            renderTree(higherLevelData);
+        }
+
+        function updateDatasetDescription() {
+            const config = datasetConfigs[currentDataset];
+            document.getElementById('datasetDescription').textContent = 
+                `Design Task: ${config.description} | Taxonomy labels as main layer, abstraction items as children`;
+        }
+
+        function renderIdeasList() {
+            const ideasList = document.getElementById('ideasList');
+            const ideaCount = document.getElementById('ideaCount');
+            
+            ideaCount.textContent = abstractionData.length;
+            
+            ideasList.innerHTML = '';
+            abstractionData.forEach(idea => {
+                const ideaDiv = document.createElement('div');
+                ideaDiv.className = 'idea-item';
+                ideaDiv.dataset.ideaId = idea.id;
+                
+                // Build tree structure
+                const abstraction = idea.abstraction;
+                let abstractionsHTML = '<div class="idea-abstractions">';
+                
+                // Build node map
+                const nodeMap = {};
+                ['superordinate', 'basic', 'subordinate'].forEach(level => {
+                    if (abstraction[level]) {
+                        abstraction[level].forEach(node => {
+                            nodeMap[node.id] = { ...node, level };
+                        });
+                    }
+                });
+                
+                // Render tree starting from superordinate nodes
+                if (abstraction.superordinate && abstraction.superordinate.length > 0) {
+                    abstraction.superordinate.forEach(node => {
+                        abstractionsHTML += renderTreeNodeMini(node, nodeMap, 'superordinate');
+                    });
+                }
+                
+                abstractionsHTML += '</div>';
+                
+                ideaDiv.innerHTML = `
+                    <div class="idea-item-id">Idea #${idea.id}</div>
+                    <div class="idea-item-text">${idea.idea}</div>
+                    ${abstractionsHTML}
+                `;
+                
+                ideaDiv.addEventListener('click', () => {
+                    selectIdea(idea.id);
+                });
+                
+                ideasList.appendChild(ideaDiv);
+            });
+        }
+
+        function renderTreeNodeMini(node, nodeMap, level) {
+            const coreClass = node.is_core ? 'core' : '';
+            const levelLabel = level === 'superordinate' ? 'S' : level === 'basic' ? 'B' : 'D';
+            
+            let html = `
+                <div class="tree-node-mini">
+                    <div class="tree-node-mini-content">
+                        <div class="tree-node-dot ${coreClass}"></div>
+                        <div class="tree-node-label-mini">
+                            <strong>[${levelLabel}]</strong> ${node.label}
+                            <div style="margin-top: 4px; font-size: 0.9em; opacity: 0.8; line-height: 1.3;">
+                                ${node.description}
+                            </div>
+                        </div>
+                    </div>
+            `;
+            
+            // Render children
+            if (node.children && node.children.length > 0) {
+                html += '<div class="tree-children-mini">';
+                
+                node.children.forEach(childId => {
+                    const childNode = nodeMap[childId];
+                    if (childNode) {
+                        html += renderTreeNodeMini(childNode, nodeMap, childNode.level);
+                    }
+                });
+                
+                html += '</div>';
+            }
+            
+            html += '</div>';
+            return html;
+        }
+
+        function renderTree(higherLevelData) {
+            const treeContainer = document.getElementById('treeContainer');
+            
+            // Build higher-level cluster mapping
+            const higherLevelMap = {};
+            higherLevelData.forEach(item => {
+                const taxonomyClusterId = item.idea_id;
+                item.labels.forEach(label => {
+                    if (!higherLevelMap[label.id]) {
+                        higherLevelMap[label.id] = {
+                            id: label.id,
+                            name: label.name,
+                            description: item.description || '',
+                            taxonomyClusters: []
+                        };
+                    }
+                    higherLevelMap[label.id].taxonomyClusters.push({
+                        clusterId: taxonomyClusterId,
+                        explanation: item.explanation
+                    });
+                });
+            });
+            
+            // Build taxonomy data structure
+            const taxonomyMap = {};
+            taxonomyData.clusters.forEach(cluster => {
+                taxonomyMap[cluster.id] = {
+                    ...cluster,
+                    abstractions: []
+                };
+            });
+
+            // Group abstractions by their main label
+            abstractionData.forEach(idea => {
+                const abstraction = idea.abstraction;
+                
+                ['superordinate', 'basic', 'subordinate'].forEach(level => {
+                    if (abstraction[level]) {
+                        abstraction[level].forEach(node => {
+                            if (node.labels && node.labels.length > 0) {
+                                // Find main label
+                                const mainLabel = node.labels.find(l => l.type === 'main');
+                                if (mainLabel && taxonomyMap[mainLabel.id]) {
+                                    taxonomyMap[mainLabel.id].abstractions.push({
+                                        nodeId: node.id,
+                                        label: node.label,
+                                        description: node.description,
+                                        level: level,
+                                        isCore: node.is_core || false,
+                                        ideaId: idea.id,
+                                        allLabels: node.labels
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Render root node
+            const config = datasetConfigs[currentDataset];
+            let html = `
+                <div class="root-node">
+                    <div class="node-content">${config.title}</div>
+                </div>
+            `;
+
+            // Render higher-level clusters
+            html += '<div class="main-layer">';
+            
+            const sortedHigherLevel = Object.values(higherLevelMap)
+                .sort((a, b) => parseInt(a.id) - parseInt(b.id));
+
+            sortedHigherLevel.forEach(higherCluster => {
+                // Get taxonomy clusters for this higher-level cluster
+                const taxonomyClusters = higherCluster.taxonomyClusters
+                    .map(tc => taxonomyMap[tc.clusterId])
+                    .filter(c => c && c.abstractions.length > 0);
+                
+                if (taxonomyClusters.length === 0) return;
+                
+                const totalAbstractions = taxonomyClusters.reduce((sum, c) => sum + c.abstractions.length, 0);
+                
+                html += `
+                    <div class="higher-cluster-wrapper" data-higher-cluster-id="${higherCluster.id}">
+                        <div class="taxonomy-node-content" data-higher-cluster-id="${higherCluster.id}" 
+                             style="background: white; color: #2c3e50; border-color: #667eea;">
+                            <div class="taxonomy-id" style="background: #667eea; color: white;">Higher Cluster #${higherCluster.id}</div>
+                            <div class="taxonomy-name">${higherCluster.name}</div>
+                            <div class="taxonomy-description">${higherCluster.description || ''}</div>
+                            <div class="taxonomy-description" style="margin-top: 8px; font-weight: 600; color: #667eea;">${taxonomyClusters.length} mechanisms, ${totalAbstractions} items</div>
+                        </div>
+                        <div class="mechanisms-layer" data-higher-cluster-id="${higherCluster.id}">
+                `;
+                
+                // Render taxonomy clusters under this higher-level cluster (horizontally)
+                taxonomyClusters.forEach(cluster => {
+                    html += `
+                        <div class="taxonomy-node" data-cluster-id="${cluster.id}">
+                            <div class="taxonomy-node-content" data-cluster-id="${cluster.id}">
+                                <div class="taxonomy-id">Mechanism #${cluster.id}</div>
+                                <div class="taxonomy-name">${cluster.name}</div>
+                                <div class="taxonomy-description">${cluster.description}</div>
+                                <div style="margin-top: 8px; font-size: 0.85em; color: #667eea; font-weight: 600;">${cluster.abstractions.length} items</div>
+                            </div>
+                            <div class="abstraction-items-wrapper">
+                                <div class="abstraction-items" data-cluster-id="${cluster.id}">
+                                    ${renderAbstractions(cluster.abstractions)}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+
+            treeContainer.innerHTML = html;
+        }
+
+        function renderAbstractions(abstractions) {
+            return abstractions.map(abs => `
+                <div class="abstraction-item ${abs.isCore ? 'core' : ''}" 
+                     data-idea-id="${abs.ideaId}" 
+                     data-node-id="${abs.nodeId}"
+                     onclick="selectIdeaFromAbstraction(${abs.ideaId})">
+                    <div class="abstraction-level">${abs.level}</div>
+                    <div class="abstraction-label">${abs.label}</div>
+                    <div class="abstraction-description">${abs.description}</div>
+                </div>
+            `).join('');
+        }
+
+        function truncateText(text, maxLength) {
+            if (text.length <= maxLength) return text;
+            return text.substring(0, maxLength) + '...';
+        }
+
+        function selectIdea(ideaId) {
+            selectedIdeaId = ideaId;
+            
+            // Update idea list UI
+            document.querySelectorAll('.idea-item').forEach(item => {
+                if (parseInt(item.dataset.ideaId) === ideaId) {
+                    item.classList.add('active');
+                    // Scroll the idea into view in the sidebar
+                    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            highlightIdeaOnTree(ideaId);
+        }
+
+        function selectIdeaFromAbstraction(ideaId) {
+            // Same as selectIdea but called from abstraction click
+            selectIdea(ideaId);
+        }
+
+        function highlightIdeaOnTree(ideaId) {
+            // Clear previous highlights
+            document.querySelectorAll('.taxonomy-node-content.highlighted').forEach(el => {
+                el.classList.remove('highlighted');
+            });
+            document.querySelectorAll('.abstraction-item.highlighted').forEach(el => {
+                el.classList.remove('highlighted');
+            });
+
+            // Find and highlight abstractions and their taxonomy labels for this idea
+            const idea = abstractionData.find(i => i.id === ideaId);
+            if (!idea) return;
+
+            const highlightedClusters = new Set();
+            
+            // Highlight abstraction items and collect their cluster IDs
+            document.querySelectorAll(`.abstraction-item[data-idea-id="${ideaId}"]`).forEach(item => {
+                item.classList.add('highlighted');
+                
+                // Find parent cluster
+                const parentNode = item.closest('.taxonomy-node');
+                if (parentNode) {
+                    const clusterId = parentNode.dataset.clusterId;
+                    highlightedClusters.add(clusterId);
+                }
+                
+                // Scroll into view the first one
+                if (highlightedClusters.size === 1) {
+                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+
+            // Highlight taxonomy nodes
+            highlightedClusters.forEach(clusterId => {
+                const taxonomyNode = document.querySelector(`.taxonomy-node-content[data-cluster-id="${clusterId}"]`);
+                if (taxonomyNode) {
+                    taxonomyNode.classList.add('highlighted');
+                    
+                }
+            });
+        }
+
+        function clearSelection() {
+            selectedIdeaId = null;
+            
+            document.querySelectorAll('.idea-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.taxonomy-node-content.highlighted').forEach(el => {
+                el.classList.remove('highlighted');
+            });
+            document.querySelectorAll('.abstraction-item.highlighted').forEach(el => {
+                el.classList.remove('highlighted');
+            });
+        }
+
+
+
+
+        // Search functionality
+        document.getElementById('ideaSearch').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            document.querySelectorAll('.idea-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Zoom functions
+        function updateZoom() {
+            const tree = document.getElementById('treeContainer');
+            tree.style.transform = `scale(${zoomLevel})`;
+            document.getElementById('zoomLevel').textContent = Math.round(zoomLevel * 100) + '%';
+        }
+
+        function zoomIn() {
+            if (zoomLevel < maxZoom) {
+                zoomLevel = Math.min(maxZoom, zoomLevel + zoomStep);
+                updateZoom();
+            }
+        }
+
+        function zoomOut() {
+            if (zoomLevel > minZoom) {
+                zoomLevel = Math.max(minZoom, zoomLevel - zoomStep);
+                updateZoom();
+            }
+        }
+
+        function zoomReset() {
+            zoomLevel = 1.0;
+            updateZoom();
+        }
+
+        // Mouse wheel zoom
+        document.getElementById('treeContainer').addEventListener('wheel', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    zoomIn();
+                } else {
+                    zoomOut();
+                }
+            }
+        }, { passive: false });
+
+        // Event listeners
+        document.getElementById('datasetSelect').addEventListener('change', (e) => {
+            currentDataset = e.target.value;
+            clearSelection();
+            loadData();
+        });
+        document.getElementById('clearBtn').addEventListener('click', clearSelection);
+        document.getElementById('zoomInBtn').addEventListener('click', zoomIn);
+        document.getElementById('zoomOutBtn').addEventListener('click', zoomOut);
+        document.getElementById('zoomResetBtn').addEventListener('click', zoomReset);
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                if (e.key === '=' || e.key === '+') {
+                    e.preventDefault();
+                    zoomIn();
+                } else if (e.key === '-') {
+                    e.preventDefault();
+                    zoomOut();
+                } else if (e.key === '0') {
+                    e.preventDefault();
+                    zoomReset();
+                }
+            }
+        });
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
+
