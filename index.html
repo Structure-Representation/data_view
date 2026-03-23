@@ -675,7 +675,7 @@ let activeIdeaId = null;
 
 async function loadData() {
   const [treeResp, purposeResp, mechAbResp, purposeAnnotResp] = await Promise.all([
-    fetch('tree_2/variant_2_tree.json'),
+    fetch('tree_2/variant_8_tree.json'),
     fetch('tree_2/0_ab_purpose.json').catch(() => null),
     fetch('tree_2/0_ab_with_labels.json').catch(() => null),
     fetch('tree_2/0_superordinate_purpose_annotated_processed.json').catch(() => null)
